@@ -117,7 +117,12 @@ def make_graph(
     patch: str | None,
     fetched_date: str | None = None,
     dual_axis: bool = False,
+    y_limits: tuple | None = None,
 ) -> Path:
+    """
+    y_limits: when normalising, pass ((pick_lo, pick_hi), (win_lo, win_hi)).
+    In single-axis mode both ranges are merged into one shared scale.
+    """
     pick_vals = series["pick"]
     win_vals  = series["win"]
     x = np.arange(len(RANK_ORDER))
@@ -133,10 +138,12 @@ def make_graph(
         _draw_line(ax_pick, x, pick_vals, PICK_COLOR)
         _draw_line(ax_win,  x, win_vals,  WIN_COLOR)
 
-        lo, hi = _axis_limits(pick_vals)
-        ax_pick.set_ylim(lo, hi)
-        lo, hi = _axis_limits(win_vals)
-        ax_win.set_ylim(lo, hi)
+        if y_limits:
+            ax_pick.set_ylim(*y_limits[0])
+            ax_win.set_ylim(*y_limits[1])
+        else:
+            ax_pick.set_ylim(*_axis_limits(pick_vals))
+            ax_win.set_ylim(*_axis_limits(win_vals))
 
         _style_ax(ax_pick, PICK_COLOR, "left")
         _style_ax(ax_win,  WIN_COLOR,  "right")
@@ -170,9 +177,15 @@ def make_graph(
         _draw_line(ax_pick, x, pick_vals, PICK_COLOR)
         _draw_line(ax_pick, x, win_vals,  WIN_COLOR)
 
-        all_vals = [v for v in pick_vals + win_vals if v is not None]
-        if all_vals:
-            ax_pick.set_ylim(max(0, min(all_vals) - 5), max(all_vals) + 5)
+        if y_limits:
+            # In single-axis mode, merge both ranges into one scale
+            lo = min(y_limits[0][0], y_limits[1][0])
+            hi = max(y_limits[0][1], y_limits[1][1])
+            ax_pick.set_ylim(lo, hi)
+        else:
+            all_vals = [v for v in pick_vals + win_vals if v is not None]
+            if all_vals:
+                ax_pick.set_ylim(max(0, min(all_vals) - 5), max(all_vals) + 5)
         ax_pick.yaxis.set_major_formatter(ticker.FormatStrFormatter("%.1f%%"))
         ax_pick.tick_params(axis="y", colors="#CCCCCC", labelsize=9)
         ax_pick.grid(axis="y", color="#2A2A4A", linewidth=0.7, zorder=1)
@@ -228,8 +241,10 @@ def main() -> None:
     region_group.add_argument("--asia",      action="store_true")
     region_group.add_argument("--europe",    action="store_true")
     parser.add_argument("--hero",      metavar="NAME", help="Only graph this hero")
-    parser.add_argument("--dual-axis", action="store_true",
+    parser.add_argument("--dual-axis",  action="store_true",
                         help="Separate y axes: pick rate left, win rate right")
+    parser.add_argument("--normalise", "--normalize", action="store_true",
+                        help="Fix y axes to dataset-wide min/max so all heroes are comparable")
     parser.add_argument("--data",  default="rates.json", metavar="FILE")
     parser.add_argument("--out",   default="outputs",    metavar="DIR")
     args = parser.parse_args()
@@ -263,11 +278,20 @@ def main() -> None:
     else:
         heroes = all_heroes
 
-    print(f"Generating {len(heroes)} graph(s)  region={region_key}  patch={patch}  dual-axis={args.dual_axis}")
+    # Compute global y limits across all heroes in the filtered dataset
+    y_limits = None
+    if args.normalise:
+        all_series = [compute_series(filtered_rows, h) for h in all_heroes]
+        all_picks  = [v for s in all_series for v in s["pick"] if v is not None]
+        all_wins   = [v for s in all_series for v in s["win"]  if v is not None]
+        y_limits   = (_axis_limits(all_picks), _axis_limits(all_wins))
+
+    print(f"Generating {len(heroes)} graph(s)  region={region_key}  patch={patch}"
+          f"  dual-axis={args.dual_axis}  normalise={args.normalise}")
     for hero in heroes:
         series   = compute_series(filtered_rows, hero)
         out_path = make_graph(hero, series, region_key, out_dir, patch, fetched_date,
-                              dual_axis=args.dual_axis)
+                              dual_axis=args.dual_axis, y_limits=y_limits)
         print(f"  {out_path}")
 
     print(f"\nDone. {len(heroes)} file(s) written to {out_dir}/")
