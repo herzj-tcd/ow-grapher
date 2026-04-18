@@ -5,11 +5,12 @@ Draw win rate / pick rate line graphs per hero across ranks.
 Usage:
     python3 graph.py                        # all heroes, average of all regions
     python3 graph.py --hero Ana             # one hero only
-    python3 graph.py --americas             # Americas region only
-    python3 graph.py --asia --hero Tracer   # Asia, one hero
-    python3 graph.py --dual-axis            # separate left/right y axes per metric
-    python3 graph.py --stacked              # two subplots sharing x axis
-    python3 graph.py --normalise            # fixed axes for cross-hero comparison
+    python3 graph.py --role support         # only support heroes (tank/damage/support)
+    python3 graph.py --americas             # Americas region only (also --asia, --europe)
+    python3 graph.py --asia --hero Tracer   # flags are combinable
+    python3 graph.py --dual-axis            # pick rate left axis, win rate right axis
+    python3 graph.py --stacked              # two subplots sharing x axis, one per metric
+    python3 graph.py --normalise            # fix axes to dataset-wide min/max for cross-hero comparison
     python3 graph.py --data other.json      # use a different data file
     python3 graph.py --out results/         # different output folder
 """
@@ -337,6 +338,8 @@ def main() -> None:
     region_group.add_argument("--asia",     action="store_true")
     region_group.add_argument("--europe",   action="store_true")
     parser.add_argument("--hero", metavar="NAME", help="Only graph this hero")
+    parser.add_argument("--role", metavar="ROLE", choices=["tank", "damage", "support"],
+                        help="Only graph heroes of this role")
     mode_group = parser.add_mutually_exclusive_group()
     mode_group.add_argument("--dual-axis", action="store_true",
                             help="Separate left/right y axes per metric")
@@ -352,6 +355,7 @@ def main() -> None:
     rows         = payload["rows"]
     patch        = payload.get("patch_note")
     fetched_date = (payload.get("fetched_at") or "")[:10] or None
+    hero_roles   = payload.get("hero_roles", {})
 
     if args.americas:
         region_key = "americas"
@@ -374,6 +378,11 @@ def main() -> None:
                   file=sys.stderr)
             sys.exit(1)
         heroes = [match]
+    elif args.role:
+        heroes = [h for h in all_heroes if hero_roles.get(h, "").lower() == args.role]
+        if not heroes:
+            print(f"No heroes found for role {args.role!r}.", file=sys.stderr)
+            sys.exit(1)
     else:
         heroes = all_heroes
 

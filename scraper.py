@@ -97,20 +97,25 @@ def parse_patch_note(html: str) -> str | None:
     return m.group(0) if m else None
 
 
-def parse_rows(data: dict, tier: str, region: str) -> list[dict]:
-    rows = []
+def parse_rows(data: dict, tier: str, region: str) -> tuple[list[dict], dict[str, str]]:
+    """Returns (rows, {hero_name: role}) — roles collected once, not repeated per row."""
+    rows, roles = [], {}
     for entry in data.get("rates", []):
-        cells = entry.get("cells", {})
+        cells    = entry.get("cells", {})
+        hero_obj = entry.get("hero") or {}
         pick = cells.get("pickrate")
         win  = cells.get("winrate")
+        name = cells.get("name") or entry.get("id", "")
         rows.append({
             "region":    region.lower(),
             "tier":      tier.lower(),
-            "hero":      cells.get("name") or entry.get("id", ""),
+            "hero":      name,
             "pick_rate": None if (pick is None or pick < 0) else pick,
             "win_rate":  None if (win  is None or win  < 0) else win,
         })
-    return rows
+        if name and hero_obj.get("role"):
+            roles[name] = hero_obj["role"].lower()
+    return rows, roles
 
 
 def validate(data: dict, expected_tier: str, expected_region: str) -> None:
@@ -133,6 +138,7 @@ def scrape(use_cache: bool = True, out_path: str = "rates.json") -> None:
 
     total = len(TIERS) * len(REGIONS)
     all_rows: list[dict] = []
+    hero_roles: dict[str, str] = {}
     done = 0
 
     for region in REGIONS:
@@ -141,14 +147,16 @@ def scrape(use_cache: bool = True, out_path: str = "rates.json") -> None:
             print(f"[{done:2d}/{total}] tier={tier:<12s} region={region}")
             data = fetch_rates(tier, region, use_cache=use_cache)
             validate(data, tier, region)
-            rows = parse_rows(data, tier, region)
+            rows, roles = parse_rows(data, tier, region)
             all_rows.extend(rows)
+            hero_roles.update(roles)
             if not _cache_path(tier, region).exists():
                 time.sleep(SLEEP_SEC)
 
     output = {
         "fetched_at":  datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "patch_note":  patch,
+        "hero_roles":  dict(sorted(hero_roles.items())),
         "rows":        all_rows,
     }
 
