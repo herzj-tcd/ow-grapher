@@ -125,7 +125,7 @@ def _subtitle(region_key, patch, fetched_date) -> str:
     region_label = REGION_DISPLAY.get(region_key, region_key.title())
     patch_str    = f"  •  Patch {patch}" if patch else ""
     date_str     = f"  •  {fetched_date}" if fetched_date else ""
-    return f"{region_label}{patch_str}{date_str}"
+    return f"{region_label}  •  Mouse & Keyboard{patch_str}{date_str}"
 
 
 def make_graph(
