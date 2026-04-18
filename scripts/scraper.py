@@ -128,7 +128,7 @@ def validate(data: dict, expected_tier: str, expected_region: str) -> None:
 
 # ── Main ──────────────────────────────────────────────────────────────────────
 
-def scrape(use_cache: bool = True, out_path: str = "rates.json") -> None:
+def scrape(use_cache: bool = True, out_path: str = "data/rates.json") -> None:
     Path("cache").mkdir(exist_ok=True)
 
     print("Fetching page for patch version...")
@@ -168,7 +168,7 @@ def scrape(use_cache: bool = True, out_path: str = "rates.json") -> None:
 def main() -> None:
     parser = argparse.ArgumentParser(description="Scrape Overwatch hero rates")
     parser.add_argument("--no-cache", action="store_true", help="Ignore cached responses")
-    parser.add_argument("--out", default="rates.json", help="Output file (default: rates.json)")
+    parser.add_argument("--out", default="data/rates.json", help="Output file (default: data/rates.json)")
     args = parser.parse_args()
 
     scrape(use_cache=not args.no_cache, out_path=args.out)

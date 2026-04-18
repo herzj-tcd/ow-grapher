@@ -193,7 +193,7 @@ def main() -> None:
     region_group.add_argument("--europe",   action="store_true")
 
     parser.add_argument("--role", metavar="ROLE", choices=["tank", "damage", "support"])
-    parser.add_argument("--data", default="rates.json", metavar="FILE")
+    parser.add_argument("--data", default="data/rates.json", metavar="FILE")
     parser.add_argument("--out",  default="outputs",    metavar="DIR")
     args = parser.parse_args()
 

@@ -347,7 +347,7 @@ def main() -> None:
                             help="Two subplots sharing x axis, one per metric")
     parser.add_argument("--normalise", "--normalize", action="store_true",
                         help="Fix y axes to dataset-wide min/max for cross-hero comparison")
-    parser.add_argument("--data", default="rates.json", metavar="FILE")
+    parser.add_argument("--data", default="data/rates.json", metavar="FILE")
     parser.add_argument("--out",  default="outputs",    metavar="DIR")
     args = parser.parse_args()
 

@@ -1,7 +1,9 @@
 *
 
+!scripts/
+!data/
 !*.py
 !*.json
 !.gitignore
 
-investigate.py
+scripts/investigate.py

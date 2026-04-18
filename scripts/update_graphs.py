@@ -12,7 +12,9 @@ import shutil
 import sys
 from pathlib import Path
 
-DATA_FILE = "rates.json"
+sys.path.insert(0, str(Path(__file__).parent))
+
+DATA_FILE = "data/rates.json"
 RELEASES_DIR = Path("releases/current")
 
 
