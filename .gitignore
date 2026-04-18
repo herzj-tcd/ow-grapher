@@ -1,5 +1,7 @@
-CLAUDE.md
+*
+
+!*.py
+!*.json
+!.gitignore
+
 investigate.py
-cache
-outputs
-outputs_dual

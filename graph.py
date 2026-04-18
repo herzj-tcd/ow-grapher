@@ -8,6 +8,8 @@ Usage:
     python3 graph.py --americas             # Americas region only
     python3 graph.py --asia --hero Tracer   # Asia, one hero
     python3 graph.py --dual-axis            # separate left/right y axes per metric
+    python3 graph.py --stacked              # two subplots sharing x axis
+    python3 graph.py --normalise            # fixed axes for cross-hero comparison
     python3 graph.py --data other.json      # use a different data file
     python3 graph.py --out results/         # different output folder
 """
@@ -82,7 +84,7 @@ def _axis_limits(vals: list, padding: float = 5.0) -> tuple[float, float]:
 
 
 def _draw_line(ax, x, vals, color):
-    """Plot a segmented line+scatter on ax, return the avg or None."""
+    """Plot a segmented line+scatter on ax and draw the average hline."""
     xs, ys = [], []
     for i, v in enumerate(vals):
         if v is not None:
@@ -99,7 +101,6 @@ def _draw_line(ax, x, vals, color):
     avg = mean_ignoring_none(vals)
     if avg is not None:
         ax.axhline(avg, color=color, linestyle="--", linewidth=1.2, alpha=0.7, zorder=2)
-    return avg
 
 
 def _style_ax(ax, color, side):
@@ -107,6 +108,23 @@ def _style_ax(ax, color, side):
     ax.tick_params(axis="y", colors=color, labelsize=9)
     ax.spines[side].set_edgecolor(color)
     ax.spines[side].set_linewidth(1.4)
+
+
+def _style_subplot(ax):
+    ax.set_facecolor("#16213E")
+    ax.yaxis.set_major_formatter(ticker.FormatStrFormatter("%.1f%%"))
+    ax.tick_params(axis="y", colors="#CCCCCC", labelsize=9)
+    ax.grid(axis="y", color="#2A2A4A", linewidth=0.7, zorder=1)
+    ax.set_axisbelow(True)
+    for spine in ax.spines.values():
+        spine.set_edgecolor("#2A2A4A")
+
+
+def _subtitle(region_key, patch, fetched_date) -> str:
+    region_label = REGION_DISPLAY.get(region_key, region_key.title())
+    patch_str    = f"  •  Patch {patch}" if patch else ""
+    date_str     = f"  •  {fetched_date}" if fetched_date else ""
+    return f"{region_label}{patch_str}{date_str}"
 
 
 def make_graph(
@@ -117,26 +135,96 @@ def make_graph(
     patch: str | None,
     fetched_date: str | None = None,
     dual_axis: bool = False,
+    stacked: bool = False,
     y_limits: tuple | None = None,
 ) -> Path:
     """
-    y_limits: when normalising, pass ((pick_lo, pick_hi), (win_lo, win_hi)).
-    In single-axis mode both ranges are merged into one shared scale.
+    y_limits: when normalising, ((pick_lo, pick_hi), (win_lo, win_hi)).
+    Single-axis mode merges both ranges into one scale.
     """
     pick_vals = series["pick"]
     win_vals  = series["win"]
     x = np.arange(len(RANK_ORDER))
 
-    fig, ax_pick = plt.subplots(figsize=(10, 5.5))
-    fig.patch.set_facecolor("#1A1A2E")
-    ax_pick.set_facecolor("#16213E")
+    subtitle = _subtitle(region_key, patch, fetched_date)
 
-    if dual_axis:
+    if stacked:
+        fig, (ax_pick, ax_win) = plt.subplots(
+            2, 1, sharex=True, figsize=(10, 8),
+            gridspec_kw={"hspace": 0.08},
+            layout="constrained",
+        )
+        fig.patch.set_facecolor("#1A1A2E")
+
+        _style_subplot(ax_pick)
+        _style_subplot(ax_win)
+
+        _draw_line(ax_pick, x, pick_vals, PICK_COLOR)
+        _draw_line(ax_win,  x, win_vals,  WIN_COLOR)
+        ax_win.axhline(50, color="white", linewidth=0.9, alpha=0.5, zorder=2)
+
+        if y_limits:
+            ax_pick.set_ylim(*y_limits[0])
+            ax_win.set_ylim(*y_limits[1])
+        else:
+            ax_pick.set_ylim(*_axis_limits(pick_vals))
+            ax_win.set_ylim(*_axis_limits(win_vals))
+
+        ax_pick.set_ylabel("Pick Rate", color=PICK_COLOR, fontsize=10)
+        ax_win.set_ylabel("Win Rate",   color=WIN_COLOR,  fontsize=10)
+        ax_pick.tick_params(axis="y", colors=PICK_COLOR)
+        ax_win.tick_params(axis="y",  colors=WIN_COLOR)
+
+        # Blend the two subplots together visually
+        ax_pick.spines["bottom"].set_visible(False)
+        ax_win.spines["top"].set_visible(False)
+        ax_pick.tick_params(axis="x", bottom=False)
+
+        # x axis on the bottom subplot only
+        ax_win.set_xticks(x)
+        ax_win.set_xticklabels(RANK_LABELS, color="#CCCCCC", fontsize=10)
+        ax_win.set_xlabel("Rank", color="#AAAAAA", fontsize=10)
+
+        # Legend in each subplot
+        ax_pick.legend(
+            handles=[
+                Line2D([0], [0], color=PICK_COLOR, linewidth=2, marker="o",
+                       markersize=6, label="Pick Rate"),
+                Line2D([0], [0], color=PICK_COLOR, linewidth=1.2, linestyle="--",
+                       alpha=0.7, label="Avg"),
+            ],
+            facecolor="#1A1A2E", edgecolor="#2A2A4A", labelcolor="#CCCCCC",
+            fontsize=9, loc="upper left",
+        )
+        ax_win.legend(
+            handles=[
+                Line2D([0], [0], color=WIN_COLOR, linewidth=2, marker="o",
+                       markersize=6, label="Win Rate"),
+                Line2D([0], [0], color=WIN_COLOR, linewidth=1.2, linestyle="--",
+                       alpha=0.7, label="Avg"),
+                Line2D([0], [0], color="white", linewidth=0.9, alpha=0.5,
+                       label="50%"),
+            ],
+            facecolor="#1A1A2E", edgecolor="#2A2A4A", labelcolor="#CCCCCC",
+            fontsize=9, loc="upper left",
+        )
+
+        fig.suptitle(
+            f"{hero}  —  Pick & Win Rate by Rank\n{subtitle}",
+            color="white", fontsize=13,
+        )
+
+    elif dual_axis:
+        fig, ax_pick = plt.subplots(figsize=(10, 5.5))
+        fig.patch.set_facecolor("#1A1A2E")
+        ax_pick.set_facecolor("#16213E")
+
         ax_win = ax_pick.twinx()
         ax_win.set_facecolor("#16213E")
 
         _draw_line(ax_pick, x, pick_vals, PICK_COLOR)
         _draw_line(ax_win,  x, win_vals,  WIN_COLOR)
+        ax_win.axhline(50, color="white", linewidth=0.9, alpha=0.5, zorder=2)
 
         if y_limits:
             ax_pick.set_ylim(*y_limits[0])
@@ -150,7 +238,6 @@ def make_graph(
         ax_pick.set_ylabel("Pick Rate", color=PICK_COLOR, fontsize=10)
         ax_win.set_ylabel("Win Rate",   color=WIN_COLOR,  fontsize=10)
 
-        # Suppress the right spine on the pick axis and left on the win axis
         ax_pick.spines["right"].set_visible(False)
         ax_win.spines["left"].set_visible(False)
         for spine_name in ("top", "bottom"):
@@ -158,27 +245,42 @@ def make_graph(
             ax_win.spines[spine_name].set_edgecolor("#2A2A4A")
 
         ax_pick.grid(axis="y", color="#2A2A4A", linewidth=0.7, zorder=1)
+        ax_pick.set_axisbelow(True)
 
-        legend_elements = [
-            Line2D([0], [0], color=PICK_COLOR, linewidth=2, marker="o",
-                   markersize=6, label="Pick Rate (left axis)"),
-            Line2D([0], [0], color=WIN_COLOR,  linewidth=2, marker="o",
-                   markersize=6, label="Win Rate (right axis)"),
-            Line2D([0], [0], color=PICK_COLOR, linewidth=1.2, linestyle="--",
-                   alpha=0.7, label="Pick Rate avg"),
-            Line2D([0], [0], color=WIN_COLOR,  linewidth=1.2, linestyle="--",
-                   alpha=0.7, label="Win Rate avg"),
-        ]
-        ax_pick.legend(handles=legend_elements, facecolor="#1A1A2E", edgecolor="#2A2A4A",
-                       labelcolor="#CCCCCC", fontsize=9, loc="upper left")
-        title_ax = ax_pick
+        ax_pick.legend(
+            handles=[
+                Line2D([0], [0], color=PICK_COLOR, linewidth=2, marker="o",
+                       markersize=6, label="Pick Rate (left)"),
+                Line2D([0], [0], color=WIN_COLOR,  linewidth=2, marker="o",
+                       markersize=6, label="Win Rate (right)"),
+                Line2D([0], [0], color=PICK_COLOR, linewidth=1.2, linestyle="--",
+                       alpha=0.7, label="Pick Rate avg"),
+                Line2D([0], [0], color=WIN_COLOR,  linewidth=1.2, linestyle="--",
+                       alpha=0.7, label="Win Rate avg"),
+            ],
+            facecolor="#1A1A2E", edgecolor="#2A2A4A", labelcolor="#CCCCCC",
+            fontsize=9, loc="upper left",
+        )
+
+        ax_pick.set_xticks(x)
+        ax_pick.set_xticklabels(RANK_LABELS, color="#CCCCCC", fontsize=10)
+        ax_pick.set_xlabel("Rank", color="#AAAAAA", fontsize=10)
+        ax_pick.set_title(
+            f"{hero}  —  Pick & Win Rate by Rank\n{subtitle}",
+            color="white", fontsize=13, pad=12,
+        )
+        fig.tight_layout()
 
     else:
+        fig, ax_pick = plt.subplots(figsize=(10, 5.5))
+        fig.patch.set_facecolor("#1A1A2E")
+        ax_pick.set_facecolor("#16213E")
+
         _draw_line(ax_pick, x, pick_vals, PICK_COLOR)
         _draw_line(ax_pick, x, win_vals,  WIN_COLOR)
+        ax_pick.axhline(50, color="white", linewidth=0.9, alpha=0.5, zorder=2)
 
         if y_limits:
-            # In single-axis mode, merge both ranges into one scale
             lo = min(y_limits[0][0], y_limits[1][0])
             hi = max(y_limits[0][1], y_limits[1][1])
             ax_pick.set_ylim(lo, hi)
@@ -186,43 +288,37 @@ def make_graph(
             all_vals = [v for v in pick_vals + win_vals if v is not None]
             if all_vals:
                 ax_pick.set_ylim(max(0, min(all_vals) - 5), max(all_vals) + 5)
+
         ax_pick.yaxis.set_major_formatter(ticker.FormatStrFormatter("%.1f%%"))
         ax_pick.tick_params(axis="y", colors="#CCCCCC", labelsize=9)
         ax_pick.grid(axis="y", color="#2A2A4A", linewidth=0.7, zorder=1)
+        ax_pick.set_axisbelow(True)
         for spine in ax_pick.spines.values():
             spine.set_edgecolor("#2A2A4A")
 
-        legend_elements = [
-            Line2D([0], [0], color=PICK_COLOR, linewidth=2, marker="o",
-                   markersize=6, label="Pick Rate"),
-            Line2D([0], [0], color=WIN_COLOR,  linewidth=2, marker="o",
-                   markersize=6, label="Win Rate"),
-            Line2D([0], [0], color=PICK_COLOR, linewidth=1.2, linestyle="--",
-                   alpha=0.7, label="Pick Rate avg"),
-            Line2D([0], [0], color=WIN_COLOR,  linewidth=1.2, linestyle="--",
-                   alpha=0.7, label="Win Rate avg"),
-        ]
-        ax_pick.legend(handles=legend_elements, facecolor="#1A1A2E", edgecolor="#2A2A4A",
-                       labelcolor="#CCCCCC", fontsize=9, loc="best")
-        title_ax = ax_pick
+        ax_pick.legend(
+            handles=[
+                Line2D([0], [0], color=PICK_COLOR, linewidth=2, marker="o",
+                       markersize=6, label="Pick Rate"),
+                Line2D([0], [0], color=WIN_COLOR,  linewidth=2, marker="o",
+                       markersize=6, label="Win Rate"),
+                Line2D([0], [0], color=PICK_COLOR, linewidth=1.2, linestyle="--",
+                       alpha=0.7, label="Pick Rate avg"),
+                Line2D([0], [0], color=WIN_COLOR,  linewidth=1.2, linestyle="--",
+                       alpha=0.7, label="Win Rate avg"),
+            ],
+            facecolor="#1A1A2E", edgecolor="#2A2A4A", labelcolor="#CCCCCC",
+            fontsize=9, loc="best",
+        )
 
-    # Shared x axis
-    ax_pick.set_xticks(x)
-    ax_pick.set_xticklabels(RANK_LABELS, color="#CCCCCC", fontsize=10)
-    ax_pick.set_xlabel("Rank", color="#AAAAAA", fontsize=10)
-    ax_pick.set_axisbelow(True)
-
-    # Title
-    region_label = REGION_DISPLAY.get(region_key, region_key.title())
-    patch_str = f"  •  Patch {patch}" if patch else ""
-    date_str  = f"  •  {fetched_date}" if fetched_date else ""
-    title_ax.set_title(
-        f"{hero}  —  Pick & Win Rate by Rank\n"
-        f"{region_label}{patch_str}{date_str}",
-        color="white", fontsize=13, pad=12,
-    )
-
-    fig.tight_layout()
+        ax_pick.set_xticks(x)
+        ax_pick.set_xticklabels(RANK_LABELS, color="#CCCCCC", fontsize=10)
+        ax_pick.set_xlabel("Rank", color="#AAAAAA", fontsize=10)
+        ax_pick.set_title(
+            f"{hero}  —  Pick & Win Rate by Rank\n{subtitle}",
+            color="white", fontsize=13, pad=12,
+        )
+        fig.tight_layout()
 
     patch_slug = patch or "unknown"
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -237,16 +333,19 @@ def make_graph(
 def main() -> None:
     parser = argparse.ArgumentParser(description="Graph OW hero pick/win rates by rank")
     region_group = parser.add_mutually_exclusive_group()
-    region_group.add_argument("--americas",  action="store_true")
-    region_group.add_argument("--asia",      action="store_true")
-    region_group.add_argument("--europe",    action="store_true")
-    parser.add_argument("--hero",      metavar="NAME", help="Only graph this hero")
-    parser.add_argument("--dual-axis",  action="store_true",
-                        help="Separate y axes: pick rate left, win rate right")
+    region_group.add_argument("--americas", action="store_true")
+    region_group.add_argument("--asia",     action="store_true")
+    region_group.add_argument("--europe",   action="store_true")
+    parser.add_argument("--hero", metavar="NAME", help="Only graph this hero")
+    mode_group = parser.add_mutually_exclusive_group()
+    mode_group.add_argument("--dual-axis", action="store_true",
+                            help="Separate left/right y axes per metric")
+    mode_group.add_argument("--stacked", action="store_true",
+                            help="Two subplots sharing x axis, one per metric")
     parser.add_argument("--normalise", "--normalize", action="store_true",
-                        help="Fix y axes to dataset-wide min/max so all heroes are comparable")
-    parser.add_argument("--data",  default="rates.json", metavar="FILE")
-    parser.add_argument("--out",   default="outputs",    metavar="DIR")
+                        help="Fix y axes to dataset-wide min/max for cross-hero comparison")
+    parser.add_argument("--data", default="rates.json", metavar="FILE")
+    parser.add_argument("--out",  default="outputs",    metavar="DIR")
     args = parser.parse_args()
 
     payload      = load_data(args.data)
@@ -271,14 +370,13 @@ def main() -> None:
     if args.hero:
         match = next((h for h in all_heroes if h.lower() == args.hero.lower()), None)
         if match is None:
-            names = ", ".join(all_heroes)
-            print(f"Hero {args.hero!r} not found. Available: {names}", file=sys.stderr)
+            print(f"Hero {args.hero!r} not found. Available: {', '.join(all_heroes)}",
+                  file=sys.stderr)
             sys.exit(1)
         heroes = [match]
     else:
         heroes = all_heroes
 
-    # Compute global y limits across all heroes in the filtered dataset
     y_limits = None
     if args.normalise:
         all_series = [compute_series(filtered_rows, h) for h in all_heroes]
@@ -286,12 +384,15 @@ def main() -> None:
         all_wins   = [v for s in all_series for v in s["win"]  if v is not None]
         y_limits   = (_axis_limits(all_picks), _axis_limits(all_wins))
 
+    mode = "stacked" if args.stacked else ("dual-axis" if args.dual_axis else "single")
     print(f"Generating {len(heroes)} graph(s)  region={region_key}  patch={patch}"
-          f"  dual-axis={args.dual_axis}  normalise={args.normalise}")
+          f"  mode={mode}  normalise={args.normalise}")
     for hero in heroes:
         series   = compute_series(filtered_rows, hero)
-        out_path = make_graph(hero, series, region_key, out_dir, patch, fetched_date,
-                              dual_axis=args.dual_axis, y_limits=y_limits)
+        out_path = make_graph(
+            hero, series, region_key, out_dir, patch, fetched_date,
+            dual_axis=args.dual_axis, stacked=args.stacked, y_limits=y_limits,
+        )
         print(f"  {out_path}")
 
     print(f"\nDone. {len(heroes)} file(s) written to {out_dir}/")
