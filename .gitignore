@@ -3,5 +3,6 @@
 !*.py
 !*.json
 !.gitignore
+!/releases
 
 investigate.py

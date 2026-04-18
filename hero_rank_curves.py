@@ -324,7 +324,7 @@ def make_graph(
     patch_slug = patch or "unknown"
     out_dir.mkdir(parents=True, exist_ok=True)
     slug = hero.lower().replace(" ", "_").replace(":", "")
-    filename = f"{slug}-{region_key.replace(' ', '_')}-{patch_slug}.png"
+    filename = f"{slug}-{region_key.replace(' ', '_')}.png"
     out_path = out_dir / filename
     fig.savefig(out_path, dpi=150, facecolor=fig.get_facecolor())
     plt.close(fig)
