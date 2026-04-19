@@ -261,7 +261,7 @@ def main() -> None:
                         help="Generate one chart per value of BY (role/region/rank) plus a combined chart")
     parser.add_argument("--normalise", "--normalize", action="store_true",
                         help="Pin all charts to the same axis limits (useful with --split)")
-    parser.add_argument("--data", default=str(_ROOT / "data" / "rates.json"), metavar="FILE")
+    parser.add_argument("--data", default=str(_ROOT / "data" / "comp_mnk.json"), metavar="FILE")
     parser.add_argument("--out",  default=str(_ROOT / "outputs"),             metavar="DIR")
     args = parser.parse_args()
 

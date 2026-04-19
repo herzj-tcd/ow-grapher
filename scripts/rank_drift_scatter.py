@@ -216,7 +216,7 @@ def main() -> None:
     parser.add_argument("--region", choices=["americas", "asia", "europe"],
                         metavar="REGION", help="Region to show (default: average all). Choices: americas, asia, europe")
     parser.add_argument("--role", metavar="ROLE", choices=["tank", "damage", "support"])
-    parser.add_argument("--data", default=str(_ROOT / "data" / "rates.json"), metavar="FILE")
+    parser.add_argument("--data", default=str(_ROOT / "data" / "comp_mnk.json"), metavar="FILE")
     parser.add_argument("--out",  default=str(_ROOT / "outputs"),             metavar="DIR")
     args = parser.parse_args()
 
