@@ -175,17 +175,23 @@ def make_scatter(
 
     # Scatter by role
     roles_present = sorted({p["role"] for p in points})
+    scatter_artists = []
     for role in roles_present:
         rpts = [p for p in points if p["role"] == role]
-        ax.scatter(
+        sc = ax.scatter(
             [p["pick_rate"] for p in rpts],
             [p["win_rate"]  for p in rpts],
             color=ROLE_COLORS.get(role, "#AAAAAA"),
             s=point_size, zorder=3, label=ROLE_LABELS.get(role, role.title()),
             edgecolors="#1A1A2E", linewidths=0.6,
         )
+        scatter_artists.append(sc)
 
-    # Hero labels — adjust_text moves them apart to avoid overlaps
+    if axis_limits:
+        ax.set_xlim(*axis_limits[0])
+        ax.set_ylim(*axis_limits[1])
+
+    # Hero labels — adjust_text repels from both other labels and the scatter points
     texts = [
         ax.text(p["pick_rate"], p["win_rate"], p["hero"],
                 fontsize=label_fontsize, color="#DDDDDD", zorder=5)
@@ -193,12 +199,9 @@ def make_scatter(
     ]
     adjust_text(
         texts, ax=ax,
-        arrowprops=dict(arrowstyle="-", color="#666666", lw=0.5),
+        add_objects=scatter_artists,
+        arrowprops=dict(arrowstyle="-", color="#666666", lw=0.5, shrinkA=5),
     )
-
-    if axis_limits:
-        ax.set_xlim(*axis_limits[0])
-        ax.set_ylim(*axis_limits[1])
 
     ax.xaxis.set_major_formatter(ticker.FormatStrFormatter("%.1f%%"))
     ax.yaxis.set_major_formatter(ticker.FormatStrFormatter("%.1f%%"))
