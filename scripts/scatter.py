@@ -3,13 +3,18 @@
 Scatter plot: pick rate (x) vs win rate (y), one point per hero.
 
 Usage:
-    python3 scatter.py                                  # all regions, all ranks
-    python3 scatter.py --rank bronze                    # bronze tier only
-    python3 scatter.py --region americas                # Americas region only
-    python3 scatter.py --region europe --rank master    # Europe, master tier
-    python3 scatter.py --role support                   # only support heroes
-    python3 scatter.py --data other.json                # different data file
-    python3 scatter.py --out results/                   # different output folder
+    python3 scatter.py                                    # all regions, all ranks
+    python3 scatter.py --rank gold                        # gold tier only
+    python3 scatter.py --region americas                  # Americas region only
+    python3 scatter.py --region europe --rank master      # Europe, master tier
+    python3 scatter.py --role support                     # only support heroes
+    python3 scatter.py --mobile                           # portrait layout, larger text for phones
+    python3 scatter.py --split role                       # one chart per role + combined
+    python3 scatter.py --split region --rank gold         # one chart per region, gold rank
+    python3 scatter.py --split rank --region americas     # one chart per rank, Americas
+    python3 scatter.py --split role --normalise           # split by role with shared axes
+    python3 scatter.py --data other.json                  # different data file
+    python3 scatter.py --out results/                     # different output folder
 """
 
 import argparse
@@ -21,6 +26,7 @@ _ROOT = Path(__file__).parent.parent
 
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
+from adjustText import adjust_text
 
 RANK_ORDER = ["bronze", "silver", "gold", "platinum", "diamond", "master", "grandmaster"]
 
@@ -36,6 +42,14 @@ ROLE_LABELS = {
 }
 
 INPUT_MODE = "Mouse & Keyboard"
+
+MOBILE_POINT_SIZE      = 200
+MOBILE_LABEL_FONTSIZE  = 16
+MOBILE_TICK_FONTSIZE   = 18
+MOBILE_AXIS_FONTSIZE   = 18
+MOBILE_TITLE_FONTSIZE  = 20
+MOBILE_QUAD_FONTSIZE   = 14
+MOBILE_LEGEND_FONTSIZE = 16
 
 REGION_DISPLAY = {
     "americas": "Americas",
@@ -64,6 +78,10 @@ def load_data(path: str) -> dict:
 def _mean(vals: list) -> float | None:
     valid = [v for v in vals if v is not None]
     return sum(valid) / len(valid) if valid else None
+
+
+def _scatter_limits(vals: list, pad: float = 0.5) -> tuple[float, float]:
+    return min(vals) - pad, max(vals) + pad
 
 
 def build_points(
@@ -107,6 +125,8 @@ def make_scatter(
     patch: str | None,
     fetched_date: str | None,
     role_filter: str | None,
+    mobile: bool = False,
+    axis_limits: tuple | None = None,
 ) -> Path:
     if role_filter:
         points = [p for p in points if p["role"] == role_filter]
@@ -119,9 +139,31 @@ def make_scatter(
     tier_label   = RANK_DISPLAY.get(tier_key, tier_key.title())
     patch_str    = f"  •  Patch {patch}" if patch else ""
     date_str     = f"  •  {fetched_date}" if fetched_date else ""
-    subtitle     = f"{region_label}  •  {INPUT_MODE}  •  {tier_label}{patch_str}{date_str}"
+    if mobile:
+        subtitle = f"{region_label}  •  {INPUT_MODE}\n{tier_label}{patch_str}{date_str}"
+    else:
+        subtitle = f"{region_label}  •  {INPUT_MODE}  •  {tier_label}{patch_str}{date_str}"
 
-    fig, ax = plt.subplots(figsize=(13, 8))
+    if mobile:
+        figsize         = (9, 14)
+        label_fontsize  = MOBILE_LABEL_FONTSIZE
+        tick_fontsize   = MOBILE_TICK_FONTSIZE
+        axis_fontsize   = MOBILE_AXIS_FONTSIZE
+        title_fontsize  = MOBILE_TITLE_FONTSIZE
+        quad_fontsize   = MOBILE_QUAD_FONTSIZE
+        legend_fontsize = MOBILE_LEGEND_FONTSIZE
+        point_size      = MOBILE_POINT_SIZE
+    else:
+        figsize         = (13, 8)
+        label_fontsize  = 6.5
+        tick_fontsize   = 9
+        axis_fontsize   = 11
+        title_fontsize  = 13
+        quad_fontsize   = 8
+        legend_fontsize = 9
+        point_size      = 70
+
+    fig, ax = plt.subplots(figsize=figsize)
     fig.patch.set_facecolor("#1A1A2E")
     ax.set_facecolor("#16213E")
 
@@ -139,37 +181,40 @@ def make_scatter(
             [p["pick_rate"] for p in rpts],
             [p["win_rate"]  for p in rpts],
             color=ROLE_COLORS.get(role, "#AAAAAA"),
-            s=70, zorder=3, label=ROLE_LABELS.get(role, role.title()),
+            s=point_size, zorder=3, label=ROLE_LABELS.get(role, role.title()),
             edgecolors="#1A1A2E", linewidths=0.6,
         )
 
-    # Hero labels — simple offset, no external lib needed
-    for p in points:
-        ax.annotate(
-            p["hero"],
-            xy=(p["pick_rate"], p["win_rate"]),
-            xytext=(4, 4),
-            textcoords="offset points",
-            fontsize=6.5,
-            color="#DDDDDD",
-            zorder=5,
-        )
+    # Hero labels — adjust_text moves them apart to avoid overlaps
+    texts = [
+        ax.text(p["pick_rate"], p["win_rate"], p["hero"],
+                fontsize=label_fontsize, color="#DDDDDD", zorder=5)
+        for p in points
+    ]
+    adjust_text(
+        texts, ax=ax,
+        arrowprops=dict(arrowstyle="-", color="#666666", lw=0.5),
+    )
+
+    if axis_limits:
+        ax.set_xlim(*axis_limits[0])
+        ax.set_ylim(*axis_limits[1])
 
     ax.xaxis.set_major_formatter(ticker.FormatStrFormatter("%.1f%%"))
     ax.yaxis.set_major_formatter(ticker.FormatStrFormatter("%.1f%%"))
-    ax.tick_params(colors="#CCCCCC", labelsize=9)
+    ax.tick_params(colors="#CCCCCC", labelsize=tick_fontsize)
     ax.grid(color="#2A2A4A", linewidth=0.6, zorder=0)
     ax.set_axisbelow(True)
     for spine in ax.spines.values():
         spine.set_edgecolor("#2A2A4A")
 
-    ax.set_xlabel("Pick Rate", color="#AAAAAA", fontsize=11)
-    ax.set_ylabel("Win Rate",  color="#AAAAAA", fontsize=11)
+    ax.set_xlabel("Pick Rate", color="#AAAAAA", fontsize=axis_fontsize)
+    ax.set_ylabel("Win Rate",  color="#AAAAAA", fontsize=axis_fontsize)
 
     # Quadrant labels
     x_min, x_max = ax.get_xlim()
     y_min, y_max = ax.get_ylim()
-    kw = dict(fontsize=8, alpha=0.35, color="white", va="center", ha="center", zorder=2)
+    kw = dict(fontsize=quad_fontsize, alpha=0.35, color="white", va="center", ha="center", zorder=2)
     ax.text((avg_pick + x_max) / 2, (50 + y_max) / 2, "Popular & Strong",   **kw)
     ax.text((x_min + avg_pick) / 2, (50 + y_max) / 2, "Niche & Strong",     **kw)
     ax.text((avg_pick + x_max) / 2, (y_min + 50) / 2, "Popular & Weak",     **kw)
@@ -177,18 +222,19 @@ def make_scatter(
 
     ax.legend(
         facecolor="#1A1A2E", edgecolor="#2A2A4A", labelcolor="#CCCCCC",
-        fontsize=9, loc="lower right",
+        fontsize=legend_fontsize, loc="lower right",
     )
     ax.set_title(
         f"Pick Rate vs Win Rate\n{subtitle}",
-        color="white", fontsize=13, pad=12,
+        color="white", fontsize=title_fontsize, pad=12,
     )
     fig.tight_layout()
 
     out_dir.mkdir(parents=True, exist_ok=True)
-    role_slug = f"_{role_filter}" if role_filter else ""
-    filename  = f"scatter_{region_key}_{tier_key}{role_slug}.png"
-    out_path  = out_dir / filename
+    role_slug   = f"_{role_filter}" if role_filter else ""
+    mobile_slug = "_mobile" if mobile else ""
+    filename    = f"scatter_{region_key}_{tier_key}{role_slug}{mobile_slug}.png"
+    out_path    = out_dir / filename
     fig.savefig(out_path, dpi=150, facecolor=fig.get_facecolor())
     plt.close(fig)
     return out_path
@@ -206,6 +252,12 @@ def main() -> None:
         help="Rank tier to show (default: all). Choices: " + ", ".join(RANK_ORDER + ["all"]),
     )
     parser.add_argument("--role", metavar="ROLE", choices=["tank", "damage", "support"])
+    parser.add_argument("--mobile", action="store_true",
+                        help="Portrait layout with larger text, optimised for phone screens")
+    parser.add_argument("--split", metavar="BY", choices=["role", "region", "rank"],
+                        help="Generate one chart per value of BY (role/region/rank) plus a combined chart")
+    parser.add_argument("--normalise", "--normalize", action="store_true",
+                        help="Pin all charts to the same axis limits (useful with --split)")
     parser.add_argument("--data", default=str(_ROOT / "data" / "rates.json"), metavar="FILE")
     parser.add_argument("--out",  default=str(_ROOT / "outputs"),             metavar="DIR")
     args = parser.parse_args()
@@ -219,15 +271,69 @@ def main() -> None:
     tier_key       = args.rank
     region_display = args.region or "all"
 
-    points = build_points(rows, args.region, tier_key, hero_roles)
+    if args.split:
+        split_by = args.split
 
-    print(f"Plotting {len(points)} heroes  region={region_display}  tier={tier_key}")
+        if split_by == "role" and args.role:
+            parser.error("--split role and --role cannot be used together")
+        if split_by == "region" and args.region:
+            parser.error("--split region and --region cannot be used together")
+        if split_by == "rank" and args.rank != "all":
+            parser.error("--split rank and --rank cannot be used together")
 
-    out_path = make_scatter(
-        points, region_display, tier_key,
-        Path(args.out), patch, fetched_date, args.role,
-    )
-    print(f"  {out_path}")
+        # Build (points, region_key, tier_key, role_filter) for each chart
+        charts = []
+        if split_by == "role":
+            base = build_points(rows, args.region, tier_key, hero_roles)
+            for role in ["tank", "damage", "support"]:
+                charts.append((base, region_display, tier_key, role))
+            charts.append((base, region_display, tier_key, None))
+        elif split_by == "region":
+            for region in ["americas", "asia", "europe"]:
+                pts = build_points(rows, region, tier_key, hero_roles)
+                charts.append((pts, region, tier_key, args.role))
+            pts = build_points(rows, None, tier_key, hero_roles)
+            charts.append((pts, "all", tier_key, args.role))
+        elif split_by == "rank":
+            for rank in RANK_ORDER:
+                pts = build_points(rows, args.region, rank, hero_roles)
+                charts.append((pts, region_display, rank, args.role))
+            pts = build_points(rows, args.region, "all", hero_roles)
+            charts.append((pts, region_display, "all", args.role))
+
+        axis_limits = None
+        if args.normalise:
+            all_picks, all_wins = [], []
+            for pts, _rk, _tk, rf in charts:
+                visible = [p for p in pts if p["role"] == rf] if rf else pts
+                all_picks.extend(p["pick_rate"] for p in visible)
+                all_wins.extend(p["win_rate"]   for p in visible)
+            axis_limits = (_scatter_limits(all_picks), _scatter_limits(all_wins))
+
+        print(f"Generating {len(charts)} charts  split={split_by}  region={region_display}"
+              f"  tier={tier_key}  normalise={args.normalise}")
+        for pts, rk, tk, rf in charts:
+            out_path = make_scatter(
+                pts, rk, tk, Path(args.out), patch, fetched_date, rf,
+                mobile=args.mobile, axis_limits=axis_limits,
+            )
+            print(f"  {out_path}")
+    else:
+        points = build_points(rows, args.region, tier_key, hero_roles)
+
+        axis_limits = None
+        if args.normalise:
+            all_picks = [p["pick_rate"] for p in points]
+            all_wins  = [p["win_rate"]  for p in points]
+            axis_limits = (_scatter_limits(all_picks), _scatter_limits(all_wins))
+
+        print(f"Plotting {len(points)} heroes  region={region_display}  tier={tier_key}")
+        out_path = make_scatter(
+            points, region_display, tier_key,
+            Path(args.out), patch, fetched_date, args.role,
+            mobile=args.mobile, axis_limits=axis_limits,
+        )
+        print(f"  {out_path}")
 
 
 if __name__ == "__main__":
