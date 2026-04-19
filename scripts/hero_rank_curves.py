@@ -3,22 +3,24 @@
 Draw win rate / pick rate line graphs per hero across ranks.
 
 Usage:
-    python3 graph.py                        # all heroes, average of all regions
-    python3 graph.py --hero Ana             # one hero only
-    python3 graph.py --role support         # only support heroes (tank/damage/support)
-    python3 graph.py --americas             # Americas region only (also --asia, --europe)
-    python3 graph.py --asia --hero Tracer   # flags are combinable
-    python3 graph.py --dual-axis            # pick rate left axis, win rate right axis
-    python3 graph.py --stacked              # two subplots sharing x axis, one per metric
-    python3 graph.py --normalise            # fix axes to dataset-wide min/max for cross-hero comparison
-    python3 graph.py --data other.json      # use a different data file
-    python3 graph.py --out results/         # different output folder
+    python3 hero_rank_curves.py                            # all heroes, average of all regions
+    python3 hero_rank_curves.py --hero Ana                 # one hero only
+    python3 hero_rank_curves.py --role support             # only support heroes (tank/damage/support)
+    python3 hero_rank_curves.py --region americas          # one region (americas/asia/europe)
+    python3 hero_rank_curves.py --region asia --hero Tracer
+    python3 hero_rank_curves.py --format dual-axis         # pick rate left axis, win rate right axis
+    python3 hero_rank_curves.py --format stacked           # two subplots sharing x axis, one per metric
+    python3 hero_rank_curves.py --normalise                # fix axes to dataset-wide min/max
+    python3 hero_rank_curves.py --data other.json          # use a different data file
+    python3 hero_rank_curves.py --out results/             # different output folder
 """
 
 import argparse
 import json
 import sys
 from pathlib import Path
+
+_ROOT = Path(__file__).parent.parent
 
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
@@ -30,6 +32,8 @@ RANK_LABELS = ["Bronze", "Silver", "Gold", "Platinum", "Diamond", "Master", "GM"
 
 PICK_COLOR = "#E87722"   # orange
 WIN_COLOR  = "#3A8FD4"   # blue
+
+INPUT_MODE = "Mouse & Keyboard"
 
 REGION_DISPLAY = {
     "americas": "Americas",
@@ -125,7 +129,7 @@ def _subtitle(region_key, patch, fetched_date) -> str:
     region_label = REGION_DISPLAY.get(region_key, region_key.title())
     patch_str    = f"  •  Patch {patch}" if patch else ""
     date_str     = f"  •  {fetched_date}" if fetched_date else ""
-    return f"{region_label}  •  Mouse & Keyboard{patch_str}{date_str}"
+    return f"{region_label}  •  {INPUT_MODE}{patch_str}{date_str}"
 
 
 def make_graph(
@@ -333,22 +337,18 @@ def make_graph(
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Graph OW hero pick/win rates by rank")
-    region_group = parser.add_mutually_exclusive_group()
-    region_group.add_argument("--americas", action="store_true")
-    region_group.add_argument("--asia",     action="store_true")
-    region_group.add_argument("--europe",   action="store_true")
-    parser.add_argument("--hero", metavar="NAME", help="Only graph this hero")
-    parser.add_argument("--role", metavar="ROLE", choices=["tank", "damage", "support"],
+    parser.add_argument("--region", choices=["americas", "asia", "europe"],
+                        metavar="REGION", help="Region to show (default: average all). Choices: americas, asia, europe")
+    parser.add_argument("--hero",   metavar="NAME", help="Only graph this hero")
+    parser.add_argument("--role",   metavar="ROLE", choices=["tank", "damage", "support"],
                         help="Only graph heroes of this role")
-    mode_group = parser.add_mutually_exclusive_group()
-    mode_group.add_argument("--dual-axis", action="store_true",
-                            help="Separate left/right y axes per metric")
-    mode_group.add_argument("--stacked", action="store_true",
-                            help="Two subplots sharing x axis, one per metric")
+    parser.add_argument("--format", dest="fmt", default="single",
+                        choices=["single", "dual-axis", "stacked"],
+                        help="Chart layout (default: single)")
     parser.add_argument("--normalise", "--normalize", action="store_true",
                         help="Fix y axes to dataset-wide min/max for cross-hero comparison")
-    parser.add_argument("--data", default="data/rates.json", metavar="FILE")
-    parser.add_argument("--out",  default="outputs",    metavar="DIR")
+    parser.add_argument("--data", default=str(_ROOT / "data" / "rates.json"), metavar="FILE")
+    parser.add_argument("--out",  default=str(_ROOT / "outputs"),             metavar="DIR")
     args = parser.parse_args()
 
     payload      = load_data(args.data)
@@ -357,16 +357,7 @@ def main() -> None:
     fetched_date = (payload.get("fetched_at") or "")[:10] or None
     hero_roles   = payload.get("hero_roles", {})
 
-    if args.americas:
-        region_key = "americas"
-    elif args.asia:
-        region_key = "asia"
-    elif args.europe:
-        region_key = "europe"
-    else:
-        region_key = "all"
-
-    filtered_rows, region_key = filter_region(rows, region_key if region_key != "all" else None)
+    filtered_rows, region_key = filter_region(rows, args.region)
 
     out_dir = Path(args.out)
 
@@ -393,14 +384,14 @@ def main() -> None:
         all_wins   = [v for s in all_series for v in s["win"]  if v is not None]
         y_limits   = (_axis_limits(all_picks), _axis_limits(all_wins))
 
-    mode = "stacked" if args.stacked else ("dual-axis" if args.dual_axis else "single")
     print(f"Generating {len(heroes)} graph(s)  region={region_key}  patch={patch}"
-          f"  mode={mode}  normalise={args.normalise}")
+          f"  format={args.fmt}  normalise={args.normalise}")
     for hero in heroes:
         series   = compute_series(filtered_rows, hero)
         out_path = make_graph(
             hero, series, region_key, out_dir, patch, fetched_date,
-            dual_axis=args.dual_axis, stacked=args.stacked, y_limits=y_limits,
+            dual_axis=(args.fmt == "dual-axis"), stacked=(args.fmt == "stacked"),
+            y_limits=y_limits,
         )
         print(f"  {out_path}")
 

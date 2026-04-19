@@ -17,6 +17,8 @@ import time
 from datetime import datetime, timezone
 from pathlib import Path
 
+_ROOT = Path(__file__).parent.parent
+
 import requests
 from bs4 import BeautifulSoup
 
@@ -43,7 +45,7 @@ MAX_RETRIES = 4
 
 def _cache_path(tier: str, region: str) -> Path:
     key = f"{region}_{tier}".lower().replace(" ", "_")
-    return Path("cache") / f"api_{key}.json"
+    return _ROOT / "cache" / f"api_{key}.json"
 
 
 def fetch_rates(tier: str, region: str, use_cache: bool = True) -> dict:
@@ -76,7 +78,7 @@ def fetch_rates(tier: str, region: str, use_cache: bool = True) -> dict:
 
 
 def fetch_page_html(use_cache: bool = True) -> str:
-    path = Path("cache") / "default.html"
+    path = _ROOT / "cache" / "default.html"
     if use_cache and path.exists():
         return path.read_text(encoding="utf-8")
     resp = requests.get(
@@ -128,8 +130,10 @@ def validate(data: dict, expected_tier: str, expected_region: str) -> None:
 
 # ── Main ──────────────────────────────────────────────────────────────────────
 
-def scrape(use_cache: bool = True, out_path: str = "data/rates.json") -> None:
-    Path("cache").mkdir(exist_ok=True)
+def scrape(use_cache: bool = True, out_path: str | None = None) -> None:
+    if out_path is None:
+        out_path = str(_ROOT / "data" / "rates.json")
+    (_ROOT / "cache").mkdir(exist_ok=True)
 
     print("Fetching page for patch version...")
     html = fetch_page_html(use_cache=use_cache)
@@ -168,7 +172,7 @@ def scrape(use_cache: bool = True, out_path: str = "data/rates.json") -> None:
 def main() -> None:
     parser = argparse.ArgumentParser(description="Scrape Overwatch hero rates")
     parser.add_argument("--no-cache", action="store_true", help="Ignore cached responses")
-    parser.add_argument("--out", default="data/rates.json", help="Output file (default: data/rates.json)")
+    parser.add_argument("--out", default=str(_ROOT / "data" / "rates.json"), help="Output file (default: data/rates.json)")
     args = parser.parse_args()
 
     scrape(use_cache=not args.no_cache, out_path=args.out)

@@ -6,9 +6,9 @@ Positive gap = higher at GM than Bronze; negative = lower.
 Heroes sorted by pick-rate gap descending.
 
 Usage:
-    python3 hero_rank_gaps.py                  # all regions averaged
-    python3 hero_rank_gaps.py --americas       # one region only
-    python3 hero_rank_gaps.py --role support   # filter by role
+    python3 hero_rank_gaps.py                          # all regions averaged
+    python3 hero_rank_gaps.py --region americas        # one region only
+    python3 hero_rank_gaps.py --role support           # filter by role
     python3 hero_rank_gaps.py --data other.json --out results/
 """
 
@@ -16,6 +16,8 @@ import argparse
 import json
 import sys
 from pathlib import Path
+
+_ROOT = Path(__file__).parent.parent
 
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
@@ -31,6 +33,8 @@ ROLE_COLORS = {
     "damage":  "#E87722",
     "support": "#70AD47",
 }
+
+INPUT_MODE = "Mouse & Keyboard"
 
 REGION_DISPLAY = {
     "americas": "Americas",
@@ -118,7 +122,7 @@ def make_chart(
     region_label = REGION_DISPLAY.get(region_key, region_key.title())
     patch_str    = f"  •  Patch {patch}" if patch else ""
     date_str     = f"  •  {fetched_date}" if fetched_date else ""
-    subtitle     = f"{region_label}{patch_str}{date_str}"
+    subtitle     = f"{region_label}  •  {INPUT_MODE}{patch_str}{date_str}"
 
     fig, (ax_pick, ax_win) = plt.subplots(
         2, 1, figsize=(max(14, n * 0.38), 10),
@@ -186,15 +190,11 @@ def make_chart(
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Bronze→GM gap bar chart")
-
-    region_group = parser.add_mutually_exclusive_group()
-    region_group.add_argument("--americas", action="store_true")
-    region_group.add_argument("--asia",     action="store_true")
-    region_group.add_argument("--europe",   action="store_true")
-
+    parser.add_argument("--region", choices=["americas", "asia", "europe"],
+                        metavar="REGION", help="Region to show (default: average all). Choices: americas, asia, europe")
     parser.add_argument("--role", metavar="ROLE", choices=["tank", "damage", "support"])
-    parser.add_argument("--data", default="data/rates.json", metavar="FILE")
-    parser.add_argument("--out",  default="outputs",    metavar="DIR")
+    parser.add_argument("--data", default=str(_ROOT / "data" / "rates.json"), metavar="FILE")
+    parser.add_argument("--out",  default=str(_ROOT / "outputs"),             metavar="DIR")
     args = parser.parse_args()
 
     payload      = load_data(args.data)
@@ -203,16 +203,8 @@ def main() -> None:
     fetched_date = (payload.get("fetched_at") or "")[:10] or None
     hero_roles   = payload.get("hero_roles", {})
 
-    if args.americas:
-        region_key = "americas"
-    elif args.asia:
-        region_key = "asia"
-    elif args.europe:
-        region_key = "europe"
-    else:
-        region_key = "all"
-
-    region_filter = None if region_key == "all" else region_key
+    region_key    = args.region or "all"
+    region_filter = args.region
 
     gaps = compute_gaps(rows, region_filter, hero_roles)
     print(f"Heroes with complete data: {len(gaps)}  region={region_key}")

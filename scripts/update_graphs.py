@@ -14,8 +14,9 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 
-DATA_FILE = "data/rates.json"
-RELEASES_DIR = Path("releases/current")
+_ROOT = Path(__file__).parent.parent
+DATA_FILE = str(_ROOT / "data" / "rates.json")
+RELEASES_DIR = _ROOT / "releases" / "current"
 
 
 # ---------------------------------------------------------------------------

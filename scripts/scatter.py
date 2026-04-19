@@ -3,19 +3,21 @@
 Scatter plot: pick rate (x) vs win rate (y), one point per hero.
 
 Usage:
-    python3 scatter.py                         # all regions, all ranks
-    python3 scatter.py --rank bronze           # bronze tier only
-    python3 scatter.py --americas              # Americas region only
-    python3 scatter.py --europe --rank master  # Europe, master tier
-    python3 scatter.py --role support          # only support heroes
-    python3 scatter.py --data other.json       # different data file
-    python3 scatter.py --out results/          # different output folder
+    python3 scatter.py                                  # all regions, all ranks
+    python3 scatter.py --rank bronze                    # bronze tier only
+    python3 scatter.py --region americas                # Americas region only
+    python3 scatter.py --region europe --rank master    # Europe, master tier
+    python3 scatter.py --role support                   # only support heroes
+    python3 scatter.py --data other.json                # different data file
+    python3 scatter.py --out results/                   # different output folder
 """
 
 import argparse
 import json
 import sys
 from pathlib import Path
+
+_ROOT = Path(__file__).parent.parent
 
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
@@ -32,6 +34,8 @@ ROLE_LABELS = {
     "damage":  "Damage",
     "support": "Support",
 }
+
+INPUT_MODE = "Mouse & Keyboard"
 
 REGION_DISPLAY = {
     "americas": "Americas",
@@ -115,7 +119,7 @@ def make_scatter(
     tier_label   = RANK_DISPLAY.get(tier_key, tier_key.title())
     patch_str    = f"  •  Patch {patch}" if patch else ""
     date_str     = f"  •  {fetched_date}" if fetched_date else ""
-    subtitle     = f"{region_label}  •  {tier_label}{patch_str}{date_str}"
+    subtitle     = f"{region_label}  •  {INPUT_MODE}  •  {tier_label}{patch_str}{date_str}"
 
     fig, ax = plt.subplots(figsize=(13, 8))
     fig.patch.set_facecolor("#1A1A2E")
@@ -192,22 +196,18 @@ def make_scatter(
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Scatter: pick rate vs win rate for all heroes")
-
-    region_group = parser.add_mutually_exclusive_group()
-    region_group.add_argument("--americas", action="store_true")
-    region_group.add_argument("--asia",     action="store_true")
-    region_group.add_argument("--europe",   action="store_true")
-
+    parser.add_argument("--region", choices=["americas", "asia", "europe"],
+                        metavar="REGION", help="Region to show (default: average all). Choices: americas, asia, europe")
     parser.add_argument(
-        "--rank", "--tier",
+        "--rank",
         metavar="RANK",
         choices=RANK_ORDER + ["all"],
         default="all",
         help="Rank tier to show (default: all). Choices: " + ", ".join(RANK_ORDER + ["all"]),
     )
     parser.add_argument("--role", metavar="ROLE", choices=["tank", "damage", "support"])
-    parser.add_argument("--data", default="data/rates.json", metavar="FILE")
-    parser.add_argument("--out",  default="outputs",    metavar="DIR")
+    parser.add_argument("--data", default=str(_ROOT / "data" / "rates.json"), metavar="FILE")
+    parser.add_argument("--out",  default=str(_ROOT / "outputs"),             metavar="DIR")
     args = parser.parse_args()
 
     payload      = load_data(args.data)
@@ -216,20 +216,11 @@ def main() -> None:
     fetched_date = (payload.get("fetched_at") or "")[:10] or None
     hero_roles   = payload.get("hero_roles", {})
 
-    if args.americas:
-        region_key = "americas"
-    elif args.asia:
-        region_key = "asia"
-    elif args.europe:
-        region_key = "europe"
-    else:
-        region_key = None  # average all
+    tier_key       = args.rank
+    region_display = args.region or "all"
 
-    tier_key = args.rank
+    points = build_points(rows, args.region, tier_key, hero_roles)
 
-    points = build_points(rows, region_key, tier_key, hero_roles)
-
-    region_display = region_key or "all"
     print(f"Plotting {len(points)} heroes  region={region_display}  tier={tier_key}")
 
     out_path = make_scatter(
