@@ -1,0 +1,8627 @@
+{
+  "fetched_at": "2026-04-19T23:27:48Z",
+  "patch_note": "18.47.0",
+  "hero_roles": {
+    "Ana": "support",
+    "Anran": "damage",
+    "Ashe": "damage",
+    "Baptiste": "support",
+    "Bastion": "damage",
+    "Brigitte": "support",
+    "Cassidy": "damage",
+    "D.Va": "tank",
+    "Domina": "tank",
+    "Doomfist": "tank",
+    "Echo": "damage",
+    "Emre": "damage",
+    "Freja": "damage",
+    "Genji": "damage",
+    "Hanzo": "damage",
+    "Hazard": "tank",
+    "Illari": "support",
+    "Jetpack Cat": "support",
+    "Junker Queen": "tank",
+    "Junkrat": "damage",
+    "Juno": "support",
+    "Kiriko": "support",
+    "Lifeweaver": "support",
+    "L\u00facio": "support",
+    "Mauga": "tank",
+    "Mei": "damage",
+    "Mercy": "support",
+    "Mizuki": "support",
+    "Moira": "support",
+    "Orisa": "tank",
+    "Pharah": "damage",
+    "Ramattra": "tank",
+    "Reaper": "damage",
+    "Reinhardt": "tank",
+    "Roadhog": "tank",
+    "Sierra": "damage",
+    "Sigma": "tank",
+    "Sojourn": "damage",
+    "Soldier: 76": "damage",
+    "Sombra": "damage",
+    "Symmetra": "damage",
+    "Torbj\u00f6rn": "damage",
+    "Tracer": "damage",
+    "Vendetta": "damage",
+    "Venture": "damage",
+    "Widowmaker": "damage",
+    "Winston": "tank",
+    "Wrecking Ball": "tank",
+    "Wuyang": "support",
+    "Zarya": "tank",
+    "Zenyatta": "support"
+  },
+  "rows": [
+    {
+      "region": "americas",
+      "hero": "Sierra",
+      "pick_rate": 35.7,
+      "win_rate": 48.1,
+      "tier": "all"
+    },
+    {
+      "region": "americas",
+      "hero": "Ramattra",
+      "pick_rate": 10.1,
+      "win_rate": 49.4,
+      "tier": "all"
+    },
+    {
+      "region": "americas",
+      "hero": "Ana",
+      "pick_rate": 20.2,
+      "win_rate": 46.6,
+      "tier": "all"
+    },
+    {
+      "region": "americas",
+      "hero": "Anran",
+      "pick_rate": 8.5,
+      "win_rate": 53.5,
+      "tier": "all"
+    },
+    {
+      "region": "americas",
+      "hero": "Ashe",
+      "pick_rate": 12,
+      "win_rate": 50.2,
+      "tier": "all"
+    },
+    {
+      "region": "americas",
+      "hero": "Baptiste",
+      "pick_rate": 8.8,
+      "win_rate": 46.9,
+      "tier": "all"
+    },
+    {
+      "region": "americas",
+      "hero": "Bastion",
+      "pick_rate": 16.3,
+      "win_rate": 47.8,
+      "tier": "all"
+    },
+    {
+      "region": "americas",
+      "hero": "Brigitte",
+      "pick_rate": 4.7,
+      "win_rate": 51.9,
+      "tier": "all"
+    },
+    {
+      "region": "americas",
+      "hero": "Cassidy",
+      "pick_rate": 11.7,
+      "win_rate": 48,
+      "tier": "all"
+    },
+    {
+      "region": "americas",
+      "hero": "D.Va",
+      "pick_rate": 10.6,
+      "win_rate": 51.2,
+      "tier": "all"
+    },
+    {
+      "region": "americas",
+      "hero": "Domina",
+      "pick_rate": 6,
+      "win_rate": 50.6,
+      "tier": "all"
+    },
+    {
+      "region": "americas",
+      "hero": "Doomfist",
+      "pick_rate": 4.1,
+      "win_rate": 50.2,
+      "tier": "all"
+    },
+    {
+      "region": "americas",
+      "hero": "Echo",
+      "pick_rate": 4.1,
+      "win_rate": 49.9,
+      "tier": "all"
+    },
+    {
+      "region": "americas",
+      "hero": "Emre",
+      "pick_rate": 14.5,
+      "win_rate": 48.4,
+      "tier": "all"
+    },
+    {
+      "region": "americas",
+      "hero": "Freja",
+      "pick_rate": 2.5,
+      "win_rate": 46.1,
+      "tier": "all"
+    },
+    {
+      "region": "americas",
+      "hero": "Genji",
+      "pick_rate": 8,
+      "win_rate": 52.3,
+      "tier": "all"
+    },
+    {
+      "region": "americas",
+      "hero": "Hanzo",
+      "pick_rate": 4.8,
+      "win_rate": 49.6,
+      "tier": "all"
+    },
+    {
+      "region": "americas",
+      "hero": "Hazard",
+      "pick_rate": 3.2,
+      "win_rate": 52.2,
+      "tier": "all"
+    },
+    {
+      "region": "americas",
+      "hero": "Illari",
+      "pick_rate": 13.5,
+      "win_rate": 52,
+      "tier": "all"
+    },
+    {
+      "region": "americas",
+      "hero": "Jetpack Cat",
+      "pick_rate": 6.9,
+      "win_rate": 49.6,
+      "tier": "all"
+    },
+    {
+      "region": "americas",
+      "hero": "Junker Queen",
+      "pick_rate": 3.6,
+      "win_rate": 49.9,
+      "tier": "all"
+    },
+    {
+      "region": "americas",
+      "hero": "Junkrat",
+      "pick_rate": 6.4,
+      "win_rate": 48.9,
+      "tier": "all"
+    },
+    {
+      "region": "americas",
+      "hero": "Juno",
+      "pick_rate": 27.6,
+      "win_rate": 51.3,
+      "tier": "all"
+    },
+    {
+      "region": "americas",
+      "hero": "Kiriko",
+      "pick_rate": 17.3,
+      "win_rate": 46.6,
+      "tier": "all"
+    },
+    {
+      "region": "americas",
+      "hero": "Lifeweaver",
+      "pick_rate": 12.5,
+      "win_rate": 49.3,
+      "tier": "all"
+    },
+    {
+      "region": "americas",
+      "hero": "L\u00facio",
+      "pick_rate": 9.1,
+      "win_rate": 51,
+      "tier": "all"
+    },
+    {
+      "region": "americas",
+      "hero": "Mauga",
+      "pick_rate": 7.8,
+      "win_rate": 51.3,
+      "tier": "all"
+    },
+    {
+      "region": "americas",
+      "hero": "Mei",
+      "pick_rate": 6.1,
+      "win_rate": 48.4,
+      "tier": "all"
+    },
+    {
+      "region": "americas",
+      "hero": "Mercy",
+      "pick_rate": 21.7,
+      "win_rate": 49.4,
+      "tier": "all"
+    },
+    {
+      "region": "americas",
+      "hero": "Mizuki",
+      "pick_rate": 12.8,
+      "win_rate": 51.4,
+      "tier": "all"
+    },
+    {
+      "region": "americas",
+      "hero": "Moira",
+      "pick_rate": 25.7,
+      "win_rate": 47.5,
+      "tier": "all"
+    },
+    {
+      "region": "americas",
+      "hero": "Orisa",
+      "pick_rate": 15.8,
+      "win_rate": 48.2,
+      "tier": "all"
+    },
+    {
+      "region": "americas",
+      "hero": "Pharah",
+      "pick_rate": 1.8,
+      "win_rate": 50.1,
+      "tier": "all"
+    },
+    {
+      "region": "americas",
+      "hero": "Reaper",
+      "pick_rate": 13.2,
+      "win_rate": 52.8,
+      "tier": "all"
+    },
+    {
+      "region": "americas",
+      "hero": "Reinhardt",
+      "pick_rate": 9,
+      "win_rate": 51.2,
+      "tier": "all"
+    },
+    {
+      "region": "americas",
+      "hero": "Roadhog",
+      "pick_rate": 7.7,
+      "win_rate": 45.4,
+      "tier": "all"
+    },
+    {
+      "region": "americas",
+      "hero": "Sigma",
+      "pick_rate": 10.6,
+      "win_rate": 49.9,
+      "tier": "all"
+    },
+    {
+      "region": "americas",
+      "hero": "Sojourn",
+      "pick_rate": 8.6,
+      "win_rate": 44,
+      "tier": "all"
+    },
+    {
+      "region": "americas",
+      "hero": "Soldier: 76",
+      "pick_rate": 22.2,
+      "win_rate": 50.8,
+      "tier": "all"
+    },
+    {
+      "region": "americas",
+      "hero": "Sombra",
+      "pick_rate": 2.3,
+      "win_rate": 51.1,
+      "tier": "all"
+    },
+    {
+      "region": "americas",
+      "hero": "Symmetra",
+      "pick_rate": 3.2,
+      "win_rate": 50.2,
+      "tier": "all"
+    },
+    {
+      "region": "americas",
+      "hero": "Torbj\u00f6rn",
+      "pick_rate": 6.1,
+      "win_rate": 51.7,
+      "tier": "all"
+    },
+    {
+      "region": "americas",
+      "hero": "Tracer",
+      "pick_rate": 4.7,
+      "win_rate": 52.1,
+      "tier": "all"
+    },
+    {
+      "region": "americas",
+      "hero": "Vendetta",
+      "pick_rate": 1.8,
+      "win_rate": 45.3,
+      "tier": "all"
+    },
+    {
+      "region": "americas",
+      "hero": "Venture",
+      "pick_rate": 1.9,
+      "win_rate": 50.8,
+      "tier": "all"
+    },
+    {
+      "region": "americas",
+      "hero": "Widowmaker",
+      "pick_rate": 3.7,
+      "win_rate": 50.4,
+      "tier": "all"
+    },
+    {
+      "region": "americas",
+      "hero": "Winston",
+      "pick_rate": 3.6,
+      "win_rate": 49.2,
+      "tier": "all"
+    },
+    {
+      "region": "americas",
+      "hero": "Wrecking Ball",
+      "pick_rate": 2.5,
+      "win_rate": 50.7,
+      "tier": "all"
+    },
+    {
+      "region": "americas",
+      "hero": "Wuyang",
+      "pick_rate": 4.6,
+      "win_rate": 49.1,
+      "tier": "all"
+    },
+    {
+      "region": "americas",
+      "hero": "Zarya",
+      "pick_rate": 5.3,
+      "win_rate": 46.5,
+      "tier": "all"
+    },
+    {
+      "region": "americas",
+      "hero": "Zenyatta",
+      "pick_rate": 14.6,
+      "win_rate": 53.4,
+      "tier": "all"
+    },
+    {
+      "region": "americas",
+      "hero": "Sierra",
+      "pick_rate": 39.7,
+      "win_rate": 51,
+      "tier": "bronze"
+    },
+    {
+      "region": "americas",
+      "hero": "Ramattra",
+      "pick_rate": 11.1,
+      "win_rate": 52,
+      "tier": "bronze"
+    },
+    {
+      "region": "americas",
+      "hero": "Ana",
+      "pick_rate": 10.5,
+      "win_rate": 45.1,
+      "tier": "bronze"
+    },
+    {
+      "region": "americas",
+      "hero": "Anran",
+      "pick_rate": 8.2,
+      "win_rate": 49.1,
+      "tier": "bronze"
+    },
+    {
+      "region": "americas",
+      "hero": "Ashe",
+      "pick_rate": 12.6,
+      "win_rate": 49.4,
+      "tier": "bronze"
+    },
+    {
+      "region": "americas",
+      "hero": "Baptiste",
+      "pick_rate": 6.2,
+      "win_rate": 44.6,
+      "tier": "bronze"
+    },
+    {
+      "region": "americas",
+      "hero": "Bastion",
+      "pick_rate": 20.8,
+      "win_rate": 50.1,
+      "tier": "bronze"
+    },
+    {
+      "region": "americas",
+      "hero": "Brigitte",
+      "pick_rate": 3.3,
+      "win_rate": 51,
+      "tier": "bronze"
+    },
+    {
+      "region": "americas",
+      "hero": "Cassidy",
+      "pick_rate": 7,
+      "win_rate": 49.6,
+      "tier": "bronze"
+    },
+    {
+      "region": "americas",
+      "hero": "D.Va",
+      "pick_rate": 17.7,
+      "win_rate": 49.3,
+      "tier": "bronze"
+    },
+    {
+      "region": "americas",
+      "hero": "Domina",
+      "pick_rate": 6.2,
+      "win_rate": 52.3,
+      "tier": "bronze"
+    },
+    {
+      "region": "americas",
+      "hero": "Doomfist",
+      "pick_rate": 1.7,
+      "win_rate": 49.5,
+      "tier": "bronze"
+    },
+    {
+      "region": "americas",
+      "hero": "Echo",
+      "pick_rate": 5.9,
+      "win_rate": 49.5,
+      "tier": "bronze"
+    },
+    {
+      "region": "americas",
+      "hero": "Emre",
+      "pick_rate": 13.6,
+      "win_rate": 47.3,
+      "tier": "bronze"
+    },
+    {
+      "region": "americas",
+      "hero": "Freja",
+      "pick_rate": 5,
+      "win_rate": 47.1,
+      "tier": "bronze"
+    },
+    {
+      "region": "americas",
+      "hero": "Genji",
+      "pick_rate": 4.8,
+      "win_rate": 49.8,
+      "tier": "bronze"
+    },
+    {
+      "region": "americas",
+      "hero": "Hanzo",
+      "pick_rate": 6.4,
+      "win_rate": 45.3,
+      "tier": "bronze"
+    },
+    {
+      "region": "americas",
+      "hero": "Hazard",
+      "pick_rate": 2.4,
+      "win_rate": 39.8,
+      "tier": "bronze"
+    },
+    {
+      "region": "americas",
+      "hero": "Illari",
+      "pick_rate": 11.6,
+      "win_rate": 51.1,
+      "tier": "bronze"
+    },
+    {
+      "region": "americas",
+      "hero": "Jetpack Cat",
+      "pick_rate": 5.3,
+      "win_rate": 50.3,
+      "tier": "bronze"
+    },
+    {
+      "region": "americas",
+      "hero": "Junker Queen",
+      "pick_rate": 3.2,
+      "win_rate": 49.6,
+      "tier": "bronze"
+    },
+    {
+      "region": "americas",
+      "hero": "Junkrat",
+      "pick_rate": 7.5,
+      "win_rate": 47.7,
+      "tier": "bronze"
+    },
+    {
+      "region": "americas",
+      "hero": "Juno",
+      "pick_rate": 34.6,
+      "win_rate": 51.3,
+      "tier": "bronze"
+    },
+    {
+      "region": "americas",
+      "hero": "Kiriko",
+      "pick_rate": 17.4,
+      "win_rate": 48.5,
+      "tier": "bronze"
+    },
+    {
+      "region": "americas",
+      "hero": "Lifeweaver",
+      "pick_rate": 11.2,
+      "win_rate": 47.2,
+      "tier": "bronze"
+    },
+    {
+      "region": "americas",
+      "hero": "L\u00facio",
+      "pick_rate": 10.3,
+      "win_rate": 50.6,
+      "tier": "bronze"
+    },
+    {
+      "region": "americas",
+      "hero": "Mauga",
+      "pick_rate": 8.1,
+      "win_rate": 49,
+      "tier": "bronze"
+    },
+    {
+      "region": "americas",
+      "hero": "Mei",
+      "pick_rate": 5.5,
+      "win_rate": 50.6,
+      "tier": "bronze"
+    },
+    {
+      "region": "americas",
+      "hero": "Mercy",
+      "pick_rate": 25.8,
+      "win_rate": 47.9,
+      "tier": "bronze"
+    },
+    {
+      "region": "americas",
+      "hero": "Mizuki",
+      "pick_rate": 13.1,
+      "win_rate": 52,
+      "tier": "bronze"
+    },
+    {
+      "region": "americas",
+      "hero": "Moira",
+      "pick_rate": 27.9,
+      "win_rate": 51.3,
+      "tier": "bronze"
+    },
+    {
+      "region": "americas",
+      "hero": "Orisa",
+      "pick_rate": 20,
+      "win_rate": 49.2,
+      "tier": "bronze"
+    },
+    {
+      "region": "americas",
+      "hero": "Pharah",
+      "pick_rate": 2.8,
+      "win_rate": 49.5,
+      "tier": "bronze"
+    },
+    {
+      "region": "americas",
+      "hero": "Reaper",
+      "pick_rate": 8.6,
+      "win_rate": 54,
+      "tier": "bronze"
+    },
+    {
+      "region": "americas",
+      "hero": "Reinhardt",
+      "pick_rate": 6.7,
+      "win_rate": 51.5,
+      "tier": "bronze"
+    },
+    {
+      "region": "americas",
+      "hero": "Roadhog",
+      "pick_rate": 5.4,
+      "win_rate": 43.7,
+      "tier": "bronze"
+    },
+    {
+      "region": "americas",
+      "hero": "Sigma",
+      "pick_rate": 10.6,
+      "win_rate": 52,
+      "tier": "bronze"
+    },
+    {
+      "region": "americas",
+      "hero": "Sojourn",
+      "pick_rate": 11.2,
+      "win_rate": 44.1,
+      "tier": "bronze"
+    },
+    {
+      "region": "americas",
+      "hero": "Soldier: 76",
+      "pick_rate": 16.6,
+      "win_rate": 51.7,
+      "tier": "bronze"
+    },
+    {
+      "region": "americas",
+      "hero": "Sombra",
+      "pick_rate": 1.8,
+      "win_rate": 57.2,
+      "tier": "bronze"
+    },
+    {
+      "region": "americas",
+      "hero": "Symmetra",
+      "pick_rate": 3.5,
+      "win_rate": 56.5,
+      "tier": "bronze"
+    },
+    {
+      "region": "americas",
+      "hero": "Torbj\u00f6rn",
+      "pick_rate": 6.3,
+      "win_rate": 55.9,
+      "tier": "bronze"
+    },
+    {
+      "region": "americas",
+      "hero": "Tracer",
+      "pick_rate": 3.4,
+      "win_rate": 51.4,
+      "tier": "bronze"
+    },
+    {
+      "region": "americas",
+      "hero": "Vendetta",
+      "pick_rate": 2.3,
+      "win_rate": 48,
+      "tier": "bronze"
+    },
+    {
+      "region": "americas",
+      "hero": "Venture",
+      "pick_rate": 1.6,
+      "win_rate": 48.3,
+      "tier": "bronze"
+    },
+    {
+      "region": "americas",
+      "hero": "Widowmaker",
+      "pick_rate": 4.8,
+      "win_rate": 44.7,
+      "tier": "bronze"
+    },
+    {
+      "region": "americas",
+      "hero": "Winston",
+      "pick_rate": 2,
+      "win_rate": 47.4,
+      "tier": "bronze"
+    },
+    {
+      "region": "americas",
+      "hero": "Wrecking Ball",
+      "pick_rate": 1.8,
+      "win_rate": 51,
+      "tier": "bronze"
+    },
+    {
+      "region": "americas",
+      "hero": "Wuyang",
+      "pick_rate": 5.9,
+      "win_rate": 48.3,
+      "tier": "bronze"
+    },
+    {
+      "region": "americas",
+      "hero": "Zarya",
+      "pick_rate": 3,
+      "win_rate": 50.4,
+      "tier": "bronze"
+    },
+    {
+      "region": "americas",
+      "hero": "Zenyatta",
+      "pick_rate": 16.9,
+      "win_rate": 51.9,
+      "tier": "bronze"
+    },
+    {
+      "region": "americas",
+      "hero": "Sierra",
+      "pick_rate": 38.8,
+      "win_rate": 49.9,
+      "tier": "silver"
+    },
+    {
+      "region": "americas",
+      "hero": "Ramattra",
+      "pick_rate": 12,
+      "win_rate": 50.8,
+      "tier": "silver"
+    },
+    {
+      "region": "americas",
+      "hero": "Ana",
+      "pick_rate": 13.9,
+      "win_rate": 46,
+      "tier": "silver"
+    },
+    {
+      "region": "americas",
+      "hero": "Anran",
+      "pick_rate": 9.1,
+      "win_rate": 52.4,
+      "tier": "silver"
+    },
+    {
+      "region": "americas",
+      "hero": "Ashe",
+      "pick_rate": 11.6,
+      "win_rate": 48.4,
+      "tier": "silver"
+    },
+    {
+      "region": "americas",
+      "hero": "Baptiste",
+      "pick_rate": 6.5,
+      "win_rate": 44.9,
+      "tier": "silver"
+    },
+    {
+      "region": "americas",
+      "hero": "Bastion",
+      "pick_rate": 20.7,
+      "win_rate": 49.6,
+      "tier": "silver"
+    },
+    {
+      "region": "americas",
+      "hero": "Brigitte",
+      "pick_rate": 3.6,
+      "win_rate": 52.2,
+      "tier": "silver"
+    },
+    {
+      "region": "americas",
+      "hero": "Cassidy",
+      "pick_rate": 7.7,
+      "win_rate": 48.7,
+      "tier": "silver"
+    },
+    {
+      "region": "americas",
+      "hero": "D.Va",
+      "pick_rate": 13.5,
+      "win_rate": 50.1,
+      "tier": "silver"
+    },
+    {
+      "region": "americas",
+      "hero": "Domina",
+      "pick_rate": 6.3,
+      "win_rate": 51.3,
+      "tier": "silver"
+    },
+    {
+      "region": "americas",
+      "hero": "Doomfist",
+      "pick_rate": 2.6,
+      "win_rate": 48.4,
+      "tier": "silver"
+    },
+    {
+      "region": "americas",
+      "hero": "Echo",
+      "pick_rate": 4.4,
+      "win_rate": 48.4,
+      "tier": "silver"
+    },
+    {
+      "region": "americas",
+      "hero": "Emre",
+      "pick_rate": 13.2,
+      "win_rate": 47.9,
+      "tier": "silver"
+    },
+    {
+      "region": "americas",
+      "hero": "Freja",
+      "pick_rate": 3.6,
+      "win_rate": 46,
+      "tier": "silver"
+    },
+    {
+      "region": "americas",
+      "hero": "Genji",
+      "pick_rate": 5.4,
+      "win_rate": 51.6,
+      "tier": "silver"
+    },
+    {
+      "region": "americas",
+      "hero": "Hanzo",
+      "pick_rate": 5.6,
+      "win_rate": 49.6,
+      "tier": "silver"
+    },
+    {
+      "region": "americas",
+      "hero": "Hazard",
+      "pick_rate": 2.2,
+      "win_rate": 50,
+      "tier": "silver"
+    },
+    {
+      "region": "americas",
+      "hero": "Illari",
+      "pick_rate": 12.7,
+      "win_rate": 51.4,
+      "tier": "silver"
+    },
+    {
+      "region": "americas",
+      "hero": "Jetpack Cat",
+      "pick_rate": 6,
+      "win_rate": 48.6,
+      "tier": "silver"
+    },
+    {
+      "region": "americas",
+      "hero": "Junker Queen",
+      "pick_rate": 3.2,
+      "win_rate": 49.8,
+      "tier": "silver"
+    },
+    {
+      "region": "americas",
+      "hero": "Junkrat",
+      "pick_rate": 8.2,
+      "win_rate": 47.6,
+      "tier": "silver"
+    },
+    {
+      "region": "americas",
+      "hero": "Juno",
+      "pick_rate": 29.5,
+      "win_rate": 51.5,
+      "tier": "silver"
+    },
+    {
+      "region": "americas",
+      "hero": "Kiriko",
+      "pick_rate": 15,
+      "win_rate": 47.4,
+      "tier": "silver"
+    },
+    {
+      "region": "americas",
+      "hero": "Lifeweaver",
+      "pick_rate": 12.1,
+      "win_rate": 48.6,
+      "tier": "silver"
+    },
+    {
+      "region": "americas",
+      "hero": "L\u00facio",
+      "pick_rate": 10.2,
+      "win_rate": 50.6,
+      "tier": "silver"
+    },
+    {
+      "region": "americas",
+      "hero": "Mauga",
+      "pick_rate": 7.7,
+      "win_rate": 50.1,
+      "tier": "silver"
+    },
+    {
+      "region": "americas",
+      "hero": "Mei",
+      "pick_rate": 6.7,
+      "win_rate": 49.8,
+      "tier": "silver"
+    },
+    {
+      "region": "americas",
+      "hero": "Mercy",
+      "pick_rate": 24.9,
+      "win_rate": 48,
+      "tier": "silver"
+    },
+    {
+      "region": "americas",
+      "hero": "Mizuki",
+      "pick_rate": 12.8,
+      "win_rate": 52.5,
+      "tier": "silver"
+    },
+    {
+      "region": "americas",
+      "hero": "Moira",
+      "pick_rate": 31.7,
+      "win_rate": 49.1,
+      "tier": "silver"
+    },
+    {
+      "region": "americas",
+      "hero": "Orisa",
+      "pick_rate": 18.5,
+      "win_rate": 47.9,
+      "tier": "silver"
+    },
+    {
+      "region": "americas",
+      "hero": "Pharah",
+      "pick_rate": 2.5,
+      "win_rate": 47.1,
+      "tier": "silver"
+    },
+    {
+      "region": "americas",
+      "hero": "Reaper",
+      "pick_rate": 11,
+      "win_rate": 53.5,
+      "tier": "silver"
+    },
+    {
+      "region": "americas",
+      "hero": "Reinhardt",
+      "pick_rate": 8.7,
+      "win_rate": 51.6,
+      "tier": "silver"
+    },
+    {
+      "region": "americas",
+      "hero": "Roadhog",
+      "pick_rate": 6.1,
+      "win_rate": 44.4,
+      "tier": "silver"
+    },
+    {
+      "region": "americas",
+      "hero": "Sigma",
+      "pick_rate": 11,
+      "win_rate": 51,
+      "tier": "silver"
+    },
+    {
+      "region": "americas",
+      "hero": "Sojourn",
+      "pick_rate": 9.5,
+      "win_rate": 43.6,
+      "tier": "silver"
+    },
+    {
+      "region": "americas",
+      "hero": "Soldier: 76",
+      "pick_rate": 18.6,
+      "win_rate": 51.5,
+      "tier": "silver"
+    },
+    {
+      "region": "americas",
+      "hero": "Sombra",
+      "pick_rate": 1.7,
+      "win_rate": 51,
+      "tier": "silver"
+    },
+    {
+      "region": "americas",
+      "hero": "Symmetra",
+      "pick_rate": 3.2,
+      "win_rate": 49.6,
+      "tier": "silver"
+    },
+    {
+      "region": "americas",
+      "hero": "Torbj\u00f6rn",
+      "pick_rate": 7.2,
+      "win_rate": 53.2,
+      "tier": "silver"
+    },
+    {
+      "region": "americas",
+      "hero": "Tracer",
+      "pick_rate": 3.5,
+      "win_rate": 52.5,
+      "tier": "silver"
+    },
+    {
+      "region": "americas",
+      "hero": "Vendetta",
+      "pick_rate": 2.2,
+      "win_rate": 46.1,
+      "tier": "silver"
+    },
+    {
+      "region": "americas",
+      "hero": "Venture",
+      "pick_rate": 1.9,
+      "win_rate": 50.2,
+      "tier": "silver"
+    },
+    {
+      "region": "americas",
+      "hero": "Widowmaker",
+      "pick_rate": 3.5,
+      "win_rate": 46.9,
+      "tier": "silver"
+    },
+    {
+      "region": "americas",
+      "hero": "Winston",
+      "pick_rate": 2.7,
+      "win_rate": 47.7,
+      "tier": "silver"
+    },
+    {
+      "region": "americas",
+      "hero": "Wrecking Ball",
+      "pick_rate": 1.8,
+      "win_rate": 49.6,
+      "tier": "silver"
+    },
+    {
+      "region": "americas",
+      "hero": "Wuyang",
+      "pick_rate": 5,
+      "win_rate": 47.7,
+      "tier": "silver"
+    },
+    {
+      "region": "americas",
+      "hero": "Zarya",
+      "pick_rate": 3.9,
+      "win_rate": 49.4,
+      "tier": "silver"
+    },
+    {
+      "region": "americas",
+      "hero": "Zenyatta",
+      "pick_rate": 16.3,
+      "win_rate": 53.3,
+      "tier": "silver"
+    },
+    {
+      "region": "americas",
+      "hero": "Sierra",
+      "pick_rate": 38.4,
+      "win_rate": 48.4,
+      "tier": "gold"
+    },
+    {
+      "region": "americas",
+      "hero": "Ramattra",
+      "pick_rate": 11.2,
+      "win_rate": 49.8,
+      "tier": "gold"
+    },
+    {
+      "region": "americas",
+      "hero": "Ana",
+      "pick_rate": 17.7,
+      "win_rate": 46.6,
+      "tier": "gold"
+    },
+    {
+      "region": "americas",
+      "hero": "Anran",
+      "pick_rate": 8.8,
+      "win_rate": 53.8,
+      "tier": "gold"
+    },
+    {
+      "region": "americas",
+      "hero": "Ashe",
+      "pick_rate": 11.6,
+      "win_rate": 50.2,
+      "tier": "gold"
+    },
+    {
+      "region": "americas",
+      "hero": "Baptiste",
+      "pick_rate": 7.3,
+      "win_rate": 47,
+      "tier": "gold"
+    },
+    {
+      "region": "americas",
+      "hero": "Bastion",
+      "pick_rate": 17.5,
+      "win_rate": 47.5,
+      "tier": "gold"
+    },
+    {
+      "region": "americas",
+      "hero": "Brigitte",
+      "pick_rate": 4,
+      "win_rate": 51.8,
+      "tier": "gold"
+    },
+    {
+      "region": "americas",
+      "hero": "Cassidy",
+      "pick_rate": 9.4,
+      "win_rate": 48.9,
+      "tier": "gold"
+    },
+    {
+      "region": "americas",
+      "hero": "D.Va",
+      "pick_rate": 11.5,
+      "win_rate": 50.3,
+      "tier": "gold"
+    },
+    {
+      "region": "americas",
+      "hero": "Domina",
+      "pick_rate": 6.2,
+      "win_rate": 49.8,
+      "tier": "gold"
+    },
+    {
+      "region": "americas",
+      "hero": "Doomfist",
+      "pick_rate": 3.3,
+      "win_rate": 51.6,
+      "tier": "gold"
+    },
+    {
+      "region": "americas",
+      "hero": "Echo",
+      "pick_rate": 4,
+      "win_rate": 48.8,
+      "tier": "gold"
+    },
+    {
+      "region": "americas",
+      "hero": "Emre",
+      "pick_rate": 13.6,
+      "win_rate": 48.4,
+      "tier": "gold"
+    },
+    {
+      "region": "americas",
+      "hero": "Freja",
+      "pick_rate": 2.6,
+      "win_rate": 46.7,
+      "tier": "gold"
+    },
+    {
+      "region": "americas",
+      "hero": "Genji",
+      "pick_rate": 6.8,
+      "win_rate": 52,
+      "tier": "gold"
+    },
+    {
+      "region": "americas",
+      "hero": "Hanzo",
+      "pick_rate": 5.2,
+      "win_rate": 50.2,
+      "tier": "gold"
+    },
+    {
+      "region": "americas",
+      "hero": "Hazard",
+      "pick_rate": 2.4,
+      "win_rate": 52.6,
+      "tier": "gold"
+    },
+    {
+      "region": "americas",
+      "hero": "Illari",
+      "pick_rate": 13.1,
+      "win_rate": 51.5,
+      "tier": "gold"
+    },
+    {
+      "region": "americas",
+      "hero": "Jetpack Cat",
+      "pick_rate": 6.6,
+      "win_rate": 49.7,
+      "tier": "gold"
+    },
+    {
+      "region": "americas",
+      "hero": "Junker Queen",
+      "pick_rate": 3.5,
+      "win_rate": 50.1,
+      "tier": "gold"
+    },
+    {
+      "region": "americas",
+      "hero": "Junkrat",
+      "pick_rate": 7.4,
+      "win_rate": 49.1,
+      "tier": "gold"
+    },
+    {
+      "region": "americas",
+      "hero": "Juno",
+      "pick_rate": 27.2,
+      "win_rate": 50.9,
+      "tier": "gold"
+    },
+    {
+      "region": "americas",
+      "hero": "Kiriko",
+      "pick_rate": 15.5,
+      "win_rate": 46.6,
+      "tier": "gold"
+    },
+    {
+      "region": "americas",
+      "hero": "Lifeweaver",
+      "pick_rate": 12.7,
+      "win_rate": 49,
+      "tier": "gold"
+    },
+    {
+      "region": "americas",
+      "hero": "L\u00facio",
+      "pick_rate": 10,
+      "win_rate": 50.7,
+      "tier": "gold"
+    },
+    {
+      "region": "americas",
+      "hero": "Mauga",
+      "pick_rate": 7.7,
+      "win_rate": 50.5,
+      "tier": "gold"
+    },
+    {
+      "region": "americas",
+      "hero": "Mei",
+      "pick_rate": 7,
+      "win_rate": 48.7,
+      "tier": "gold"
+    },
+    {
+      "region": "americas",
+      "hero": "Mercy",
+      "pick_rate": 23.5,
+      "win_rate": 48.8,
+      "tier": "gold"
+    },
+    {
+      "region": "americas",
+      "hero": "Mizuki",
+      "pick_rate": 13,
+      "win_rate": 52,
+      "tier": "gold"
+    },
+    {
+      "region": "americas",
+      "hero": "Moira",
+      "pick_rate": 30.1,
+      "win_rate": 48,
+      "tier": "gold"
+    },
+    {
+      "region": "americas",
+      "hero": "Orisa",
+      "pick_rate": 16.7,
+      "win_rate": 48.1,
+      "tier": "gold"
+    },
+    {
+      "region": "americas",
+      "hero": "Pharah",
+      "pick_rate": 1.9,
+      "win_rate": 50,
+      "tier": "gold"
+    },
+    {
+      "region": "americas",
+      "hero": "Reaper",
+      "pick_rate": 12.9,
+      "win_rate": 52.9,
+      "tier": "gold"
+    },
+    {
+      "region": "americas",
+      "hero": "Reinhardt",
+      "pick_rate": 9.5,
+      "win_rate": 52,
+      "tier": "gold"
+    },
+    {
+      "region": "americas",
+      "hero": "Roadhog",
+      "pick_rate": 6.8,
+      "win_rate": 44.8,
+      "tier": "gold"
+    },
+    {
+      "region": "americas",
+      "hero": "Sigma",
+      "pick_rate": 11.1,
+      "win_rate": 49.4,
+      "tier": "gold"
+    },
+    {
+      "region": "americas",
+      "hero": "Sojourn",
+      "pick_rate": 8.4,
+      "win_rate": 43.3,
+      "tier": "gold"
+    },
+    {
+      "region": "americas",
+      "hero": "Soldier: 76",
+      "pick_rate": 20.8,
+      "win_rate": 50.4,
+      "tier": "gold"
+    },
+    {
+      "region": "americas",
+      "hero": "Sombra",
+      "pick_rate": 1.9,
+      "win_rate": 51.8,
+      "tier": "gold"
+    },
+    {
+      "region": "americas",
+      "hero": "Symmetra",
+      "pick_rate": 3.4,
+      "win_rate": 50.7,
+      "tier": "gold"
+    },
+    {
+      "region": "americas",
+      "hero": "Torbj\u00f6rn",
+      "pick_rate": 7.2,
+      "win_rate": 51.8,
+      "tier": "gold"
+    },
+    {
+      "region": "americas",
+      "hero": "Tracer",
+      "pick_rate": 3.8,
+      "win_rate": 51.5,
+      "tier": "gold"
+    },
+    {
+      "region": "americas",
+      "hero": "Vendetta",
+      "pick_rate": 1.9,
+      "win_rate": 45.1,
+      "tier": "gold"
+    },
+    {
+      "region": "americas",
+      "hero": "Venture",
+      "pick_rate": 2,
+      "win_rate": 51.2,
+      "tier": "gold"
+    },
+    {
+      "region": "americas",
+      "hero": "Widowmaker",
+      "pick_rate": 3.6,
+      "win_rate": 49.8,
+      "tier": "gold"
+    },
+    {
+      "region": "americas",
+      "hero": "Winston",
+      "pick_rate": 3.1,
+      "win_rate": 50,
+      "tier": "gold"
+    },
+    {
+      "region": "americas",
+      "hero": "Wrecking Ball",
+      "pick_rate": 2,
+      "win_rate": 50,
+      "tier": "gold"
+    },
+    {
+      "region": "americas",
+      "hero": "Wuyang",
+      "pick_rate": 4.3,
+      "win_rate": 48.6,
+      "tier": "gold"
+    },
+    {
+      "region": "americas",
+      "hero": "Zarya",
+      "pick_rate": 5,
+      "win_rate": 48.5,
+      "tier": "gold"
+    },
+    {
+      "region": "americas",
+      "hero": "Zenyatta",
+      "pick_rate": 15.1,
+      "win_rate": 53.9,
+      "tier": "gold"
+    },
+    {
+      "region": "americas",
+      "hero": "Sierra",
+      "pick_rate": 35.7,
+      "win_rate": 47.9,
+      "tier": "platinum"
+    },
+    {
+      "region": "americas",
+      "hero": "Ramattra",
+      "pick_rate": 9.9,
+      "win_rate": 48.9,
+      "tier": "platinum"
+    },
+    {
+      "region": "americas",
+      "hero": "Ana",
+      "pick_rate": 21.9,
+      "win_rate": 46.6,
+      "tier": "platinum"
+    },
+    {
+      "region": "americas",
+      "hero": "Anran",
+      "pick_rate": 8.4,
+      "win_rate": 54.1,
+      "tier": "platinum"
+    },
+    {
+      "region": "americas",
+      "hero": "Ashe",
+      "pick_rate": 11.9,
+      "win_rate": 50.4,
+      "tier": "platinum"
+    },
+    {
+      "region": "americas",
+      "hero": "Baptiste",
+      "pick_rate": 8.8,
+      "win_rate": 46.8,
+      "tier": "platinum"
+    },
+    {
+      "region": "americas",
+      "hero": "Bastion",
+      "pick_rate": 15.1,
+      "win_rate": 47.1,
+      "tier": "platinum"
+    },
+    {
+      "region": "americas",
+      "hero": "Brigitte",
+      "pick_rate": 4.7,
+      "win_rate": 52.2,
+      "tier": "platinum"
+    },
+    {
+      "region": "americas",
+      "hero": "Cassidy",
+      "pick_rate": 12.7,
+      "win_rate": 47.8,
+      "tier": "platinum"
+    },
+    {
+      "region": "americas",
+      "hero": "D.Va",
+      "pick_rate": 9.9,
+      "win_rate": 52.3,
+      "tier": "platinum"
+    },
+    {
+      "region": "americas",
+      "hero": "Domina",
+      "pick_rate": 5.8,
+      "win_rate": 50.3,
+      "tier": "platinum"
+    },
+    {
+      "region": "americas",
+      "hero": "Doomfist",
+      "pick_rate": 4.5,
+      "win_rate": 50.2,
+      "tier": "platinum"
+    },
+    {
+      "region": "americas",
+      "hero": "Echo",
+      "pick_rate": 3.9,
+      "win_rate": 50.7,
+      "tier": "platinum"
+    },
+    {
+      "region": "americas",
+      "hero": "Emre",
+      "pick_rate": 14.5,
+      "win_rate": 48,
+      "tier": "platinum"
+    },
+    {
+      "region": "americas",
+      "hero": "Freja",
+      "pick_rate": 2.1,
+      "win_rate": 45.9,
+      "tier": "platinum"
+    },
+    {
+      "region": "americas",
+      "hero": "Genji",
+      "pick_rate": 8.7,
+      "win_rate": 53.1,
+      "tier": "platinum"
+    },
+    {
+      "region": "americas",
+      "hero": "Hanzo",
+      "pick_rate": 4.6,
+      "win_rate": 49.9,
+      "tier": "platinum"
+    },
+    {
+      "region": "americas",
+      "hero": "Hazard",
+      "pick_rate": 3.2,
+      "win_rate": 52.9,
+      "tier": "platinum"
+    },
+    {
+      "region": "americas",
+      "hero": "Illari",
+      "pick_rate": 13.2,
+      "win_rate": 52.4,
+      "tier": "platinum"
+    },
+    {
+      "region": "americas",
+      "hero": "Jetpack Cat",
+      "pick_rate": 7.6,
+      "win_rate": 49.9,
+      "tier": "platinum"
+    },
+    {
+      "region": "americas",
+      "hero": "Junker Queen",
+      "pick_rate": 3.6,
+      "win_rate": 49.3,
+      "tier": "platinum"
+    },
+    {
+      "region": "americas",
+      "hero": "Junkrat",
+      "pick_rate": 6,
+      "win_rate": 48.9,
+      "tier": "platinum"
+    },
+    {
+      "region": "americas",
+      "hero": "Juno",
+      "pick_rate": 27.5,
+      "win_rate": 51.2,
+      "tier": "platinum"
+    },
+    {
+      "region": "americas",
+      "hero": "Kiriko",
+      "pick_rate": 17.1,
+      "win_rate": 46.1,
+      "tier": "platinum"
+    },
+    {
+      "region": "americas",
+      "hero": "Lifeweaver",
+      "pick_rate": 13,
+      "win_rate": 49.4,
+      "tier": "platinum"
+    },
+    {
+      "region": "americas",
+      "hero": "L\u00facio",
+      "pick_rate": 8.5,
+      "win_rate": 51.3,
+      "tier": "platinum"
+    },
+    {
+      "region": "americas",
+      "hero": "Mauga",
+      "pick_rate": 7.4,
+      "win_rate": 51.4,
+      "tier": "platinum"
+    },
+    {
+      "region": "americas",
+      "hero": "Mei",
+      "pick_rate": 6.3,
+      "win_rate": 47.5,
+      "tier": "platinum"
+    },
+    {
+      "region": "americas",
+      "hero": "Mercy",
+      "pick_rate": 21,
+      "win_rate": 49.7,
+      "tier": "platinum"
+    },
+    {
+      "region": "americas",
+      "hero": "Mizuki",
+      "pick_rate": 13,
+      "win_rate": 50.9,
+      "tier": "platinum"
+    },
+    {
+      "region": "americas",
+      "hero": "Moira",
+      "pick_rate": 24.9,
+      "win_rate": 46.8,
+      "tier": "platinum"
+    },
+    {
+      "region": "americas",
+      "hero": "Orisa",
+      "pick_rate": 14.7,
+      "win_rate": 48.1,
+      "tier": "platinum"
+    },
+    {
+      "region": "americas",
+      "hero": "Pharah",
+      "pick_rate": 1.7,
+      "win_rate": 51.1,
+      "tier": "platinum"
+    },
+    {
+      "region": "americas",
+      "hero": "Reaper",
+      "pick_rate": 14.1,
+      "win_rate": 52.7,
+      "tier": "platinum"
+    },
+    {
+      "region": "americas",
+      "hero": "Reinhardt",
+      "pick_rate": 9.8,
+      "win_rate": 50.9,
+      "tier": "platinum"
+    },
+    {
+      "region": "americas",
+      "hero": "Roadhog",
+      "pick_rate": 8.4,
+      "win_rate": 45.9,
+      "tier": "platinum"
+    },
+    {
+      "region": "americas",
+      "hero": "Sigma",
+      "pick_rate": 10.7,
+      "win_rate": 49.7,
+      "tier": "platinum"
+    },
+    {
+      "region": "americas",
+      "hero": "Sojourn",
+      "pick_rate": 7.7,
+      "win_rate": 44.5,
+      "tier": "platinum"
+    },
+    {
+      "region": "americas",
+      "hero": "Soldier: 76",
+      "pick_rate": 23,
+      "win_rate": 50.2,
+      "tier": "platinum"
+    },
+    {
+      "region": "americas",
+      "hero": "Sombra",
+      "pick_rate": 2.2,
+      "win_rate": 50.6,
+      "tier": "platinum"
+    },
+    {
+      "region": "americas",
+      "hero": "Symmetra",
+      "pick_rate": 3.3,
+      "win_rate": 50,
+      "tier": "platinum"
+    },
+    {
+      "region": "americas",
+      "hero": "Torbj\u00f6rn",
+      "pick_rate": 5.9,
+      "win_rate": 50.8,
+      "tier": "platinum"
+    },
+    {
+      "region": "americas",
+      "hero": "Tracer",
+      "pick_rate": 4.5,
+      "win_rate": 51.8,
+      "tier": "platinum"
+    },
+    {
+      "region": "americas",
+      "hero": "Vendetta",
+      "pick_rate": 1.7,
+      "win_rate": 45.6,
+      "tier": "platinum"
+    },
+    {
+      "region": "americas",
+      "hero": "Venture",
+      "pick_rate": 2,
+      "win_rate": 50.7,
+      "tier": "platinum"
+    },
+    {
+      "region": "americas",
+      "hero": "Widowmaker",
+      "pick_rate": 3.7,
+      "win_rate": 51.9,
+      "tier": "platinum"
+    },
+    {
+      "region": "americas",
+      "hero": "Winston",
+      "pick_rate": 3.8,
+      "win_rate": 49,
+      "tier": "platinum"
+    },
+    {
+      "region": "americas",
+      "hero": "Wrecking Ball",
+      "pick_rate": 2.6,
+      "win_rate": 51.3,
+      "tier": "platinum"
+    },
+    {
+      "region": "americas",
+      "hero": "Wuyang",
+      "pick_rate": 4.5,
+      "win_rate": 50.2,
+      "tier": "platinum"
+    },
+    {
+      "region": "americas",
+      "hero": "Zarya",
+      "pick_rate": 5.8,
+      "win_rate": 45.7,
+      "tier": "platinum"
+    },
+    {
+      "region": "americas",
+      "hero": "Zenyatta",
+      "pick_rate": 14.2,
+      "win_rate": 53.5,
+      "tier": "platinum"
+    },
+    {
+      "region": "americas",
+      "hero": "Sierra",
+      "pick_rate": 31.6,
+      "win_rate": 46.3,
+      "tier": "diamond"
+    },
+    {
+      "region": "americas",
+      "hero": "Ramattra",
+      "pick_rate": 7.8,
+      "win_rate": 47.5,
+      "tier": "diamond"
+    },
+    {
+      "region": "americas",
+      "hero": "Ana",
+      "pick_rate": 26.1,
+      "win_rate": 47.2,
+      "tier": "diamond"
+    },
+    {
+      "region": "americas",
+      "hero": "Anran",
+      "pick_rate": 8.3,
+      "win_rate": 53.7,
+      "tier": "diamond"
+    },
+    {
+      "region": "americas",
+      "hero": "Ashe",
+      "pick_rate": 12.3,
+      "win_rate": 51,
+      "tier": "diamond"
+    },
+    {
+      "region": "americas",
+      "hero": "Baptiste",
+      "pick_rate": 11.6,
+      "win_rate": 47.8,
+      "tier": "diamond"
+    },
+    {
+      "region": "americas",
+      "hero": "Bastion",
+      "pick_rate": 12.7,
+      "win_rate": 46.8,
+      "tier": "diamond"
+    },
+    {
+      "region": "americas",
+      "hero": "Brigitte",
+      "pick_rate": 5.8,
+      "win_rate": 51.8,
+      "tier": "diamond"
+    },
+    {
+      "region": "americas",
+      "hero": "Cassidy",
+      "pick_rate": 16.4,
+      "win_rate": 47.3,
+      "tier": "diamond"
+    },
+    {
+      "region": "americas",
+      "hero": "D.Va",
+      "pick_rate": 8.1,
+      "win_rate": 53.3,
+      "tier": "diamond"
+    },
+    {
+      "region": "americas",
+      "hero": "Domina",
+      "pick_rate": 5.9,
+      "win_rate": 52.2,
+      "tier": "diamond"
+    },
+    {
+      "region": "americas",
+      "hero": "Doomfist",
+      "pick_rate": 5.9,
+      "win_rate": 50,
+      "tier": "diamond"
+    },
+    {
+      "region": "americas",
+      "hero": "Echo",
+      "pick_rate": 3.9,
+      "win_rate": 51.4,
+      "tier": "diamond"
+    },
+    {
+      "region": "americas",
+      "hero": "Emre",
+      "pick_rate": 16.2,
+      "win_rate": 49.3,
+      "tier": "diamond"
+    },
+    {
+      "region": "americas",
+      "hero": "Freja",
+      "pick_rate": 1.7,
+      "win_rate": 44.7,
+      "tier": "diamond"
+    },
+    {
+      "region": "americas",
+      "hero": "Genji",
+      "pick_rate": 10.7,
+      "win_rate": 52.4,
+      "tier": "diamond"
+    },
+    {
+      "region": "americas",
+      "hero": "Hanzo",
+      "pick_rate": 4,
+      "win_rate": 49.3,
+      "tier": "diamond"
+    },
+    {
+      "region": "americas",
+      "hero": "Hazard",
+      "pick_rate": 4.8,
+      "win_rate": 52.7,
+      "tier": "diamond"
+    },
+    {
+      "region": "americas",
+      "hero": "Illari",
+      "pick_rate": 14.3,
+      "win_rate": 53,
+      "tier": "diamond"
+    },
+    {
+      "region": "americas",
+      "hero": "Jetpack Cat",
+      "pick_rate": 7.5,
+      "win_rate": 49.7,
+      "tier": "diamond"
+    },
+    {
+      "region": "americas",
+      "hero": "Junker Queen",
+      "pick_rate": 4.2,
+      "win_rate": 50.5,
+      "tier": "diamond"
+    },
+    {
+      "region": "americas",
+      "hero": "Junkrat",
+      "pick_rate": 4.3,
+      "win_rate": 50.4,
+      "tier": "diamond"
+    },
+    {
+      "region": "americas",
+      "hero": "Juno",
+      "pick_rate": 26.6,
+      "win_rate": 51.8,
+      "tier": "diamond"
+    },
+    {
+      "region": "americas",
+      "hero": "Kiriko",
+      "pick_rate": 20.2,
+      "win_rate": 46.1,
+      "tier": "diamond"
+    },
+    {
+      "region": "americas",
+      "hero": "Lifeweaver",
+      "pick_rate": 12.7,
+      "win_rate": 49.8,
+      "tier": "diamond"
+    },
+    {
+      "region": "americas",
+      "hero": "L\u00facio",
+      "pick_rate": 7.8,
+      "win_rate": 51.7,
+      "tier": "diamond"
+    },
+    {
+      "region": "americas",
+      "hero": "Mauga",
+      "pick_rate": 8.1,
+      "win_rate": 53.9,
+      "tier": "diamond"
+    },
+    {
+      "region": "americas",
+      "hero": "Mei",
+      "pick_rate": 4.8,
+      "win_rate": 47.7,
+      "tier": "diamond"
+    },
+    {
+      "region": "americas",
+      "hero": "Mercy",
+      "pick_rate": 18.3,
+      "win_rate": 51.4,
+      "tier": "diamond"
+    },
+    {
+      "region": "americas",
+      "hero": "Mizuki",
+      "pick_rate": 12.5,
+      "win_rate": 50.5,
+      "tier": "diamond"
+    },
+    {
+      "region": "americas",
+      "hero": "Moira",
+      "pick_rate": 18.4,
+      "win_rate": 45.2,
+      "tier": "diamond"
+    },
+    {
+      "region": "americas",
+      "hero": "Orisa",
+      "pick_rate": 13,
+      "win_rate": 48.1,
+      "tier": "diamond"
+    },
+    {
+      "region": "americas",
+      "hero": "Pharah",
+      "pick_rate": 1.4,
+      "win_rate": 52.9,
+      "tier": "diamond"
+    },
+    {
+      "region": "americas",
+      "hero": "Reaper",
+      "pick_rate": 14.1,
+      "win_rate": 52.1,
+      "tier": "diamond"
+    },
+    {
+      "region": "americas",
+      "hero": "Reinhardt",
+      "pick_rate": 8.7,
+      "win_rate": 50.4,
+      "tier": "diamond"
+    },
+    {
+      "region": "americas",
+      "hero": "Roadhog",
+      "pick_rate": 9.5,
+      "win_rate": 46,
+      "tier": "diamond"
+    },
+    {
+      "region": "americas",
+      "hero": "Sigma",
+      "pick_rate": 9.8,
+      "win_rate": 48.9,
+      "tier": "diamond"
+    },
+    {
+      "region": "americas",
+      "hero": "Sojourn",
+      "pick_rate": 8.5,
+      "win_rate": 44.1,
+      "tier": "diamond"
+    },
+    {
+      "region": "americas",
+      "hero": "Soldier: 76",
+      "pick_rate": 25.4,
+      "win_rate": 51.5,
+      "tier": "diamond"
+    },
+    {
+      "region": "americas",
+      "hero": "Sombra",
+      "pick_rate": 3,
+      "win_rate": 50.8,
+      "tier": "diamond"
+    },
+    {
+      "region": "americas",
+      "hero": "Symmetra",
+      "pick_rate": 2.8,
+      "win_rate": 49.4,
+      "tier": "diamond"
+    },
+    {
+      "region": "americas",
+      "hero": "Torbj\u00f6rn",
+      "pick_rate": 4.3,
+      "win_rate": 50.8,
+      "tier": "diamond"
+    },
+    {
+      "region": "americas",
+      "hero": "Tracer",
+      "pick_rate": 6.4,
+      "win_rate": 52.6,
+      "tier": "diamond"
+    },
+    {
+      "region": "americas",
+      "hero": "Vendetta",
+      "pick_rate": 1.5,
+      "win_rate": 43.4,
+      "tier": "diamond"
+    },
+    {
+      "region": "americas",
+      "hero": "Venture",
+      "pick_rate": 1.9,
+      "win_rate": 50.4,
+      "tier": "diamond"
+    },
+    {
+      "region": "americas",
+      "hero": "Widowmaker",
+      "pick_rate": 4,
+      "win_rate": 53.4,
+      "tier": "diamond"
+    },
+    {
+      "region": "americas",
+      "hero": "Winston",
+      "pick_rate": 4.6,
+      "win_rate": 49.7,
+      "tier": "diamond"
+    },
+    {
+      "region": "americas",
+      "hero": "Wrecking Ball",
+      "pick_rate": 3.4,
+      "win_rate": 51.1,
+      "tier": "diamond"
+    },
+    {
+      "region": "americas",
+      "hero": "Wuyang",
+      "pick_rate": 4.8,
+      "win_rate": 48.4,
+      "tier": "diamond"
+    },
+    {
+      "region": "americas",
+      "hero": "Zarya",
+      "pick_rate": 6.3,
+      "win_rate": 44,
+      "tier": "diamond"
+    },
+    {
+      "region": "americas",
+      "hero": "Zenyatta",
+      "pick_rate": 13.4,
+      "win_rate": 52.9,
+      "tier": "diamond"
+    },
+    {
+      "region": "americas",
+      "hero": "Sierra",
+      "pick_rate": 23.2,
+      "win_rate": 45.1,
+      "tier": "master"
+    },
+    {
+      "region": "americas",
+      "hero": "Ramattra",
+      "pick_rate": 5.7,
+      "win_rate": 46.5,
+      "tier": "master"
+    },
+    {
+      "region": "americas",
+      "hero": "Ana",
+      "pick_rate": 30.2,
+      "win_rate": 47.3,
+      "tier": "master"
+    },
+    {
+      "region": "americas",
+      "hero": "Anran",
+      "pick_rate": 6.9,
+      "win_rate": 52.6,
+      "tier": "master"
+    },
+    {
+      "region": "americas",
+      "hero": "Ashe",
+      "pick_rate": 14,
+      "win_rate": 53,
+      "tier": "master"
+    },
+    {
+      "region": "americas",
+      "hero": "Baptiste",
+      "pick_rate": 16.5,
+      "win_rate": 47.9,
+      "tier": "master"
+    },
+    {
+      "region": "americas",
+      "hero": "Bastion",
+      "pick_rate": 11.6,
+      "win_rate": 47.9,
+      "tier": "master"
+    },
+    {
+      "region": "americas",
+      "hero": "Brigitte",
+      "pick_rate": 8.2,
+      "win_rate": 49.8,
+      "tier": "master"
+    },
+    {
+      "region": "americas",
+      "hero": "Cassidy",
+      "pick_rate": 19.7,
+      "win_rate": 46.1,
+      "tier": "master"
+    },
+    {
+      "region": "americas",
+      "hero": "D.Va",
+      "pick_rate": 5.6,
+      "win_rate": 53.8,
+      "tier": "master"
+    },
+    {
+      "region": "americas",
+      "hero": "Domina",
+      "pick_rate": 5.5,
+      "win_rate": 50,
+      "tier": "master"
+    },
+    {
+      "region": "americas",
+      "hero": "Doomfist",
+      "pick_rate": 6.4,
+      "win_rate": 48.8,
+      "tier": "master"
+    },
+    {
+      "region": "americas",
+      "hero": "Echo",
+      "pick_rate": 3.6,
+      "win_rate": 52.9,
+      "tier": "master"
+    },
+    {
+      "region": "americas",
+      "hero": "Emre",
+      "pick_rate": 18,
+      "win_rate": 50,
+      "tier": "master"
+    },
+    {
+      "region": "americas",
+      "hero": "Freja",
+      "pick_rate": 1.4,
+      "win_rate": 44.9,
+      "tier": "master"
+    },
+    {
+      "region": "americas",
+      "hero": "Genji",
+      "pick_rate": 12.5,
+      "win_rate": 51.2,
+      "tier": "master"
+    },
+    {
+      "region": "americas",
+      "hero": "Hanzo",
+      "pick_rate": 3.4,
+      "win_rate": 50,
+      "tier": "master"
+    },
+    {
+      "region": "americas",
+      "hero": "Hazard",
+      "pick_rate": 7,
+      "win_rate": 54.2,
+      "tier": "master"
+    },
+    {
+      "region": "americas",
+      "hero": "Illari",
+      "pick_rate": 17.3,
+      "win_rate": 51.8,
+      "tier": "master"
+    },
+    {
+      "region": "americas",
+      "hero": "Jetpack Cat",
+      "pick_rate": 6.4,
+      "win_rate": 47.9,
+      "tier": "master"
+    },
+    {
+      "region": "americas",
+      "hero": "Junker Queen",
+      "pick_rate": 3.8,
+      "win_rate": 51.2,
+      "tier": "master"
+    },
+    {
+      "region": "americas",
+      "hero": "Junkrat",
+      "pick_rate": 2.5,
+      "win_rate": 52.8,
+      "tier": "master"
+    },
+    {
+      "region": "americas",
+      "hero": "Juno",
+      "pick_rate": 25.1,
+      "win_rate": 51.2,
+      "tier": "master"
+    },
+    {
+      "region": "americas",
+      "hero": "Kiriko",
+      "pick_rate": 25.9,
+      "win_rate": 46.9,
+      "tier": "master"
+    },
+    {
+      "region": "americas",
+      "hero": "Lifeweaver",
+      "pick_rate": 9.2,
+      "win_rate": 52.2,
+      "tier": "master"
+    },
+    {
+      "region": "americas",
+      "hero": "L\u00facio",
+      "pick_rate": 7.4,
+      "win_rate": 50.7,
+      "tier": "master"
+    },
+    {
+      "region": "americas",
+      "hero": "Mauga",
+      "pick_rate": 9.9,
+      "win_rate": 53.5,
+      "tier": "master"
+    },
+    {
+      "region": "americas",
+      "hero": "Mei",
+      "pick_rate": 2.9,
+      "win_rate": 46.5,
+      "tier": "master"
+    },
+    {
+      "region": "americas",
+      "hero": "Mercy",
+      "pick_rate": 15.7,
+      "win_rate": 52.8,
+      "tier": "master"
+    },
+    {
+      "region": "americas",
+      "hero": "Mizuki",
+      "pick_rate": 11.2,
+      "win_rate": 49.6,
+      "tier": "master"
+    },
+    {
+      "region": "americas",
+      "hero": "Moira",
+      "pick_rate": 10.7,
+      "win_rate": 46.6,
+      "tier": "master"
+    },
+    {
+      "region": "americas",
+      "hero": "Orisa",
+      "pick_rate": 14.8,
+      "win_rate": 50.6,
+      "tier": "master"
+    },
+    {
+      "region": "americas",
+      "hero": "Pharah",
+      "pick_rate": 1.1,
+      "win_rate": 49.9,
+      "tier": "master"
+    },
+    {
+      "region": "americas",
+      "hero": "Reaper",
+      "pick_rate": 15.1,
+      "win_rate": 51.9,
+      "tier": "master"
+    },
+    {
+      "region": "americas",
+      "hero": "Reinhardt",
+      "pick_rate": 5.9,
+      "win_rate": 48.2,
+      "tier": "master"
+    },
+    {
+      "region": "americas",
+      "hero": "Roadhog",
+      "pick_rate": 9.4,
+      "win_rate": 45.9,
+      "tier": "master"
+    },
+    {
+      "region": "americas",
+      "hero": "Sigma",
+      "pick_rate": 9,
+      "win_rate": 50.8,
+      "tier": "master"
+    },
+    {
+      "region": "americas",
+      "hero": "Sojourn",
+      "pick_rate": 10.2,
+      "win_rate": 45.1,
+      "tier": "master"
+    },
+    {
+      "region": "americas",
+      "hero": "Soldier: 76",
+      "pick_rate": 28.1,
+      "win_rate": 51.7,
+      "tier": "master"
+    },
+    {
+      "region": "americas",
+      "hero": "Sombra",
+      "pick_rate": 4.1,
+      "win_rate": 50.5,
+      "tier": "master"
+    },
+    {
+      "region": "americas",
+      "hero": "Symmetra",
+      "pick_rate": 2.1,
+      "win_rate": 47.4,
+      "tier": "master"
+    },
+    {
+      "region": "americas",
+      "hero": "Torbj\u00f6rn",
+      "pick_rate": 2.4,
+      "win_rate": 46.4,
+      "tier": "master"
+    },
+    {
+      "region": "americas",
+      "hero": "Tracer",
+      "pick_rate": 10.2,
+      "win_rate": 53.3,
+      "tier": "master"
+    },
+    {
+      "region": "americas",
+      "hero": "Vendetta",
+      "pick_rate": 1.1,
+      "win_rate": 46.1,
+      "tier": "master"
+    },
+    {
+      "region": "americas",
+      "hero": "Venture",
+      "pick_rate": 1.6,
+      "win_rate": 53.2,
+      "tier": "master"
+    },
+    {
+      "region": "americas",
+      "hero": "Widowmaker",
+      "pick_rate": 4.5,
+      "win_rate": 52.3,
+      "tier": "master"
+    },
+    {
+      "region": "americas",
+      "hero": "Winston",
+      "pick_rate": 5.8,
+      "win_rate": 49.9,
+      "tier": "master"
+    },
+    {
+      "region": "americas",
+      "hero": "Wrecking Ball",
+      "pick_rate": 5.2,
+      "win_rate": 50.7,
+      "tier": "master"
+    },
+    {
+      "region": "americas",
+      "hero": "Wuyang",
+      "pick_rate": 4.4,
+      "win_rate": 52.7,
+      "tier": "master"
+    },
+    {
+      "region": "americas",
+      "hero": "Zarya",
+      "pick_rate": 6,
+      "win_rate": 41.7,
+      "tier": "master"
+    },
+    {
+      "region": "americas",
+      "hero": "Zenyatta",
+      "pick_rate": 11.9,
+      "win_rate": 51.8,
+      "tier": "master"
+    },
+    {
+      "region": "americas",
+      "hero": "Sierra",
+      "pick_rate": 10.2,
+      "win_rate": 38.3,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "americas",
+      "hero": "Ramattra",
+      "pick_rate": 2.8,
+      "win_rate": 50.4,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "americas",
+      "hero": "Ana",
+      "pick_rate": 25.9,
+      "win_rate": 44.2,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "americas",
+      "hero": "Anran",
+      "pick_rate": 3.3,
+      "win_rate": 53.4,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "americas",
+      "hero": "Ashe",
+      "pick_rate": 21,
+      "win_rate": 54.6,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "americas",
+      "hero": "Baptiste",
+      "pick_rate": 27.8,
+      "win_rate": 52.2,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "americas",
+      "hero": "Bastion",
+      "pick_rate": 12.3,
+      "win_rate": 47.8,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "americas",
+      "hero": "Brigitte",
+      "pick_rate": 13.2,
+      "win_rate": 53.3,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "americas",
+      "hero": "Cassidy",
+      "pick_rate": 18.9,
+      "win_rate": 47.2,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "americas",
+      "hero": "D.Va",
+      "pick_rate": 6.5,
+      "win_rate": 57.9,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "americas",
+      "hero": "Domina",
+      "pick_rate": 5.7,
+      "win_rate": 46,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "americas",
+      "hero": "Doomfist",
+      "pick_rate": 6.7,
+      "win_rate": 48,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "americas",
+      "hero": "Echo",
+      "pick_rate": 1.7,
+      "win_rate": 50.4,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "americas",
+      "hero": "Emre",
+      "pick_rate": 21.3,
+      "win_rate": 48.8,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "americas",
+      "hero": "Freja",
+      "pick_rate": 0.8,
+      "win_rate": 49.7,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "americas",
+      "hero": "Genji",
+      "pick_rate": 10.5,
+      "win_rate": 45.3,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "americas",
+      "hero": "Hanzo",
+      "pick_rate": 1.7,
+      "win_rate": 37.4,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "americas",
+      "hero": "Hazard",
+      "pick_rate": 6.2,
+      "win_rate": 49.4,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "americas",
+      "hero": "Illari",
+      "pick_rate": 26.6,
+      "win_rate": 52.7,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "americas",
+      "hero": "Jetpack Cat",
+      "pick_rate": 4.4,
+      "win_rate": 46.8,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "americas",
+      "hero": "Junker Queen",
+      "pick_rate": 1.8,
+      "win_rate": 47.2,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "americas",
+      "hero": "Junkrat",
+      "pick_rate": 2.1,
+      "win_rate": 55.9,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "americas",
+      "hero": "Juno",
+      "pick_rate": 16.5,
+      "win_rate": 47.1,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "americas",
+      "hero": "Kiriko",
+      "pick_rate": 33.4,
+      "win_rate": 50.8,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "americas",
+      "hero": "Lifeweaver",
+      "pick_rate": 8,
+      "win_rate": 51,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "americas",
+      "hero": "L\u00facio",
+      "pick_rate": 6.7,
+      "win_rate": 53.6,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "americas",
+      "hero": "Mauga",
+      "pick_rate": 13.9,
+      "win_rate": 56,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "americas",
+      "hero": "Mei",
+      "pick_rate": 1.5,
+      "win_rate": 55,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "americas",
+      "hero": "Mercy",
+      "pick_rate": 15.7,
+      "win_rate": 50.8,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "americas",
+      "hero": "Mizuki",
+      "pick_rate": 8.1,
+      "win_rate": 48.7,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "americas",
+      "hero": "Moira",
+      "pick_rate": 4.5,
+      "win_rate": 47.4,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "americas",
+      "hero": "Orisa",
+      "pick_rate": 24.6,
+      "win_rate": 51.9,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "americas",
+      "hero": "Pharah",
+      "pick_rate": 2.2,
+      "win_rate": 55.1,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "americas",
+      "hero": "Reaper",
+      "pick_rate": 14.1,
+      "win_rate": 54.9,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "americas",
+      "hero": "Reinhardt",
+      "pick_rate": 2.6,
+      "win_rate": 44.8,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "americas",
+      "hero": "Roadhog",
+      "pick_rate": 6.4,
+      "win_rate": 46.2,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "americas",
+      "hero": "Sigma",
+      "pick_rate": 10.7,
+      "win_rate": 51.8,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "americas",
+      "hero": "Sojourn",
+      "pick_rate": 12,
+      "win_rate": 48.2,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "americas",
+      "hero": "Soldier: 76",
+      "pick_rate": 31.9,
+      "win_rate": 53.4,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "americas",
+      "hero": "Sombra",
+      "pick_rate": 6.4,
+      "win_rate": 50.5,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "americas",
+      "hero": "Symmetra",
+      "pick_rate": 2.9,
+      "win_rate": 53.1,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "americas",
+      "hero": "Torbj\u00f6rn",
+      "pick_rate": 3.5,
+      "win_rate": 47.9,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "americas",
+      "hero": "Tracer",
+      "pick_rate": 16.1,
+      "win_rate": 54.1,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "americas",
+      "hero": "Vendetta",
+      "pick_rate": 0.5,
+      "win_rate": 29.8,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "americas",
+      "hero": "Venture",
+      "pick_rate": 0.9,
+      "win_rate": 53.3,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "americas",
+      "hero": "Widowmaker",
+      "pick_rate": 4.7,
+      "win_rate": 40.6,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "americas",
+      "hero": "Winston",
+      "pick_rate": 3,
+      "win_rate": 36.3,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "americas",
+      "hero": "Wrecking Ball",
+      "pick_rate": 5,
+      "win_rate": 51.9,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "americas",
+      "hero": "Wuyang",
+      "pick_rate": 3.6,
+      "win_rate": 49.2,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "americas",
+      "hero": "Zarya",
+      "pick_rate": 4.1,
+      "win_rate": 45.2,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "americas",
+      "hero": "Zenyatta",
+      "pick_rate": 5.6,
+      "win_rate": 47.2,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "asia",
+      "hero": "Sierra",
+      "pick_rate": 34.1,
+      "win_rate": 46.7,
+      "tier": "all"
+    },
+    {
+      "region": "asia",
+      "hero": "Ramattra",
+      "pick_rate": 10.2,
+      "win_rate": 50.6,
+      "tier": "all"
+    },
+    {
+      "region": "asia",
+      "hero": "Ana",
+      "pick_rate": 33.6,
+      "win_rate": 47.1,
+      "tier": "all"
+    },
+    {
+      "region": "asia",
+      "hero": "Anran",
+      "pick_rate": 9.1,
+      "win_rate": 52.2,
+      "tier": "all"
+    },
+    {
+      "region": "asia",
+      "hero": "Ashe",
+      "pick_rate": 10.1,
+      "win_rate": 49.8,
+      "tier": "all"
+    },
+    {
+      "region": "asia",
+      "hero": "Baptiste",
+      "pick_rate": 10.2,
+      "win_rate": 46.5,
+      "tier": "all"
+    },
+    {
+      "region": "asia",
+      "hero": "Bastion",
+      "pick_rate": 11.9,
+      "win_rate": 48.7,
+      "tier": "all"
+    },
+    {
+      "region": "asia",
+      "hero": "Brigitte",
+      "pick_rate": 5.4,
+      "win_rate": 50,
+      "tier": "all"
+    },
+    {
+      "region": "asia",
+      "hero": "Cassidy",
+      "pick_rate": 12.4,
+      "win_rate": 45.2,
+      "tier": "all"
+    },
+    {
+      "region": "asia",
+      "hero": "D.Va",
+      "pick_rate": 11.1,
+      "win_rate": 52.5,
+      "tier": "all"
+    },
+    {
+      "region": "asia",
+      "hero": "Domina",
+      "pick_rate": 7,
+      "win_rate": 50.5,
+      "tier": "all"
+    },
+    {
+      "region": "asia",
+      "hero": "Doomfist",
+      "pick_rate": 4.4,
+      "win_rate": 47.2,
+      "tier": "all"
+    },
+    {
+      "region": "asia",
+      "hero": "Echo",
+      "pick_rate": 4.9,
+      "win_rate": 51,
+      "tier": "all"
+    },
+    {
+      "region": "asia",
+      "hero": "Emre",
+      "pick_rate": 18.1,
+      "win_rate": 50.2,
+      "tier": "all"
+    },
+    {
+      "region": "asia",
+      "hero": "Freja",
+      "pick_rate": 1.7,
+      "win_rate": 47.2,
+      "tier": "all"
+    },
+    {
+      "region": "asia",
+      "hero": "Genji",
+      "pick_rate": 7.1,
+      "win_rate": 48.8,
+      "tier": "all"
+    },
+    {
+      "region": "asia",
+      "hero": "Hanzo",
+      "pick_rate": 2.7,
+      "win_rate": 47.5,
+      "tier": "all"
+    },
+    {
+      "region": "asia",
+      "hero": "Hazard",
+      "pick_rate": 3.7,
+      "win_rate": 49.2,
+      "tier": "all"
+    },
+    {
+      "region": "asia",
+      "hero": "Illari",
+      "pick_rate": 17.8,
+      "win_rate": 53.9,
+      "tier": "all"
+    },
+    {
+      "region": "asia",
+      "hero": "Jetpack Cat",
+      "pick_rate": 3.7,
+      "win_rate": 49.7,
+      "tier": "all"
+    },
+    {
+      "region": "asia",
+      "hero": "Junker Queen",
+      "pick_rate": 2.2,
+      "win_rate": 48.2,
+      "tier": "all"
+    },
+    {
+      "region": "asia",
+      "hero": "Junkrat",
+      "pick_rate": 4.1,
+      "win_rate": 50.2,
+      "tier": "all"
+    },
+    {
+      "region": "asia",
+      "hero": "Juno",
+      "pick_rate": 20.8,
+      "win_rate": 50.3,
+      "tier": "all"
+    },
+    {
+      "region": "asia",
+      "hero": "Kiriko",
+      "pick_rate": 39.1,
+      "win_rate": 47.3,
+      "tier": "all"
+    },
+    {
+      "region": "asia",
+      "hero": "Lifeweaver",
+      "pick_rate": 10.8,
+      "win_rate": 50,
+      "tier": "all"
+    },
+    {
+      "region": "asia",
+      "hero": "L\u00facio",
+      "pick_rate": 6.9,
+      "win_rate": 52.7,
+      "tier": "all"
+    },
+    {
+      "region": "asia",
+      "hero": "Mauga",
+      "pick_rate": 7.4,
+      "win_rate": 50.3,
+      "tier": "all"
+    },
+    {
+      "region": "asia",
+      "hero": "Mei",
+      "pick_rate": 5.4,
+      "win_rate": 48.8,
+      "tier": "all"
+    },
+    {
+      "region": "asia",
+      "hero": "Mercy",
+      "pick_rate": 6.6,
+      "win_rate": 48.3,
+      "tier": "all"
+    },
+    {
+      "region": "asia",
+      "hero": "Mizuki",
+      "pick_rate": 9.6,
+      "win_rate": 50.2,
+      "tier": "all"
+    },
+    {
+      "region": "asia",
+      "hero": "Moira",
+      "pick_rate": 17.8,
+      "win_rate": 49.6,
+      "tier": "all"
+    },
+    {
+      "region": "asia",
+      "hero": "Orisa",
+      "pick_rate": 16.9,
+      "win_rate": 49.8,
+      "tier": "all"
+    },
+    {
+      "region": "asia",
+      "hero": "Pharah",
+      "pick_rate": 4.7,
+      "win_rate": 51.8,
+      "tier": "all"
+    },
+    {
+      "region": "asia",
+      "hero": "Reaper",
+      "pick_rate": 16.3,
+      "win_rate": 53.8,
+      "tier": "all"
+    },
+    {
+      "region": "asia",
+      "hero": "Reinhardt",
+      "pick_rate": 5.7,
+      "win_rate": 48.2,
+      "tier": "all"
+    },
+    {
+      "region": "asia",
+      "hero": "Roadhog",
+      "pick_rate": 4.8,
+      "win_rate": 42,
+      "tier": "all"
+    },
+    {
+      "region": "asia",
+      "hero": "Sigma",
+      "pick_rate": 12.3,
+      "win_rate": 51.1,
+      "tier": "all"
+    },
+    {
+      "region": "asia",
+      "hero": "Sojourn",
+      "pick_rate": 12.5,
+      "win_rate": 44.7,
+      "tier": "all"
+    },
+    {
+      "region": "asia",
+      "hero": "Soldier: 76",
+      "pick_rate": 16.8,
+      "win_rate": 51.7,
+      "tier": "all"
+    },
+    {
+      "region": "asia",
+      "hero": "Sombra",
+      "pick_rate": 2.7,
+      "win_rate": 52,
+      "tier": "all"
+    },
+    {
+      "region": "asia",
+      "hero": "Symmetra",
+      "pick_rate": 4.3,
+      "win_rate": 53.9,
+      "tier": "all"
+    },
+    {
+      "region": "asia",
+      "hero": "Torbj\u00f6rn",
+      "pick_rate": 6.4,
+      "win_rate": 52,
+      "tier": "all"
+    },
+    {
+      "region": "asia",
+      "hero": "Tracer",
+      "pick_rate": 8.9,
+      "win_rate": 50.8,
+      "tier": "all"
+    },
+    {
+      "region": "asia",
+      "hero": "Vendetta",
+      "pick_rate": 1.6,
+      "win_rate": 44,
+      "tier": "all"
+    },
+    {
+      "region": "asia",
+      "hero": "Venture",
+      "pick_rate": 1.5,
+      "win_rate": 52.4,
+      "tier": "all"
+    },
+    {
+      "region": "asia",
+      "hero": "Widowmaker",
+      "pick_rate": 3.2,
+      "win_rate": 49.1,
+      "tier": "all"
+    },
+    {
+      "region": "asia",
+      "hero": "Winston",
+      "pick_rate": 5.4,
+      "win_rate": 49.2,
+      "tier": "all"
+    },
+    {
+      "region": "asia",
+      "hero": "Wrecking Ball",
+      "pick_rate": 2.9,
+      "win_rate": 50.9,
+      "tier": "all"
+    },
+    {
+      "region": "asia",
+      "hero": "Wuyang",
+      "pick_rate": 5.8,
+      "win_rate": 49.3,
+      "tier": "all"
+    },
+    {
+      "region": "asia",
+      "hero": "Zarya",
+      "pick_rate": 6.2,
+      "win_rate": 47.3,
+      "tier": "all"
+    },
+    {
+      "region": "asia",
+      "hero": "Zenyatta",
+      "pick_rate": 12.2,
+      "win_rate": 52.6,
+      "tier": "all"
+    },
+    {
+      "region": "asia",
+      "hero": "Sierra",
+      "pick_rate": 38.5,
+      "win_rate": 50.4,
+      "tier": "bronze"
+    },
+    {
+      "region": "asia",
+      "hero": "Ramattra",
+      "pick_rate": 12.5,
+      "win_rate": 54.5,
+      "tier": "bronze"
+    },
+    {
+      "region": "asia",
+      "hero": "Ana",
+      "pick_rate": 22.6,
+      "win_rate": 48.6,
+      "tier": "bronze"
+    },
+    {
+      "region": "asia",
+      "hero": "Anran",
+      "pick_rate": 9.2,
+      "win_rate": 54.4,
+      "tier": "bronze"
+    },
+    {
+      "region": "asia",
+      "hero": "Ashe",
+      "pick_rate": 12.4,
+      "win_rate": 44.8,
+      "tier": "bronze"
+    },
+    {
+      "region": "asia",
+      "hero": "Baptiste",
+      "pick_rate": 6.6,
+      "win_rate": 45.1,
+      "tier": "bronze"
+    },
+    {
+      "region": "asia",
+      "hero": "Bastion",
+      "pick_rate": 19.1,
+      "win_rate": 52.1,
+      "tier": "bronze"
+    },
+    {
+      "region": "asia",
+      "hero": "Brigitte",
+      "pick_rate": 2.9,
+      "win_rate": 52.3,
+      "tier": "bronze"
+    },
+    {
+      "region": "asia",
+      "hero": "Cassidy",
+      "pick_rate": 5.8,
+      "win_rate": 45.1,
+      "tier": "bronze"
+    },
+    {
+      "region": "asia",
+      "hero": "D.Va",
+      "pick_rate": 13.8,
+      "win_rate": 48,
+      "tier": "bronze"
+    },
+    {
+      "region": "asia",
+      "hero": "Domina",
+      "pick_rate": 8.8,
+      "win_rate": 53.6,
+      "tier": "bronze"
+    },
+    {
+      "region": "asia",
+      "hero": "Doomfist",
+      "pick_rate": 1.8,
+      "win_rate": 44.3,
+      "tier": "bronze"
+    },
+    {
+      "region": "asia",
+      "hero": "Echo",
+      "pick_rate": 3.5,
+      "win_rate": 44.5,
+      "tier": "bronze"
+    },
+    {
+      "region": "asia",
+      "hero": "Emre",
+      "pick_rate": 15.6,
+      "win_rate": 52.2,
+      "tier": "bronze"
+    },
+    {
+      "region": "asia",
+      "hero": "Freja",
+      "pick_rate": 2.8,
+      "win_rate": 48.7,
+      "tier": "bronze"
+    },
+    {
+      "region": "asia",
+      "hero": "Genji",
+      "pick_rate": 3.1,
+      "win_rate": 44.9,
+      "tier": "bronze"
+    },
+    {
+      "region": "asia",
+      "hero": "Hanzo",
+      "pick_rate": 3.2,
+      "win_rate": 47.9,
+      "tier": "bronze"
+    },
+    {
+      "region": "asia",
+      "hero": "Hazard",
+      "pick_rate": 2.5,
+      "win_rate": 38,
+      "tier": "bronze"
+    },
+    {
+      "region": "asia",
+      "hero": "Illari",
+      "pick_rate": 17.7,
+      "win_rate": 50.5,
+      "tier": "bronze"
+    },
+    {
+      "region": "asia",
+      "hero": "Jetpack Cat",
+      "pick_rate": 1.5,
+      "win_rate": 53.6,
+      "tier": "bronze"
+    },
+    {
+      "region": "asia",
+      "hero": "Junker Queen",
+      "pick_rate": 1.6,
+      "win_rate": 50.2,
+      "tier": "bronze"
+    },
+    {
+      "region": "asia",
+      "hero": "Junkrat",
+      "pick_rate": 5.2,
+      "win_rate": 48.9,
+      "tier": "bronze"
+    },
+    {
+      "region": "asia",
+      "hero": "Juno",
+      "pick_rate": 31.5,
+      "win_rate": 52.3,
+      "tier": "bronze"
+    },
+    {
+      "region": "asia",
+      "hero": "Kiriko",
+      "pick_rate": 39,
+      "win_rate": 46.3,
+      "tier": "bronze"
+    },
+    {
+      "region": "asia",
+      "hero": "Lifeweaver",
+      "pick_rate": 6.3,
+      "win_rate": 41.6,
+      "tier": "bronze"
+    },
+    {
+      "region": "asia",
+      "hero": "L\u00facio",
+      "pick_rate": 6.3,
+      "win_rate": 50.5,
+      "tier": "bronze"
+    },
+    {
+      "region": "asia",
+      "hero": "Mauga",
+      "pick_rate": 7.4,
+      "win_rate": 45.3,
+      "tier": "bronze"
+    },
+    {
+      "region": "asia",
+      "hero": "Mei",
+      "pick_rate": 5.9,
+      "win_rate": 45.7,
+      "tier": "bronze"
+    },
+    {
+      "region": "asia",
+      "hero": "Mercy",
+      "pick_rate": 8.5,
+      "win_rate": 47.5,
+      "tier": "bronze"
+    },
+    {
+      "region": "asia",
+      "hero": "Mizuki",
+      "pick_rate": 11.4,
+      "win_rate": 47.6,
+      "tier": "bronze"
+    },
+    {
+      "region": "asia",
+      "hero": "Moira",
+      "pick_rate": 24.1,
+      "win_rate": 53.3,
+      "tier": "bronze"
+    },
+    {
+      "region": "asia",
+      "hero": "Orisa",
+      "pick_rate": 17.5,
+      "win_rate": 50.1,
+      "tier": "bronze"
+    },
+    {
+      "region": "asia",
+      "hero": "Pharah",
+      "pick_rate": 4.9,
+      "win_rate": 53.4,
+      "tier": "bronze"
+    },
+    {
+      "region": "asia",
+      "hero": "Reaper",
+      "pick_rate": 12.7,
+      "win_rate": 54.2,
+      "tier": "bronze"
+    },
+    {
+      "region": "asia",
+      "hero": "Reinhardt",
+      "pick_rate": 4.7,
+      "win_rate": 42.1,
+      "tier": "bronze"
+    },
+    {
+      "region": "asia",
+      "hero": "Roadhog",
+      "pick_rate": 4.4,
+      "win_rate": 41.1,
+      "tier": "bronze"
+    },
+    {
+      "region": "asia",
+      "hero": "Sigma",
+      "pick_rate": 14.3,
+      "win_rate": 53.3,
+      "tier": "bronze"
+    },
+    {
+      "region": "asia",
+      "hero": "Sojourn",
+      "pick_rate": 14.6,
+      "win_rate": 39.9,
+      "tier": "bronze"
+    },
+    {
+      "region": "asia",
+      "hero": "Soldier: 76",
+      "pick_rate": 16.3,
+      "win_rate": 50.3,
+      "tier": "bronze"
+    },
+    {
+      "region": "asia",
+      "hero": "Sombra",
+      "pick_rate": 1.5,
+      "win_rate": 47,
+      "tier": "bronze"
+    },
+    {
+      "region": "asia",
+      "hero": "Symmetra",
+      "pick_rate": 5,
+      "win_rate": 55.7,
+      "tier": "bronze"
+    },
+    {
+      "region": "asia",
+      "hero": "Torbj\u00f6rn",
+      "pick_rate": 10.5,
+      "win_rate": 52.5,
+      "tier": "bronze"
+    },
+    {
+      "region": "asia",
+      "hero": "Tracer",
+      "pick_rate": 3.7,
+      "win_rate": 56.3,
+      "tier": "bronze"
+    },
+    {
+      "region": "asia",
+      "hero": "Vendetta",
+      "pick_rate": 2,
+      "win_rate": 35.5,
+      "tier": "bronze"
+    },
+    {
+      "region": "asia",
+      "hero": "Venture",
+      "pick_rate": 1.2,
+      "win_rate": 55.4,
+      "tier": "bronze"
+    },
+    {
+      "region": "asia",
+      "hero": "Widowmaker",
+      "pick_rate": 3.5,
+      "win_rate": 41.4,
+      "tier": "bronze"
+    },
+    {
+      "region": "asia",
+      "hero": "Winston",
+      "pick_rate": 3.3,
+      "win_rate": 50.7,
+      "tier": "bronze"
+    },
+    {
+      "region": "asia",
+      "hero": "Wrecking Ball",
+      "pick_rate": 2.5,
+      "win_rate": 50.5,
+      "tier": "bronze"
+    },
+    {
+      "region": "asia",
+      "hero": "Wuyang",
+      "pick_rate": 6.1,
+      "win_rate": 50.4,
+      "tier": "bronze"
+    },
+    {
+      "region": "asia",
+      "hero": "Zarya",
+      "pick_rate": 5,
+      "win_rate": 49.5,
+      "tier": "bronze"
+    },
+    {
+      "region": "asia",
+      "hero": "Zenyatta",
+      "pick_rate": 15.6,
+      "win_rate": 52.3,
+      "tier": "bronze"
+    },
+    {
+      "region": "asia",
+      "hero": "Sierra",
+      "pick_rate": 39,
+      "win_rate": 48.8,
+      "tier": "silver"
+    },
+    {
+      "region": "asia",
+      "hero": "Ramattra",
+      "pick_rate": 11.7,
+      "win_rate": 50.9,
+      "tier": "silver"
+    },
+    {
+      "region": "asia",
+      "hero": "Ana",
+      "pick_rate": 25.3,
+      "win_rate": 45.5,
+      "tier": "silver"
+    },
+    {
+      "region": "asia",
+      "hero": "Anran",
+      "pick_rate": 9.9,
+      "win_rate": 51.9,
+      "tier": "silver"
+    },
+    {
+      "region": "asia",
+      "hero": "Ashe",
+      "pick_rate": 11.1,
+      "win_rate": 48.6,
+      "tier": "silver"
+    },
+    {
+      "region": "asia",
+      "hero": "Baptiste",
+      "pick_rate": 7.9,
+      "win_rate": 44.9,
+      "tier": "silver"
+    },
+    {
+      "region": "asia",
+      "hero": "Bastion",
+      "pick_rate": 15.5,
+      "win_rate": 47.9,
+      "tier": "silver"
+    },
+    {
+      "region": "asia",
+      "hero": "Brigitte",
+      "pick_rate": 3.6,
+      "win_rate": 47.9,
+      "tier": "silver"
+    },
+    {
+      "region": "asia",
+      "hero": "Cassidy",
+      "pick_rate": 8.5,
+      "win_rate": 45.7,
+      "tier": "silver"
+    },
+    {
+      "region": "asia",
+      "hero": "D.Va",
+      "pick_rate": 12.4,
+      "win_rate": 51,
+      "tier": "silver"
+    },
+    {
+      "region": "asia",
+      "hero": "Domina",
+      "pick_rate": 7.7,
+      "win_rate": 50.4,
+      "tier": "silver"
+    },
+    {
+      "region": "asia",
+      "hero": "Doomfist",
+      "pick_rate": 3.4,
+      "win_rate": 47.8,
+      "tier": "silver"
+    },
+    {
+      "region": "asia",
+      "hero": "Echo",
+      "pick_rate": 4.2,
+      "win_rate": 52.1,
+      "tier": "silver"
+    },
+    {
+      "region": "asia",
+      "hero": "Emre",
+      "pick_rate": 16,
+      "win_rate": 48.6,
+      "tier": "silver"
+    },
+    {
+      "region": "asia",
+      "hero": "Freja",
+      "pick_rate": 2.3,
+      "win_rate": 45,
+      "tier": "silver"
+    },
+    {
+      "region": "asia",
+      "hero": "Genji",
+      "pick_rate": 5.2,
+      "win_rate": 52.2,
+      "tier": "silver"
+    },
+    {
+      "region": "asia",
+      "hero": "Hanzo",
+      "pick_rate": 2.5,
+      "win_rate": 48.4,
+      "tier": "silver"
+    },
+    {
+      "region": "asia",
+      "hero": "Hazard",
+      "pick_rate": 3,
+      "win_rate": 51,
+      "tier": "silver"
+    },
+    {
+      "region": "asia",
+      "hero": "Illari",
+      "pick_rate": 18.3,
+      "win_rate": 53.6,
+      "tier": "silver"
+    },
+    {
+      "region": "asia",
+      "hero": "Jetpack Cat",
+      "pick_rate": 2.5,
+      "win_rate": 52.7,
+      "tier": "silver"
+    },
+    {
+      "region": "asia",
+      "hero": "Junker Queen",
+      "pick_rate": 2.1,
+      "win_rate": 46.4,
+      "tier": "silver"
+    },
+    {
+      "region": "asia",
+      "hero": "Junkrat",
+      "pick_rate": 5.6,
+      "win_rate": 49.4,
+      "tier": "silver"
+    },
+    {
+      "region": "asia",
+      "hero": "Juno",
+      "pick_rate": 26.7,
+      "win_rate": 50.7,
+      "tier": "silver"
+    },
+    {
+      "region": "asia",
+      "hero": "Kiriko",
+      "pick_rate": 39.1,
+      "win_rate": 48.5,
+      "tier": "silver"
+    },
+    {
+      "region": "asia",
+      "hero": "Lifeweaver",
+      "pick_rate": 9.4,
+      "win_rate": 51.5,
+      "tier": "silver"
+    },
+    {
+      "region": "asia",
+      "hero": "L\u00facio",
+      "pick_rate": 6.2,
+      "win_rate": 50.5,
+      "tier": "silver"
+    },
+    {
+      "region": "asia",
+      "hero": "Mauga",
+      "pick_rate": 7.2,
+      "win_rate": 48.4,
+      "tier": "silver"
+    },
+    {
+      "region": "asia",
+      "hero": "Mei",
+      "pick_rate": 6.1,
+      "win_rate": 51.2,
+      "tier": "silver"
+    },
+    {
+      "region": "asia",
+      "hero": "Mercy",
+      "pick_rate": 7.4,
+      "win_rate": 46.9,
+      "tier": "silver"
+    },
+    {
+      "region": "asia",
+      "hero": "Mizuki",
+      "pick_rate": 10.9,
+      "win_rate": 51.4,
+      "tier": "silver"
+    },
+    {
+      "region": "asia",
+      "hero": "Moira",
+      "pick_rate": 23.4,
+      "win_rate": 49.1,
+      "tier": "silver"
+    },
+    {
+      "region": "asia",
+      "hero": "Orisa",
+      "pick_rate": 18.2,
+      "win_rate": 49.1,
+      "tier": "silver"
+    },
+    {
+      "region": "asia",
+      "hero": "Pharah",
+      "pick_rate": 4.9,
+      "win_rate": 50.1,
+      "tier": "silver"
+    },
+    {
+      "region": "asia",
+      "hero": "Reaper",
+      "pick_rate": 14.2,
+      "win_rate": 53.6,
+      "tier": "silver"
+    },
+    {
+      "region": "asia",
+      "hero": "Reinhardt",
+      "pick_rate": 5.6,
+      "win_rate": 51.6,
+      "tier": "silver"
+    },
+    {
+      "region": "asia",
+      "hero": "Roadhog",
+      "pick_rate": 4.2,
+      "win_rate": 43.6,
+      "tier": "silver"
+    },
+    {
+      "region": "asia",
+      "hero": "Sigma",
+      "pick_rate": 12.5,
+      "win_rate": 50.3,
+      "tier": "silver"
+    },
+    {
+      "region": "asia",
+      "hero": "Sojourn",
+      "pick_rate": 12.8,
+      "win_rate": 43.5,
+      "tier": "silver"
+    },
+    {
+      "region": "asia",
+      "hero": "Soldier: 76",
+      "pick_rate": 15.4,
+      "win_rate": 50.7,
+      "tier": "silver"
+    },
+    {
+      "region": "asia",
+      "hero": "Sombra",
+      "pick_rate": 2,
+      "win_rate": 53.9,
+      "tier": "silver"
+    },
+    {
+      "region": "asia",
+      "hero": "Symmetra",
+      "pick_rate": 4.9,
+      "win_rate": 54.4,
+      "tier": "silver"
+    },
+    {
+      "region": "asia",
+      "hero": "Torbj\u00f6rn",
+      "pick_rate": 7.9,
+      "win_rate": 53.2,
+      "tier": "silver"
+    },
+    {
+      "region": "asia",
+      "hero": "Tracer",
+      "pick_rate": 5.8,
+      "win_rate": 49.5,
+      "tier": "silver"
+    },
+    {
+      "region": "asia",
+      "hero": "Vendetta",
+      "pick_rate": 1.7,
+      "win_rate": 44.2,
+      "tier": "silver"
+    },
+    {
+      "region": "asia",
+      "hero": "Venture",
+      "pick_rate": 1.5,
+      "win_rate": 55.7,
+      "tier": "silver"
+    },
+    {
+      "region": "asia",
+      "hero": "Widowmaker",
+      "pick_rate": 3,
+      "win_rate": 50.5,
+      "tier": "silver"
+    },
+    {
+      "region": "asia",
+      "hero": "Winston",
+      "pick_rate": 4.6,
+      "win_rate": 49.4,
+      "tier": "silver"
+    },
+    {
+      "region": "asia",
+      "hero": "Wrecking Ball",
+      "pick_rate": 1.9,
+      "win_rate": 51.5,
+      "tier": "silver"
+    },
+    {
+      "region": "asia",
+      "hero": "Wuyang",
+      "pick_rate": 5.4,
+      "win_rate": 49.4,
+      "tier": "silver"
+    },
+    {
+      "region": "asia",
+      "hero": "Zarya",
+      "pick_rate": 5.5,
+      "win_rate": 48.4,
+      "tier": "silver"
+    },
+    {
+      "region": "asia",
+      "hero": "Zenyatta",
+      "pick_rate": 13.9,
+      "win_rate": 53.6,
+      "tier": "silver"
+    },
+    {
+      "region": "asia",
+      "hero": "Sierra",
+      "pick_rate": 36.4,
+      "win_rate": 46.4,
+      "tier": "gold"
+    },
+    {
+      "region": "asia",
+      "hero": "Ramattra",
+      "pick_rate": 10.9,
+      "win_rate": 49.9,
+      "tier": "gold"
+    },
+    {
+      "region": "asia",
+      "hero": "Ana",
+      "pick_rate": 33.6,
+      "win_rate": 46.7,
+      "tier": "gold"
+    },
+    {
+      "region": "asia",
+      "hero": "Anran",
+      "pick_rate": 9.2,
+      "win_rate": 50.5,
+      "tier": "gold"
+    },
+    {
+      "region": "asia",
+      "hero": "Ashe",
+      "pick_rate": 9.6,
+      "win_rate": 50.3,
+      "tier": "gold"
+    },
+    {
+      "region": "asia",
+      "hero": "Baptiste",
+      "pick_rate": 9.4,
+      "win_rate": 47.2,
+      "tier": "gold"
+    },
+    {
+      "region": "asia",
+      "hero": "Bastion",
+      "pick_rate": 12.5,
+      "win_rate": 49,
+      "tier": "gold"
+    },
+    {
+      "region": "asia",
+      "hero": "Brigitte",
+      "pick_rate": 5.1,
+      "win_rate": 50.3,
+      "tier": "gold"
+    },
+    {
+      "region": "asia",
+      "hero": "Cassidy",
+      "pick_rate": 11.4,
+      "win_rate": 43.7,
+      "tier": "gold"
+    },
+    {
+      "region": "asia",
+      "hero": "D.Va",
+      "pick_rate": 11.4,
+      "win_rate": 52.5,
+      "tier": "gold"
+    },
+    {
+      "region": "asia",
+      "hero": "Domina",
+      "pick_rate": 7.1,
+      "win_rate": 49.4,
+      "tier": "gold"
+    },
+    {
+      "region": "asia",
+      "hero": "Doomfist",
+      "pick_rate": 4.3,
+      "win_rate": 46.8,
+      "tier": "gold"
+    },
+    {
+      "region": "asia",
+      "hero": "Echo",
+      "pick_rate": 4.8,
+      "win_rate": 52.1,
+      "tier": "gold"
+    },
+    {
+      "region": "asia",
+      "hero": "Emre",
+      "pick_rate": 17,
+      "win_rate": 49.2,
+      "tier": "gold"
+    },
+    {
+      "region": "asia",
+      "hero": "Freja",
+      "pick_rate": 1.6,
+      "win_rate": 51.1,
+      "tier": "gold"
+    },
+    {
+      "region": "asia",
+      "hero": "Genji",
+      "pick_rate": 6.7,
+      "win_rate": 48.5,
+      "tier": "gold"
+    },
+    {
+      "region": "asia",
+      "hero": "Hanzo",
+      "pick_rate": 2.6,
+      "win_rate": 48.1,
+      "tier": "gold"
+    },
+    {
+      "region": "asia",
+      "hero": "Hazard",
+      "pick_rate": 3.3,
+      "win_rate": 48.9,
+      "tier": "gold"
+    },
+    {
+      "region": "asia",
+      "hero": "Illari",
+      "pick_rate": 16.2,
+      "win_rate": 54.7,
+      "tier": "gold"
+    },
+    {
+      "region": "asia",
+      "hero": "Jetpack Cat",
+      "pick_rate": 3.9,
+      "win_rate": 49.3,
+      "tier": "gold"
+    },
+    {
+      "region": "asia",
+      "hero": "Junker Queen",
+      "pick_rate": 2.1,
+      "win_rate": 47,
+      "tier": "gold"
+    },
+    {
+      "region": "asia",
+      "hero": "Junkrat",
+      "pick_rate": 4.2,
+      "win_rate": 49.7,
+      "tier": "gold"
+    },
+    {
+      "region": "asia",
+      "hero": "Juno",
+      "pick_rate": 21.9,
+      "win_rate": 49.4,
+      "tier": "gold"
+    },
+    {
+      "region": "asia",
+      "hero": "Kiriko",
+      "pick_rate": 39,
+      "win_rate": 47,
+      "tier": "gold"
+    },
+    {
+      "region": "asia",
+      "hero": "Lifeweaver",
+      "pick_rate": 11.3,
+      "win_rate": 49.4,
+      "tier": "gold"
+    },
+    {
+      "region": "asia",
+      "hero": "L\u00facio",
+      "pick_rate": 6.7,
+      "win_rate": 53,
+      "tier": "gold"
+    },
+    {
+      "region": "asia",
+      "hero": "Mauga",
+      "pick_rate": 6.8,
+      "win_rate": 50.9,
+      "tier": "gold"
+    },
+    {
+      "region": "asia",
+      "hero": "Mei",
+      "pick_rate": 5.7,
+      "win_rate": 49.2,
+      "tier": "gold"
+    },
+    {
+      "region": "asia",
+      "hero": "Mercy",
+      "pick_rate": 6.8,
+      "win_rate": 49.1,
+      "tier": "gold"
+    },
+    {
+      "region": "asia",
+      "hero": "Mizuki",
+      "pick_rate": 9.6,
+      "win_rate": 50.1,
+      "tier": "gold"
+    },
+    {
+      "region": "asia",
+      "hero": "Moira",
+      "pick_rate": 19,
+      "win_rate": 49.3,
+      "tier": "gold"
+    },
+    {
+      "region": "asia",
+      "hero": "Orisa",
+      "pick_rate": 16.9,
+      "win_rate": 49.6,
+      "tier": "gold"
+    },
+    {
+      "region": "asia",
+      "hero": "Pharah",
+      "pick_rate": 4.8,
+      "win_rate": 51.1,
+      "tier": "gold"
+    },
+    {
+      "region": "asia",
+      "hero": "Reaper",
+      "pick_rate": 17,
+      "win_rate": 53.7,
+      "tier": "gold"
+    },
+    {
+      "region": "asia",
+      "hero": "Reinhardt",
+      "pick_rate": 5.9,
+      "win_rate": 47.9,
+      "tier": "gold"
+    },
+    {
+      "region": "asia",
+      "hero": "Roadhog",
+      "pick_rate": 4.9,
+      "win_rate": 41.2,
+      "tier": "gold"
+    },
+    {
+      "region": "asia",
+      "hero": "Sigma",
+      "pick_rate": 12.3,
+      "win_rate": 51.2,
+      "tier": "gold"
+    },
+    {
+      "region": "asia",
+      "hero": "Sojourn",
+      "pick_rate": 11.7,
+      "win_rate": 45.2,
+      "tier": "gold"
+    },
+    {
+      "region": "asia",
+      "hero": "Soldier: 76",
+      "pick_rate": 17.2,
+      "win_rate": 51.6,
+      "tier": "gold"
+    },
+    {
+      "region": "asia",
+      "hero": "Sombra",
+      "pick_rate": 2.8,
+      "win_rate": 51.1,
+      "tier": "gold"
+    },
+    {
+      "region": "asia",
+      "hero": "Symmetra",
+      "pick_rate": 4.4,
+      "win_rate": 54.8,
+      "tier": "gold"
+    },
+    {
+      "region": "asia",
+      "hero": "Torbj\u00f6rn",
+      "pick_rate": 6.6,
+      "win_rate": 52.1,
+      "tier": "gold"
+    },
+    {
+      "region": "asia",
+      "hero": "Tracer",
+      "pick_rate": 7.6,
+      "win_rate": 51.3,
+      "tier": "gold"
+    },
+    {
+      "region": "asia",
+      "hero": "Vendetta",
+      "pick_rate": 1.8,
+      "win_rate": 44.2,
+      "tier": "gold"
+    },
+    {
+      "region": "asia",
+      "hero": "Venture",
+      "pick_rate": 1.5,
+      "win_rate": 52.3,
+      "tier": "gold"
+    },
+    {
+      "region": "asia",
+      "hero": "Widowmaker",
+      "pick_rate": 3.1,
+      "win_rate": 49.5,
+      "tier": "gold"
+    },
+    {
+      "region": "asia",
+      "hero": "Winston",
+      "pick_rate": 5.3,
+      "win_rate": 49.5,
+      "tier": "gold"
+    },
+    {
+      "region": "asia",
+      "hero": "Wrecking Ball",
+      "pick_rate": 2.3,
+      "win_rate": 51,
+      "tier": "gold"
+    },
+    {
+      "region": "asia",
+      "hero": "Wuyang",
+      "pick_rate": 5.2,
+      "win_rate": 48.5,
+      "tier": "gold"
+    },
+    {
+      "region": "asia",
+      "hero": "Zarya",
+      "pick_rate": 6.5,
+      "win_rate": 49.1,
+      "tier": "gold"
+    },
+    {
+      "region": "asia",
+      "hero": "Zenyatta",
+      "pick_rate": 12.4,
+      "win_rate": 53.4,
+      "tier": "gold"
+    },
+    {
+      "region": "asia",
+      "hero": "Sierra",
+      "pick_rate": 32,
+      "win_rate": 46,
+      "tier": "platinum"
+    },
+    {
+      "region": "asia",
+      "hero": "Ramattra",
+      "pick_rate": 9.4,
+      "win_rate": 50.4,
+      "tier": "platinum"
+    },
+    {
+      "region": "asia",
+      "hero": "Ana",
+      "pick_rate": 39.1,
+      "win_rate": 48.4,
+      "tier": "platinum"
+    },
+    {
+      "region": "asia",
+      "hero": "Anran",
+      "pick_rate": 8.9,
+      "win_rate": 53.7,
+      "tier": "platinum"
+    },
+    {
+      "region": "asia",
+      "hero": "Ashe",
+      "pick_rate": 9.2,
+      "win_rate": 49.6,
+      "tier": "platinum"
+    },
+    {
+      "region": "asia",
+      "hero": "Baptiste",
+      "pick_rate": 10.9,
+      "win_rate": 46.5,
+      "tier": "platinum"
+    },
+    {
+      "region": "asia",
+      "hero": "Bastion",
+      "pick_rate": 9.2,
+      "win_rate": 47.9,
+      "tier": "platinum"
+    },
+    {
+      "region": "asia",
+      "hero": "Brigitte",
+      "pick_rate": 6.3,
+      "win_rate": 50,
+      "tier": "platinum"
+    },
+    {
+      "region": "asia",
+      "hero": "Cassidy",
+      "pick_rate": 14.5,
+      "win_rate": 45.7,
+      "tier": "platinum"
+    },
+    {
+      "region": "asia",
+      "hero": "D.Va",
+      "pick_rate": 10.5,
+      "win_rate": 55,
+      "tier": "platinum"
+    },
+    {
+      "region": "asia",
+      "hero": "Domina",
+      "pick_rate": 6.5,
+      "win_rate": 49.6,
+      "tier": "platinum"
+    },
+    {
+      "region": "asia",
+      "hero": "Doomfist",
+      "pick_rate": 5.2,
+      "win_rate": 48.2,
+      "tier": "platinum"
+    },
+    {
+      "region": "asia",
+      "hero": "Echo",
+      "pick_rate": 5.6,
+      "win_rate": 51.4,
+      "tier": "platinum"
+    },
+    {
+      "region": "asia",
+      "hero": "Emre",
+      "pick_rate": 19.3,
+      "win_rate": 51.4,
+      "tier": "platinum"
+    },
+    {
+      "region": "asia",
+      "hero": "Freja",
+      "pick_rate": 1.4,
+      "win_rate": 45.9,
+      "tier": "platinum"
+    },
+    {
+      "region": "asia",
+      "hero": "Genji",
+      "pick_rate": 8.8,
+      "win_rate": 48.2,
+      "tier": "platinum"
+    },
+    {
+      "region": "asia",
+      "hero": "Hanzo",
+      "pick_rate": 2.9,
+      "win_rate": 46.3,
+      "tier": "platinum"
+    },
+    {
+      "region": "asia",
+      "hero": "Hazard",
+      "pick_rate": 3.9,
+      "win_rate": 51.4,
+      "tier": "platinum"
+    },
+    {
+      "region": "asia",
+      "hero": "Illari",
+      "pick_rate": 16.6,
+      "win_rate": 53.4,
+      "tier": "platinum"
+    },
+    {
+      "region": "asia",
+      "hero": "Jetpack Cat",
+      "pick_rate": 4.5,
+      "win_rate": 49,
+      "tier": "platinum"
+    },
+    {
+      "region": "asia",
+      "hero": "Junker Queen",
+      "pick_rate": 2.4,
+      "win_rate": 49,
+      "tier": "platinum"
+    },
+    {
+      "region": "asia",
+      "hero": "Junkrat",
+      "pick_rate": 3.3,
+      "win_rate": 51.4,
+      "tier": "platinum"
+    },
+    {
+      "region": "asia",
+      "hero": "Juno",
+      "pick_rate": 17,
+      "win_rate": 50.6,
+      "tier": "platinum"
+    },
+    {
+      "region": "asia",
+      "hero": "Kiriko",
+      "pick_rate": 39.3,
+      "win_rate": 47.3,
+      "tier": "platinum"
+    },
+    {
+      "region": "asia",
+      "hero": "Lifeweaver",
+      "pick_rate": 12.6,
+      "win_rate": 49.8,
+      "tier": "platinum"
+    },
+    {
+      "region": "asia",
+      "hero": "L\u00facio",
+      "pick_rate": 7.1,
+      "win_rate": 53.7,
+      "tier": "platinum"
+    },
+    {
+      "region": "asia",
+      "hero": "Mauga",
+      "pick_rate": 7.3,
+      "win_rate": 50.9,
+      "tier": "platinum"
+    },
+    {
+      "region": "asia",
+      "hero": "Mei",
+      "pick_rate": 4.9,
+      "win_rate": 47.4,
+      "tier": "platinum"
+    },
+    {
+      "region": "asia",
+      "hero": "Mercy",
+      "pick_rate": 6.1,
+      "win_rate": 48.5,
+      "tier": "platinum"
+    },
+    {
+      "region": "asia",
+      "hero": "Mizuki",
+      "pick_rate": 8.6,
+      "win_rate": 50,
+      "tier": "platinum"
+    },
+    {
+      "region": "asia",
+      "hero": "Moira",
+      "pick_rate": 14.7,
+      "win_rate": 49.8,
+      "tier": "platinum"
+    },
+    {
+      "region": "asia",
+      "hero": "Orisa",
+      "pick_rate": 15.7,
+      "win_rate": 49.8,
+      "tier": "platinum"
+    },
+    {
+      "region": "asia",
+      "hero": "Pharah",
+      "pick_rate": 4.7,
+      "win_rate": 53.6,
+      "tier": "platinum"
+    },
+    {
+      "region": "asia",
+      "hero": "Reaper",
+      "pick_rate": 17.4,
+      "win_rate": 54.2,
+      "tier": "platinum"
+    },
+    {
+      "region": "asia",
+      "hero": "Reinhardt",
+      "pick_rate": 6.1,
+      "win_rate": 47.3,
+      "tier": "platinum"
+    },
+    {
+      "region": "asia",
+      "hero": "Roadhog",
+      "pick_rate": 5.2,
+      "win_rate": 42.6,
+      "tier": "platinum"
+    },
+    {
+      "region": "asia",
+      "hero": "Sigma",
+      "pick_rate": 12.2,
+      "win_rate": 50.6,
+      "tier": "platinum"
+    },
+    {
+      "region": "asia",
+      "hero": "Sojourn",
+      "pick_rate": 12.5,
+      "win_rate": 45.1,
+      "tier": "platinum"
+    },
+    {
+      "region": "asia",
+      "hero": "Soldier: 76",
+      "pick_rate": 16.9,
+      "win_rate": 51.7,
+      "tier": "platinum"
+    },
+    {
+      "region": "asia",
+      "hero": "Sombra",
+      "pick_rate": 2.8,
+      "win_rate": 53.2,
+      "tier": "platinum"
+    },
+    {
+      "region": "asia",
+      "hero": "Symmetra",
+      "pick_rate": 3.9,
+      "win_rate": 53,
+      "tier": "platinum"
+    },
+    {
+      "region": "asia",
+      "hero": "Torbj\u00f6rn",
+      "pick_rate": 5.4,
+      "win_rate": 51.3,
+      "tier": "platinum"
+    },
+    {
+      "region": "asia",
+      "hero": "Tracer",
+      "pick_rate": 10.3,
+      "win_rate": 50.3,
+      "tier": "platinum"
+    },
+    {
+      "region": "asia",
+      "hero": "Vendetta",
+      "pick_rate": 1.5,
+      "win_rate": 46.1,
+      "tier": "platinum"
+    },
+    {
+      "region": "asia",
+      "hero": "Venture",
+      "pick_rate": 1.6,
+      "win_rate": 50.1,
+      "tier": "platinum"
+    },
+    {
+      "region": "asia",
+      "hero": "Widowmaker",
+      "pick_rate": 3.2,
+      "win_rate": 49.3,
+      "tier": "platinum"
+    },
+    {
+      "region": "asia",
+      "hero": "Winston",
+      "pick_rate": 5.6,
+      "win_rate": 49.5,
+      "tier": "platinum"
+    },
+    {
+      "region": "asia",
+      "hero": "Wrecking Ball",
+      "pick_rate": 3.5,
+      "win_rate": 51.3,
+      "tier": "platinum"
+    },
+    {
+      "region": "asia",
+      "hero": "Wuyang",
+      "pick_rate": 6,
+      "win_rate": 49.8,
+      "tier": "platinum"
+    },
+    {
+      "region": "asia",
+      "hero": "Zarya",
+      "pick_rate": 6.5,
+      "win_rate": 45.5,
+      "tier": "platinum"
+    },
+    {
+      "region": "asia",
+      "hero": "Zenyatta",
+      "pick_rate": 11.3,
+      "win_rate": 51.3,
+      "tier": "platinum"
+    },
+    {
+      "region": "asia",
+      "hero": "Sierra",
+      "pick_rate": 25.9,
+      "win_rate": 43.9,
+      "tier": "diamond"
+    },
+    {
+      "region": "asia",
+      "hero": "Ramattra",
+      "pick_rate": 7.9,
+      "win_rate": 49.7,
+      "tier": "diamond"
+    },
+    {
+      "region": "asia",
+      "hero": "Ana",
+      "pick_rate": 39.2,
+      "win_rate": 45.9,
+      "tier": "diamond"
+    },
+    {
+      "region": "asia",
+      "hero": "Anran",
+      "pick_rate": 8.2,
+      "win_rate": 52.5,
+      "tier": "diamond"
+    },
+    {
+      "region": "asia",
+      "hero": "Ashe",
+      "pick_rate": 10,
+      "win_rate": 54.3,
+      "tier": "diamond"
+    },
+    {
+      "region": "asia",
+      "hero": "Baptiste",
+      "pick_rate": 13.1,
+      "win_rate": 46.7,
+      "tier": "diamond"
+    },
+    {
+      "region": "asia",
+      "hero": "Bastion",
+      "pick_rate": 7.7,
+      "win_rate": 48.7,
+      "tier": "diamond"
+    },
+    {
+      "region": "asia",
+      "hero": "Brigitte",
+      "pick_rate": 8,
+      "win_rate": 51.1,
+      "tier": "diamond"
+    },
+    {
+      "region": "asia",
+      "hero": "Cassidy",
+      "pick_rate": 18.1,
+      "win_rate": 44.9,
+      "tier": "diamond"
+    },
+    {
+      "region": "asia",
+      "hero": "D.Va",
+      "pick_rate": 9.4,
+      "win_rate": 53.7,
+      "tier": "diamond"
+    },
+    {
+      "region": "asia",
+      "hero": "Domina",
+      "pick_rate": 5.8,
+      "win_rate": 53,
+      "tier": "diamond"
+    },
+    {
+      "region": "asia",
+      "hero": "Doomfist",
+      "pick_rate": 5.9,
+      "win_rate": 45.9,
+      "tier": "diamond"
+    },
+    {
+      "region": "asia",
+      "hero": "Echo",
+      "pick_rate": 5.1,
+      "win_rate": 46.6,
+      "tier": "diamond"
+    },
+    {
+      "region": "asia",
+      "hero": "Emre",
+      "pick_rate": 20.9,
+      "win_rate": 51.2,
+      "tier": "diamond"
+    },
+    {
+      "region": "asia",
+      "hero": "Freja",
+      "pick_rate": 1.1,
+      "win_rate": 42.6,
+      "tier": "diamond"
+    },
+    {
+      "region": "asia",
+      "hero": "Genji",
+      "pick_rate": 9.5,
+      "win_rate": 47.8,
+      "tier": "diamond"
+    },
+    {
+      "region": "asia",
+      "hero": "Hanzo",
+      "pick_rate": 2.4,
+      "win_rate": 46.6,
+      "tier": "diamond"
+    },
+    {
+      "region": "asia",
+      "hero": "Hazard",
+      "pick_rate": 5.3,
+      "win_rate": 46.4,
+      "tier": "diamond"
+    },
+    {
+      "region": "asia",
+      "hero": "Illari",
+      "pick_rate": 20.5,
+      "win_rate": 54.6,
+      "tier": "diamond"
+    },
+    {
+      "region": "asia",
+      "hero": "Jetpack Cat",
+      "pick_rate": 4.4,
+      "win_rate": 48.6,
+      "tier": "diamond"
+    },
+    {
+      "region": "asia",
+      "hero": "Junker Queen",
+      "pick_rate": 2.2,
+      "win_rate": 51.1,
+      "tier": "diamond"
+    },
+    {
+      "region": "asia",
+      "hero": "Junkrat",
+      "pick_rate": 2.6,
+      "win_rate": 52.4,
+      "tier": "diamond"
+    },
+    {
+      "region": "asia",
+      "hero": "Juno",
+      "pick_rate": 13.9,
+      "win_rate": 50.5,
+      "tier": "diamond"
+    },
+    {
+      "region": "asia",
+      "hero": "Kiriko",
+      "pick_rate": 39.4,
+      "win_rate": 46.4,
+      "tier": "diamond"
+    },
+    {
+      "region": "asia",
+      "hero": "Lifeweaver",
+      "pick_rate": 10.9,
+      "win_rate": 52.6,
+      "tier": "diamond"
+    },
+    {
+      "region": "asia",
+      "hero": "L\u00facio",
+      "pick_rate": 8.2,
+      "win_rate": 52.3,
+      "tier": "diamond"
+    },
+    {
+      "region": "asia",
+      "hero": "Mauga",
+      "pick_rate": 7.8,
+      "win_rate": 51.9,
+      "tier": "diamond"
+    },
+    {
+      "region": "asia",
+      "hero": "Mei",
+      "pick_rate": 4.6,
+      "win_rate": 47.2,
+      "tier": "diamond"
+    },
+    {
+      "region": "asia",
+      "hero": "Mercy",
+      "pick_rate": 5,
+      "win_rate": 49.1,
+      "tier": "diamond"
+    },
+    {
+      "region": "asia",
+      "hero": "Mizuki",
+      "pick_rate": 8.9,
+      "win_rate": 51.3,
+      "tier": "diamond"
+    },
+    {
+      "region": "asia",
+      "hero": "Moira",
+      "pick_rate": 11.3,
+      "win_rate": 50,
+      "tier": "diamond"
+    },
+    {
+      "region": "asia",
+      "hero": "Orisa",
+      "pick_rate": 16.3,
+      "win_rate": 51,
+      "tier": "diamond"
+    },
+    {
+      "region": "asia",
+      "hero": "Pharah",
+      "pick_rate": 4,
+      "win_rate": 53.3,
+      "tier": "diamond"
+    },
+    {
+      "region": "asia",
+      "hero": "Reaper",
+      "pick_rate": 17.3,
+      "win_rate": 53.8,
+      "tier": "diamond"
+    },
+    {
+      "region": "asia",
+      "hero": "Reinhardt",
+      "pick_rate": 5.4,
+      "win_rate": 47.7,
+      "tier": "diamond"
+    },
+    {
+      "region": "asia",
+      "hero": "Roadhog",
+      "pick_rate": 5.1,
+      "win_rate": 41.7,
+      "tier": "diamond"
+    },
+    {
+      "region": "asia",
+      "hero": "Sigma",
+      "pick_rate": 11,
+      "win_rate": 52.8,
+      "tier": "diamond"
+    },
+    {
+      "region": "asia",
+      "hero": "Sojourn",
+      "pick_rate": 13,
+      "win_rate": 47.2,
+      "tier": "diamond"
+    },
+    {
+      "region": "asia",
+      "hero": "Soldier: 76",
+      "pick_rate": 17.7,
+      "win_rate": 53.1,
+      "tier": "diamond"
+    },
+    {
+      "region": "asia",
+      "hero": "Sombra",
+      "pick_rate": 3.3,
+      "win_rate": 51.2,
+      "tier": "diamond"
+    },
+    {
+      "region": "asia",
+      "hero": "Symmetra",
+      "pick_rate": 3.4,
+      "win_rate": 52.6,
+      "tier": "diamond"
+    },
+    {
+      "region": "asia",
+      "hero": "Torbj\u00f6rn",
+      "pick_rate": 4.1,
+      "win_rate": 48.8,
+      "tier": "diamond"
+    },
+    {
+      "region": "asia",
+      "hero": "Tracer",
+      "pick_rate": 14.7,
+      "win_rate": 51.3,
+      "tier": "diamond"
+    },
+    {
+      "region": "asia",
+      "hero": "Vendetta",
+      "pick_rate": 1.3,
+      "win_rate": 45.9,
+      "tier": "diamond"
+    },
+    {
+      "region": "asia",
+      "hero": "Venture",
+      "pick_rate": 1.7,
+      "win_rate": 53.1,
+      "tier": "diamond"
+    },
+    {
+      "region": "asia",
+      "hero": "Widowmaker",
+      "pick_rate": 3.3,
+      "win_rate": 49.8,
+      "tier": "diamond"
+    },
+    {
+      "region": "asia",
+      "hero": "Winston",
+      "pick_rate": 7,
+      "win_rate": 47.1,
+      "tier": "diamond"
+    },
+    {
+      "region": "asia",
+      "hero": "Wrecking Ball",
+      "pick_rate": 4.6,
+      "win_rate": 51.5,
+      "tier": "diamond"
+    },
+    {
+      "region": "asia",
+      "hero": "Wuyang",
+      "pick_rate": 6.7,
+      "win_rate": 49.5,
+      "tier": "diamond"
+    },
+    {
+      "region": "asia",
+      "hero": "Zarya",
+      "pick_rate": 6.2,
+      "win_rate": 45,
+      "tier": "diamond"
+    },
+    {
+      "region": "asia",
+      "hero": "Zenyatta",
+      "pick_rate": 10.3,
+      "win_rate": 52.1,
+      "tier": "diamond"
+    },
+    {
+      "region": "asia",
+      "hero": "Sierra",
+      "pick_rate": 19,
+      "win_rate": 36.9,
+      "tier": "master"
+    },
+    {
+      "region": "asia",
+      "hero": "Ramattra",
+      "pick_rate": 6.3,
+      "win_rate": 46.7,
+      "tier": "master"
+    },
+    {
+      "region": "asia",
+      "hero": "Ana",
+      "pick_rate": 40,
+      "win_rate": 50.1,
+      "tier": "master"
+    },
+    {
+      "region": "asia",
+      "hero": "Anran",
+      "pick_rate": 6.3,
+      "win_rate": 52.4,
+      "tier": "master"
+    },
+    {
+      "region": "asia",
+      "hero": "Ashe",
+      "pick_rate": 10.9,
+      "win_rate": 51.3,
+      "tier": "master"
+    },
+    {
+      "region": "asia",
+      "hero": "Baptiste",
+      "pick_rate": 21.2,
+      "win_rate": 49.5,
+      "tier": "master"
+    },
+    {
+      "region": "asia",
+      "hero": "Bastion",
+      "pick_rate": 6.9,
+      "win_rate": 48,
+      "tier": "master"
+    },
+    {
+      "region": "asia",
+      "hero": "Brigitte",
+      "pick_rate": 7.9,
+      "win_rate": 48.3,
+      "tier": "master"
+    },
+    {
+      "region": "asia",
+      "hero": "Cassidy",
+      "pick_rate": 21.3,
+      "win_rate": 50.2,
+      "tier": "master"
+    },
+    {
+      "region": "asia",
+      "hero": "D.Va",
+      "pick_rate": 6.3,
+      "win_rate": 54.1,
+      "tier": "master"
+    },
+    {
+      "region": "asia",
+      "hero": "Domina",
+      "pick_rate": 6.1,
+      "win_rate": 55.5,
+      "tier": "master"
+    },
+    {
+      "region": "asia",
+      "hero": "Doomfist",
+      "pick_rate": 4.9,
+      "win_rate": 44.4,
+      "tier": "master"
+    },
+    {
+      "region": "asia",
+      "hero": "Echo",
+      "pick_rate": 5.4,
+      "win_rate": 54.4,
+      "tier": "master"
+    },
+    {
+      "region": "asia",
+      "hero": "Emre",
+      "pick_rate": 25.2,
+      "win_rate": 52,
+      "tier": "master"
+    },
+    {
+      "region": "asia",
+      "hero": "Freja",
+      "pick_rate": 1.2,
+      "win_rate": 49.4,
+      "tier": "master"
+    },
+    {
+      "region": "asia",
+      "hero": "Genji",
+      "pick_rate": 7.6,
+      "win_rate": 52.3,
+      "tier": "master"
+    },
+    {
+      "region": "asia",
+      "hero": "Hanzo",
+      "pick_rate": 1.9,
+      "win_rate": 52,
+      "tier": "master"
+    },
+    {
+      "region": "asia",
+      "hero": "Hazard",
+      "pick_rate": 5.7,
+      "win_rate": 51.3,
+      "tier": "master"
+    },
+    {
+      "region": "asia",
+      "hero": "Illari",
+      "pick_rate": 31.2,
+      "win_rate": 55.7,
+      "tier": "master"
+    },
+    {
+      "region": "asia",
+      "hero": "Jetpack Cat",
+      "pick_rate": 4.2,
+      "win_rate": 53.5,
+      "tier": "master"
+    },
+    {
+      "region": "asia",
+      "hero": "Junker Queen",
+      "pick_rate": 1.2,
+      "win_rate": 52.8,
+      "tier": "master"
+    },
+    {
+      "region": "asia",
+      "hero": "Junkrat",
+      "pick_rate": 2,
+      "win_rate": 51,
+      "tier": "master"
+    },
+    {
+      "region": "asia",
+      "hero": "Juno",
+      "pick_rate": 11.1,
+      "win_rate": 47.1,
+      "tier": "master"
+    },
+    {
+      "region": "asia",
+      "hero": "Kiriko",
+      "pick_rate": 35.5,
+      "win_rate": 49,
+      "tier": "master"
+    },
+    {
+      "region": "asia",
+      "hero": "Lifeweaver",
+      "pick_rate": 6.6,
+      "win_rate": 46.6,
+      "tier": "master"
+    },
+    {
+      "region": "asia",
+      "hero": "L\u00facio",
+      "pick_rate": 9,
+      "win_rate": 58.4,
+      "tier": "master"
+    },
+    {
+      "region": "asia",
+      "hero": "Mauga",
+      "pick_rate": 11.7,
+      "win_rate": 58.2,
+      "tier": "master"
+    },
+    {
+      "region": "asia",
+      "hero": "Mei",
+      "pick_rate": 2.8,
+      "win_rate": 48.4,
+      "tier": "master"
+    },
+    {
+      "region": "asia",
+      "hero": "Mercy",
+      "pick_rate": 3.5,
+      "win_rate": 52.9,
+      "tier": "master"
+    },
+    {
+      "region": "asia",
+      "hero": "Mizuki",
+      "pick_rate": 7.1,
+      "win_rate": 42.7,
+      "tier": "master"
+    },
+    {
+      "region": "asia",
+      "hero": "Moira",
+      "pick_rate": 7.3,
+      "win_rate": 41.4,
+      "tier": "master"
+    },
+    {
+      "region": "asia",
+      "hero": "Orisa",
+      "pick_rate": 21.1,
+      "win_rate": 54,
+      "tier": "master"
+    },
+    {
+      "region": "asia",
+      "hero": "Pharah",
+      "pick_rate": 4.9,
+      "win_rate": 47.5,
+      "tier": "master"
+    },
+    {
+      "region": "asia",
+      "hero": "Reaper",
+      "pick_rate": 17.4,
+      "win_rate": 53.2,
+      "tier": "master"
+    },
+    {
+      "region": "asia",
+      "hero": "Reinhardt",
+      "pick_rate": 3.2,
+      "win_rate": 48.7,
+      "tier": "master"
+    },
+    {
+      "region": "asia",
+      "hero": "Roadhog",
+      "pick_rate": 4.1,
+      "win_rate": 36.8,
+      "tier": "master"
+    },
+    {
+      "region": "asia",
+      "hero": "Sigma",
+      "pick_rate": 11.5,
+      "win_rate": 45.9,
+      "tier": "master"
+    },
+    {
+      "region": "asia",
+      "hero": "Sojourn",
+      "pick_rate": 12.9,
+      "win_rate": 46,
+      "tier": "master"
+    },
+    {
+      "region": "asia",
+      "hero": "Soldier: 76",
+      "pick_rate": 19.2,
+      "win_rate": 58.3,
+      "tier": "master"
+    },
+    {
+      "region": "asia",
+      "hero": "Sombra",
+      "pick_rate": 4.6,
+      "win_rate": 48.9,
+      "tier": "master"
+    },
+    {
+      "region": "asia",
+      "hero": "Symmetra",
+      "pick_rate": 3.4,
+      "win_rate": 48.9,
+      "tier": "master"
+    },
+    {
+      "region": "asia",
+      "hero": "Torbj\u00f6rn",
+      "pick_rate": 3.8,
+      "win_rate": 50.4,
+      "tier": "master"
+    },
+    {
+      "region": "asia",
+      "hero": "Tracer",
+      "pick_rate": 18.9,
+      "win_rate": 50.7,
+      "tier": "master"
+    },
+    {
+      "region": "asia",
+      "hero": "Vendetta",
+      "pick_rate": 0.8,
+      "win_rate": 29.7,
+      "tier": "master"
+    },
+    {
+      "region": "asia",
+      "hero": "Venture",
+      "pick_rate": 1.6,
+      "win_rate": 45.9,
+      "tier": "master"
+    },
+    {
+      "region": "asia",
+      "hero": "Widowmaker",
+      "pick_rate": 4,
+      "win_rate": 47.6,
+      "tier": "master"
+    },
+    {
+      "region": "asia",
+      "hero": "Winston",
+      "pick_rate": 7.2,
+      "win_rate": 50.8,
+      "tier": "master"
+    },
+    {
+      "region": "asia",
+      "hero": "Wrecking Ball",
+      "pick_rate": 5.2,
+      "win_rate": 45.8,
+      "tier": "master"
+    },
+    {
+      "region": "asia",
+      "hero": "Wuyang",
+      "pick_rate": 7.7,
+      "win_rate": 48.8,
+      "tier": "master"
+    },
+    {
+      "region": "asia",
+      "hero": "Zarya",
+      "pick_rate": 6.1,
+      "win_rate": 44.7,
+      "tier": "master"
+    },
+    {
+      "region": "asia",
+      "hero": "Zenyatta",
+      "pick_rate": 8.2,
+      "win_rate": 49.2,
+      "tier": "master"
+    },
+    {
+      "region": "asia",
+      "hero": "Sierra",
+      "pick_rate": 15.7,
+      "win_rate": 48.2,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "asia",
+      "hero": "Ramattra",
+      "pick_rate": 6.1,
+      "win_rate": 41.9,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "asia",
+      "hero": "Ana",
+      "pick_rate": 32.6,
+      "win_rate": 48.1,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "asia",
+      "hero": "Anran",
+      "pick_rate": 9.6,
+      "win_rate": 20.2,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "asia",
+      "hero": "Ashe",
+      "pick_rate": 21.9,
+      "win_rate": 52.9,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "asia",
+      "hero": "Baptiste",
+      "pick_rate": 33.9,
+      "win_rate": 40.6,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "asia",
+      "hero": "Bastion",
+      "pick_rate": 11.2,
+      "win_rate": 24.7,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "asia",
+      "hero": "Brigitte",
+      "pick_rate": 12.5,
+      "win_rate": 55.2,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "asia",
+      "hero": "Cassidy",
+      "pick_rate": 17.5,
+      "win_rate": 45.4,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "asia",
+      "hero": "D.Va",
+      "pick_rate": 19.7,
+      "win_rate": 40.7,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "asia",
+      "hero": "Domina",
+      "pick_rate": 10.9,
+      "win_rate": 54.5,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "asia",
+      "hero": "Doomfist",
+      "pick_rate": 6,
+      "win_rate": 33.5,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "asia",
+      "hero": "Echo",
+      "pick_rate": 13.4,
+      "win_rate": 75.6,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "asia",
+      "hero": "Emre",
+      "pick_rate": 34.3,
+      "win_rate": 58.5,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "asia",
+      "hero": "Freja",
+      "pick_rate": 4.5,
+      "win_rate": 64.7,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "asia",
+      "hero": "Genji",
+      "pick_rate": 10.6,
+      "win_rate": 26.4,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "asia",
+      "hero": "Hanzo",
+      "pick_rate": 2.8,
+      "win_rate": 35.9,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "asia",
+      "hero": "Hazard",
+      "pick_rate": 16.9,
+      "win_rate": 41.1,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "asia",
+      "hero": "Illari",
+      "pick_rate": 42.1,
+      "win_rate": 74.7,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "asia",
+      "hero": "Jetpack Cat",
+      "pick_rate": 9,
+      "win_rate": 34.6,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "asia",
+      "hero": "Junker Queen",
+      "pick_rate": 1.2,
+      "win_rate": 0,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "asia",
+      "hero": "Junkrat",
+      "pick_rate": 1.3,
+      "win_rate": 0,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "asia",
+      "hero": "Juno",
+      "pick_rate": 6.9,
+      "win_rate": 49.2,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "asia",
+      "hero": "Kiriko",
+      "pick_rate": 39.4,
+      "win_rate": 46.7,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "asia",
+      "hero": "Lifeweaver",
+      "pick_rate": 10.3,
+      "win_rate": 56.3,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "asia",
+      "hero": "L\u00facio",
+      "pick_rate": 13.5,
+      "win_rate": 56,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "asia",
+      "hero": "Mauga",
+      "pick_rate": 24.9,
+      "win_rate": 72.8,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "asia",
+      "hero": "Mei",
+      "pick_rate": 5.3,
+      "win_rate": 62.4,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "asia",
+      "hero": "Mercy",
+      "pick_rate": 11.8,
+      "win_rate": 28.6,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "asia",
+      "hero": "Mizuki",
+      "pick_rate": 10.1,
+      "win_rate": 72.3,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "asia",
+      "hero": "Moira",
+      "pick_rate": 10.6,
+      "win_rate": 40.9,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "asia",
+      "hero": "Orisa",
+      "pick_rate": 22.6,
+      "win_rate": 49,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "asia",
+      "hero": "Pharah",
+      "pick_rate": 3,
+      "win_rate": 38.3,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "asia",
+      "hero": "Reaper",
+      "pick_rate": 18,
+      "win_rate": 53.7,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "asia",
+      "hero": "Reinhardt",
+      "pick_rate": 5.2,
+      "win_rate": 37,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "asia",
+      "hero": "Roadhog",
+      "pick_rate": 4.5,
+      "win_rate": 0,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "asia",
+      "hero": "Sigma",
+      "pick_rate": 16.3,
+      "win_rate": 66,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "asia",
+      "hero": "Sojourn",
+      "pick_rate": 14.7,
+      "win_rate": 42.6,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "asia",
+      "hero": "Soldier: 76",
+      "pick_rate": 21.2,
+      "win_rate": 57.2,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "asia",
+      "hero": "Sombra",
+      "pick_rate": 10,
+      "win_rate": 66.8,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "asia",
+      "hero": "Symmetra",
+      "pick_rate": 3.9,
+      "win_rate": 31,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "asia",
+      "hero": "Torbj\u00f6rn",
+      "pick_rate": 5.9,
+      "win_rate": 72.6,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "asia",
+      "hero": "Tracer",
+      "pick_rate": 34.5,
+      "win_rate": 54.6,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "asia",
+      "hero": "Vendetta",
+      "pick_rate": 6.8,
+      "win_rate": 0,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "asia",
+      "hero": "Venture",
+      "pick_rate": 6.2,
+      "win_rate": 34.6,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "asia",
+      "hero": "Widowmaker",
+      "pick_rate": 9.4,
+      "win_rate": 52.8,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "asia",
+      "hero": "Winston",
+      "pick_rate": 7.9,
+      "win_rate": 31.6,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "asia",
+      "hero": "Wrecking Ball",
+      "pick_rate": 4.3,
+      "win_rate": 23.6,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "asia",
+      "hero": "Wuyang",
+      "pick_rate": 8.8,
+      "win_rate": 40.1,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "asia",
+      "hero": "Zarya",
+      "pick_rate": 9.5,
+      "win_rate": 62.9,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "asia",
+      "hero": "Zenyatta",
+      "pick_rate": 6.6,
+      "win_rate": 32.8,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "europe",
+      "hero": "Sierra",
+      "pick_rate": 31.2,
+      "win_rate": 46.8,
+      "tier": "all"
+    },
+    {
+      "region": "europe",
+      "hero": "Ramattra",
+      "pick_rate": 8,
+      "win_rate": 48.7,
+      "tier": "all"
+    },
+    {
+      "region": "europe",
+      "hero": "Ana",
+      "pick_rate": 25.3,
+      "win_rate": 47.5,
+      "tier": "all"
+    },
+    {
+      "region": "europe",
+      "hero": "Anran",
+      "pick_rate": 6.3,
+      "win_rate": 52.6,
+      "tier": "all"
+    },
+    {
+      "region": "europe",
+      "hero": "Ashe",
+      "pick_rate": 14.6,
+      "win_rate": 52,
+      "tier": "all"
+    },
+    {
+      "region": "europe",
+      "hero": "Baptiste",
+      "pick_rate": 11.1,
+      "win_rate": 48.8,
+      "tier": "all"
+    },
+    {
+      "region": "europe",
+      "hero": "Bastion",
+      "pick_rate": 16.3,
+      "win_rate": 48.3,
+      "tier": "all"
+    },
+    {
+      "region": "europe",
+      "hero": "Brigitte",
+      "pick_rate": 4.4,
+      "win_rate": 52.5,
+      "tier": "all"
+    },
+    {
+      "region": "europe",
+      "hero": "Cassidy",
+      "pick_rate": 13.9,
+      "win_rate": 48.1,
+      "tier": "all"
+    },
+    {
+      "region": "europe",
+      "hero": "D.Va",
+      "pick_rate": 9.9,
+      "win_rate": 51.8,
+      "tier": "all"
+    },
+    {
+      "region": "europe",
+      "hero": "Domina",
+      "pick_rate": 5.4,
+      "win_rate": 50.8,
+      "tier": "all"
+    },
+    {
+      "region": "europe",
+      "hero": "Doomfist",
+      "pick_rate": 4.9,
+      "win_rate": 50.7,
+      "tier": "all"
+    },
+    {
+      "region": "europe",
+      "hero": "Echo",
+      "pick_rate": 3.4,
+      "win_rate": 50.3,
+      "tier": "all"
+    },
+    {
+      "region": "europe",
+      "hero": "Emre",
+      "pick_rate": 14.3,
+      "win_rate": 48,
+      "tier": "all"
+    },
+    {
+      "region": "europe",
+      "hero": "Freja",
+      "pick_rate": 2.1,
+      "win_rate": 46.5,
+      "tier": "all"
+    },
+    {
+      "region": "europe",
+      "hero": "Genji",
+      "pick_rate": 8.2,
+      "win_rate": 51.8,
+      "tier": "all"
+    },
+    {
+      "region": "europe",
+      "hero": "Hanzo",
+      "pick_rate": 5.9,
+      "win_rate": 49.7,
+      "tier": "all"
+    },
+    {
+      "region": "europe",
+      "hero": "Hazard",
+      "pick_rate": 3.4,
+      "win_rate": 52.6,
+      "tier": "all"
+    },
+    {
+      "region": "europe",
+      "hero": "Illari",
+      "pick_rate": 16.7,
+      "win_rate": 52.9,
+      "tier": "all"
+    },
+    {
+      "region": "europe",
+      "hero": "Jetpack Cat",
+      "pick_rate": 6.7,
+      "win_rate": 48.6,
+      "tier": "all"
+    },
+    {
+      "region": "europe",
+      "hero": "Junker Queen",
+      "pick_rate": 2.8,
+      "win_rate": 49.6,
+      "tier": "all"
+    },
+    {
+      "region": "europe",
+      "hero": "Junkrat",
+      "pick_rate": 5.5,
+      "win_rate": 47.9,
+      "tier": "all"
+    },
+    {
+      "region": "europe",
+      "hero": "Juno",
+      "pick_rate": 23.8,
+      "win_rate": 50.6,
+      "tier": "all"
+    },
+    {
+      "region": "europe",
+      "hero": "Kiriko",
+      "pick_rate": 19.1,
+      "win_rate": 46.3,
+      "tier": "all"
+    },
+    {
+      "region": "europe",
+      "hero": "Lifeweaver",
+      "pick_rate": 11.1,
+      "win_rate": 49.2,
+      "tier": "all"
+    },
+    {
+      "region": "europe",
+      "hero": "L\u00facio",
+      "pick_rate": 8.6,
+      "win_rate": 51.6,
+      "tier": "all"
+    },
+    {
+      "region": "europe",
+      "hero": "Mauga",
+      "pick_rate": 8.5,
+      "win_rate": 51.1,
+      "tier": "all"
+    },
+    {
+      "region": "europe",
+      "hero": "Mei",
+      "pick_rate": 4.6,
+      "win_rate": 48.3,
+      "tier": "all"
+    },
+    {
+      "region": "europe",
+      "hero": "Mercy",
+      "pick_rate": 22.9,
+      "win_rate": 49.6,
+      "tier": "all"
+    },
+    {
+      "region": "europe",
+      "hero": "Mizuki",
+      "pick_rate": 10.2,
+      "win_rate": 50.8,
+      "tier": "all"
+    },
+    {
+      "region": "europe",
+      "hero": "Moira",
+      "pick_rate": 22.3,
+      "win_rate": 47.4,
+      "tier": "all"
+    },
+    {
+      "region": "europe",
+      "hero": "Orisa",
+      "pick_rate": 16.6,
+      "win_rate": 48.6,
+      "tier": "all"
+    },
+    {
+      "region": "europe",
+      "hero": "Pharah",
+      "pick_rate": 2.3,
+      "win_rate": 52.5,
+      "tier": "all"
+    },
+    {
+      "region": "europe",
+      "hero": "Reaper",
+      "pick_rate": 14.4,
+      "win_rate": 53.1,
+      "tier": "all"
+    },
+    {
+      "region": "europe",
+      "hero": "Reinhardt",
+      "pick_rate": 8.8,
+      "win_rate": 50.8,
+      "tier": "all"
+    },
+    {
+      "region": "europe",
+      "hero": "Roadhog",
+      "pick_rate": 9.3,
+      "win_rate": 46.1,
+      "tier": "all"
+    },
+    {
+      "region": "europe",
+      "hero": "Sigma",
+      "pick_rate": 11.6,
+      "win_rate": 50,
+      "tier": "all"
+    },
+    {
+      "region": "europe",
+      "hero": "Sojourn",
+      "pick_rate": 8.9,
+      "win_rate": 44.6,
+      "tier": "all"
+    },
+    {
+      "region": "europe",
+      "hero": "Soldier: 76",
+      "pick_rate": 25.8,
+      "win_rate": 51.1,
+      "tier": "all"
+    },
+    {
+      "region": "europe",
+      "hero": "Sombra",
+      "pick_rate": 2.4,
+      "win_rate": 50.4,
+      "tier": "all"
+    },
+    {
+      "region": "europe",
+      "hero": "Symmetra",
+      "pick_rate": 2.5,
+      "win_rate": 49.1,
+      "tier": "all"
+    },
+    {
+      "region": "europe",
+      "hero": "Torbj\u00f6rn",
+      "pick_rate": 4.5,
+      "win_rate": 50.9,
+      "tier": "all"
+    },
+    {
+      "region": "europe",
+      "hero": "Tracer",
+      "pick_rate": 5.2,
+      "win_rate": 51.8,
+      "tier": "all"
+    },
+    {
+      "region": "europe",
+      "hero": "Vendetta",
+      "pick_rate": 1.2,
+      "win_rate": 44.5,
+      "tier": "all"
+    },
+    {
+      "region": "europe",
+      "hero": "Venture",
+      "pick_rate": 1.3,
+      "win_rate": 50.2,
+      "tier": "all"
+    },
+    {
+      "region": "europe",
+      "hero": "Widowmaker",
+      "pick_rate": 4.9,
+      "win_rate": 51,
+      "tier": "all"
+    },
+    {
+      "region": "europe",
+      "hero": "Winston",
+      "pick_rate": 3.3,
+      "win_rate": 49.8,
+      "tier": "all"
+    },
+    {
+      "region": "europe",
+      "hero": "Wrecking Ball",
+      "pick_rate": 2.7,
+      "win_rate": 48.8,
+      "tier": "all"
+    },
+    {
+      "region": "europe",
+      "hero": "Wuyang",
+      "pick_rate": 4.3,
+      "win_rate": 48.4,
+      "tier": "all"
+    },
+    {
+      "region": "europe",
+      "hero": "Zarya",
+      "pick_rate": 4.9,
+      "win_rate": 45.9,
+      "tier": "all"
+    },
+    {
+      "region": "europe",
+      "hero": "Zenyatta",
+      "pick_rate": 13.5,
+      "win_rate": 52.8,
+      "tier": "all"
+    },
+    {
+      "region": "europe",
+      "hero": "Sierra",
+      "pick_rate": 33.9,
+      "win_rate": 50.2,
+      "tier": "bronze"
+    },
+    {
+      "region": "europe",
+      "hero": "Ramattra",
+      "pick_rate": 11,
+      "win_rate": 51.5,
+      "tier": "bronze"
+    },
+    {
+      "region": "europe",
+      "hero": "Ana",
+      "pick_rate": 11.8,
+      "win_rate": 47.9,
+      "tier": "bronze"
+    },
+    {
+      "region": "europe",
+      "hero": "Anran",
+      "pick_rate": 7.1,
+      "win_rate": 51.5,
+      "tier": "bronze"
+    },
+    {
+      "region": "europe",
+      "hero": "Ashe",
+      "pick_rate": 14.7,
+      "win_rate": 48.7,
+      "tier": "bronze"
+    },
+    {
+      "region": "europe",
+      "hero": "Baptiste",
+      "pick_rate": 7.6,
+      "win_rate": 52.4,
+      "tier": "bronze"
+    },
+    {
+      "region": "europe",
+      "hero": "Bastion",
+      "pick_rate": 20.1,
+      "win_rate": 51.8,
+      "tier": "bronze"
+    },
+    {
+      "region": "europe",
+      "hero": "Brigitte",
+      "pick_rate": 1.8,
+      "win_rate": 55.6,
+      "tier": "bronze"
+    },
+    {
+      "region": "europe",
+      "hero": "Cassidy",
+      "pick_rate": 7.8,
+      "win_rate": 49.3,
+      "tier": "bronze"
+    },
+    {
+      "region": "europe",
+      "hero": "D.Va",
+      "pick_rate": 16.6,
+      "win_rate": 47.3,
+      "tier": "bronze"
+    },
+    {
+      "region": "europe",
+      "hero": "Domina",
+      "pick_rate": 6.3,
+      "win_rate": 52.9,
+      "tier": "bronze"
+    },
+    {
+      "region": "europe",
+      "hero": "Doomfist",
+      "pick_rate": 2.8,
+      "win_rate": 55,
+      "tier": "bronze"
+    },
+    {
+      "region": "europe",
+      "hero": "Echo",
+      "pick_rate": 5.7,
+      "win_rate": 47.7,
+      "tier": "bronze"
+    },
+    {
+      "region": "europe",
+      "hero": "Emre",
+      "pick_rate": 14.2,
+      "win_rate": 46.2,
+      "tier": "bronze"
+    },
+    {
+      "region": "europe",
+      "hero": "Freja",
+      "pick_rate": 5.2,
+      "win_rate": 46.7,
+      "tier": "bronze"
+    },
+    {
+      "region": "europe",
+      "hero": "Genji",
+      "pick_rate": 6.1,
+      "win_rate": 49.7,
+      "tier": "bronze"
+    },
+    {
+      "region": "europe",
+      "hero": "Hanzo",
+      "pick_rate": 7.6,
+      "win_rate": 49.2,
+      "tier": "bronze"
+    },
+    {
+      "region": "europe",
+      "hero": "Hazard",
+      "pick_rate": 1.7,
+      "win_rate": 42.4,
+      "tier": "bronze"
+    },
+    {
+      "region": "europe",
+      "hero": "Illari",
+      "pick_rate": 11.8,
+      "win_rate": 53.7,
+      "tier": "bronze"
+    },
+    {
+      "region": "europe",
+      "hero": "Jetpack Cat",
+      "pick_rate": 5.6,
+      "win_rate": 47.3,
+      "tier": "bronze"
+    },
+    {
+      "region": "europe",
+      "hero": "Junker Queen",
+      "pick_rate": 3.4,
+      "win_rate": 50.4,
+      "tier": "bronze"
+    },
+    {
+      "region": "europe",
+      "hero": "Junkrat",
+      "pick_rate": 7.7,
+      "win_rate": 47.7,
+      "tier": "bronze"
+    },
+    {
+      "region": "europe",
+      "hero": "Juno",
+      "pick_rate": 30.4,
+      "win_rate": 51,
+      "tier": "bronze"
+    },
+    {
+      "region": "europe",
+      "hero": "Kiriko",
+      "pick_rate": 19.3,
+      "win_rate": 47.5,
+      "tier": "bronze"
+    },
+    {
+      "region": "europe",
+      "hero": "Lifeweaver",
+      "pick_rate": 11.8,
+      "win_rate": 46.4,
+      "tier": "bronze"
+    },
+    {
+      "region": "europe",
+      "hero": "L\u00facio",
+      "pick_rate": 9.9,
+      "win_rate": 50.7,
+      "tier": "bronze"
+    },
+    {
+      "region": "europe",
+      "hero": "Mauga",
+      "pick_rate": 7.7,
+      "win_rate": 44.7,
+      "tier": "bronze"
+    },
+    {
+      "region": "europe",
+      "hero": "Mei",
+      "pick_rate": 3.7,
+      "win_rate": 52,
+      "tier": "bronze"
+    },
+    {
+      "region": "europe",
+      "hero": "Mercy",
+      "pick_rate": 28.9,
+      "win_rate": 47.5,
+      "tier": "bronze"
+    },
+    {
+      "region": "europe",
+      "hero": "Mizuki",
+      "pick_rate": 10.6,
+      "win_rate": 52.2,
+      "tier": "bronze"
+    },
+    {
+      "region": "europe",
+      "hero": "Moira",
+      "pick_rate": 27.9,
+      "win_rate": 50.8,
+      "tier": "bronze"
+    },
+    {
+      "region": "europe",
+      "hero": "Orisa",
+      "pick_rate": 19.8,
+      "win_rate": 52,
+      "tier": "bronze"
+    },
+    {
+      "region": "europe",
+      "hero": "Pharah",
+      "pick_rate": 3.9,
+      "win_rate": 48.2,
+      "tier": "bronze"
+    },
+    {
+      "region": "europe",
+      "hero": "Reaper",
+      "pick_rate": 11,
+      "win_rate": 55.3,
+      "tier": "bronze"
+    },
+    {
+      "region": "europe",
+      "hero": "Reinhardt",
+      "pick_rate": 7.2,
+      "win_rate": 52.9,
+      "tier": "bronze"
+    },
+    {
+      "region": "europe",
+      "hero": "Roadhog",
+      "pick_rate": 6.7,
+      "win_rate": 44.7,
+      "tier": "bronze"
+    },
+    {
+      "region": "europe",
+      "hero": "Sigma",
+      "pick_rate": 9.8,
+      "win_rate": 51.6,
+      "tier": "bronze"
+    },
+    {
+      "region": "europe",
+      "hero": "Sojourn",
+      "pick_rate": 12.6,
+      "win_rate": 45.8,
+      "tier": "bronze"
+    },
+    {
+      "region": "europe",
+      "hero": "Soldier: 76",
+      "pick_rate": 18.2,
+      "win_rate": 53.3,
+      "tier": "bronze"
+    },
+    {
+      "region": "europe",
+      "hero": "Sombra",
+      "pick_rate": 2.2,
+      "win_rate": 50,
+      "tier": "bronze"
+    },
+    {
+      "region": "europe",
+      "hero": "Symmetra",
+      "pick_rate": 2.1,
+      "win_rate": 51.8,
+      "tier": "bronze"
+    },
+    {
+      "region": "europe",
+      "hero": "Torbj\u00f6rn",
+      "pick_rate": 5.4,
+      "win_rate": 58.4,
+      "tier": "bronze"
+    },
+    {
+      "region": "europe",
+      "hero": "Tracer",
+      "pick_rate": 2.8,
+      "win_rate": 49.8,
+      "tier": "bronze"
+    },
+    {
+      "region": "europe",
+      "hero": "Vendetta",
+      "pick_rate": 1.6,
+      "win_rate": 46.6,
+      "tier": "bronze"
+    },
+    {
+      "region": "europe",
+      "hero": "Venture",
+      "pick_rate": 0.9,
+      "win_rate": 59.4,
+      "tier": "bronze"
+    },
+    {
+      "region": "europe",
+      "hero": "Widowmaker",
+      "pick_rate": 5.5,
+      "win_rate": 40.7,
+      "tier": "bronze"
+    },
+    {
+      "region": "europe",
+      "hero": "Winston",
+      "pick_rate": 1.8,
+      "win_rate": 49.3,
+      "tier": "bronze"
+    },
+    {
+      "region": "europe",
+      "hero": "Wrecking Ball",
+      "pick_rate": 2,
+      "win_rate": 45.4,
+      "tier": "bronze"
+    },
+    {
+      "region": "europe",
+      "hero": "Wuyang",
+      "pick_rate": 5.2,
+      "win_rate": 45,
+      "tier": "bronze"
+    },
+    {
+      "region": "europe",
+      "hero": "Zarya",
+      "pick_rate": 3,
+      "win_rate": 51.7,
+      "tier": "bronze"
+    },
+    {
+      "region": "europe",
+      "hero": "Zenyatta",
+      "pick_rate": 17.6,
+      "win_rate": 51.9,
+      "tier": "bronze"
+    },
+    {
+      "region": "europe",
+      "hero": "Sierra",
+      "pick_rate": 34.1,
+      "win_rate": 48.2,
+      "tier": "silver"
+    },
+    {
+      "region": "europe",
+      "hero": "Ramattra",
+      "pick_rate": 10,
+      "win_rate": 50.4,
+      "tier": "silver"
+    },
+    {
+      "region": "europe",
+      "hero": "Ana",
+      "pick_rate": 17.6,
+      "win_rate": 47.8,
+      "tier": "silver"
+    },
+    {
+      "region": "europe",
+      "hero": "Anran",
+      "pick_rate": 6.5,
+      "win_rate": 53.2,
+      "tier": "silver"
+    },
+    {
+      "region": "europe",
+      "hero": "Ashe",
+      "pick_rate": 13.3,
+      "win_rate": 50.1,
+      "tier": "silver"
+    },
+    {
+      "region": "europe",
+      "hero": "Baptiste",
+      "pick_rate": 8,
+      "win_rate": 49.4,
+      "tier": "silver"
+    },
+    {
+      "region": "europe",
+      "hero": "Bastion",
+      "pick_rate": 20,
+      "win_rate": 49.6,
+      "tier": "silver"
+    },
+    {
+      "region": "europe",
+      "hero": "Brigitte",
+      "pick_rate": 2.6,
+      "win_rate": 51.3,
+      "tier": "silver"
+    },
+    {
+      "region": "europe",
+      "hero": "Cassidy",
+      "pick_rate": 9.7,
+      "win_rate": 48.8,
+      "tier": "silver"
+    },
+    {
+      "region": "europe",
+      "hero": "D.Va",
+      "pick_rate": 13.7,
+      "win_rate": 49.7,
+      "tier": "silver"
+    },
+    {
+      "region": "europe",
+      "hero": "Domina",
+      "pick_rate": 5.2,
+      "win_rate": 50.3,
+      "tier": "silver"
+    },
+    {
+      "region": "europe",
+      "hero": "Doomfist",
+      "pick_rate": 3.8,
+      "win_rate": 50,
+      "tier": "silver"
+    },
+    {
+      "region": "europe",
+      "hero": "Echo",
+      "pick_rate": 3.9,
+      "win_rate": 46.9,
+      "tier": "silver"
+    },
+    {
+      "region": "europe",
+      "hero": "Emre",
+      "pick_rate": 12.8,
+      "win_rate": 48.7,
+      "tier": "silver"
+    },
+    {
+      "region": "europe",
+      "hero": "Freja",
+      "pick_rate": 2.9,
+      "win_rate": 44.5,
+      "tier": "silver"
+    },
+    {
+      "region": "europe",
+      "hero": "Genji",
+      "pick_rate": 6.1,
+      "win_rate": 50.4,
+      "tier": "silver"
+    },
+    {
+      "region": "europe",
+      "hero": "Hanzo",
+      "pick_rate": 7.4,
+      "win_rate": 50,
+      "tier": "silver"
+    },
+    {
+      "region": "europe",
+      "hero": "Hazard",
+      "pick_rate": 1.6,
+      "win_rate": 50.3,
+      "tier": "silver"
+    },
+    {
+      "region": "europe",
+      "hero": "Illari",
+      "pick_rate": 14.1,
+      "win_rate": 52.6,
+      "tier": "silver"
+    },
+    {
+      "region": "europe",
+      "hero": "Jetpack Cat",
+      "pick_rate": 5.5,
+      "win_rate": 48.8,
+      "tier": "silver"
+    },
+    {
+      "region": "europe",
+      "hero": "Junker Queen",
+      "pick_rate": 2.6,
+      "win_rate": 49.3,
+      "tier": "silver"
+    },
+    {
+      "region": "europe",
+      "hero": "Junkrat",
+      "pick_rate": 7.9,
+      "win_rate": 47.5,
+      "tier": "silver"
+    },
+    {
+      "region": "europe",
+      "hero": "Juno",
+      "pick_rate": 25.9,
+      "win_rate": 50.8,
+      "tier": "silver"
+    },
+    {
+      "region": "europe",
+      "hero": "Kiriko",
+      "pick_rate": 16.4,
+      "win_rate": 46.6,
+      "tier": "silver"
+    },
+    {
+      "region": "europe",
+      "hero": "Lifeweaver",
+      "pick_rate": 10.7,
+      "win_rate": 47.7,
+      "tier": "silver"
+    },
+    {
+      "region": "europe",
+      "hero": "L\u00facio",
+      "pick_rate": 10,
+      "win_rate": 52.7,
+      "tier": "silver"
+    },
+    {
+      "region": "europe",
+      "hero": "Mauga",
+      "pick_rate": 8.3,
+      "win_rate": 49.3,
+      "tier": "silver"
+    },
+    {
+      "region": "europe",
+      "hero": "Mei",
+      "pick_rate": 4.9,
+      "win_rate": 51.3,
+      "tier": "silver"
+    },
+    {
+      "region": "europe",
+      "hero": "Mercy",
+      "pick_rate": 27.9,
+      "win_rate": 47.2,
+      "tier": "silver"
+    },
+    {
+      "region": "europe",
+      "hero": "Mizuki",
+      "pick_rate": 10.8,
+      "win_rate": 51.2,
+      "tier": "silver"
+    },
+    {
+      "region": "europe",
+      "hero": "Moira",
+      "pick_rate": 30.2,
+      "win_rate": 49.8,
+      "tier": "silver"
+    },
+    {
+      "region": "europe",
+      "hero": "Orisa",
+      "pick_rate": 18.2,
+      "win_rate": 48.7,
+      "tier": "silver"
+    },
+    {
+      "region": "europe",
+      "hero": "Pharah",
+      "pick_rate": 2.9,
+      "win_rate": 50.7,
+      "tier": "silver"
+    },
+    {
+      "region": "europe",
+      "hero": "Reaper",
+      "pick_rate": 13,
+      "win_rate": 53.7,
+      "tier": "silver"
+    },
+    {
+      "region": "europe",
+      "hero": "Reinhardt",
+      "pick_rate": 8.8,
+      "win_rate": 51.7,
+      "tier": "silver"
+    },
+    {
+      "region": "europe",
+      "hero": "Roadhog",
+      "pick_rate": 7.9,
+      "win_rate": 46.6,
+      "tier": "silver"
+    },
+    {
+      "region": "europe",
+      "hero": "Sigma",
+      "pick_rate": 11.7,
+      "win_rate": 51.1,
+      "tier": "silver"
+    },
+    {
+      "region": "europe",
+      "hero": "Sojourn",
+      "pick_rate": 10,
+      "win_rate": 44.5,
+      "tier": "silver"
+    },
+    {
+      "region": "europe",
+      "hero": "Soldier: 76",
+      "pick_rate": 23.4,
+      "win_rate": 51.4,
+      "tier": "silver"
+    },
+    {
+      "region": "europe",
+      "hero": "Sombra",
+      "pick_rate": 2.1,
+      "win_rate": 52.3,
+      "tier": "silver"
+    },
+    {
+      "region": "europe",
+      "hero": "Symmetra",
+      "pick_rate": 2.7,
+      "win_rate": 51.1,
+      "tier": "silver"
+    },
+    {
+      "region": "europe",
+      "hero": "Torbj\u00f6rn",
+      "pick_rate": 5.9,
+      "win_rate": 53.5,
+      "tier": "silver"
+    },
+    {
+      "region": "europe",
+      "hero": "Tracer",
+      "pick_rate": 3.3,
+      "win_rate": 49.7,
+      "tier": "silver"
+    },
+    {
+      "region": "europe",
+      "hero": "Vendetta",
+      "pick_rate": 1.5,
+      "win_rate": 44.7,
+      "tier": "silver"
+    },
+    {
+      "region": "europe",
+      "hero": "Venture",
+      "pick_rate": 1.4,
+      "win_rate": 50.5,
+      "tier": "silver"
+    },
+    {
+      "region": "europe",
+      "hero": "Widowmaker",
+      "pick_rate": 4.4,
+      "win_rate": 47.6,
+      "tier": "silver"
+    },
+    {
+      "region": "europe",
+      "hero": "Winston",
+      "pick_rate": 2.4,
+      "win_rate": 47.5,
+      "tier": "silver"
+    },
+    {
+      "region": "europe",
+      "hero": "Wrecking Ball",
+      "pick_rate": 1.8,
+      "win_rate": 49.3,
+      "tier": "silver"
+    },
+    {
+      "region": "europe",
+      "hero": "Wuyang",
+      "pick_rate": 4.3,
+      "win_rate": 47.6,
+      "tier": "silver"
+    },
+    {
+      "region": "europe",
+      "hero": "Zarya",
+      "pick_rate": 3.8,
+      "win_rate": 50.1,
+      "tier": "silver"
+    },
+    {
+      "region": "europe",
+      "hero": "Zenyatta",
+      "pick_rate": 15.9,
+      "win_rate": 52.7,
+      "tier": "silver"
+    },
+    {
+      "region": "europe",
+      "hero": "Sierra",
+      "pick_rate": 34,
+      "win_rate": 46.8,
+      "tier": "gold"
+    },
+    {
+      "region": "europe",
+      "hero": "Ramattra",
+      "pick_rate": 9.1,
+      "win_rate": 48.9,
+      "tier": "gold"
+    },
+    {
+      "region": "europe",
+      "hero": "Ana",
+      "pick_rate": 22.3,
+      "win_rate": 47.2,
+      "tier": "gold"
+    },
+    {
+      "region": "europe",
+      "hero": "Anran",
+      "pick_rate": 6.5,
+      "win_rate": 51.5,
+      "tier": "gold"
+    },
+    {
+      "region": "europe",
+      "hero": "Ashe",
+      "pick_rate": 13.7,
+      "win_rate": 51.4,
+      "tier": "gold"
+    },
+    {
+      "region": "europe",
+      "hero": "Baptiste",
+      "pick_rate": 9.1,
+      "win_rate": 48.6,
+      "tier": "gold"
+    },
+    {
+      "region": "europe",
+      "hero": "Bastion",
+      "pick_rate": 17.8,
+      "win_rate": 48.3,
+      "tier": "gold"
+    },
+    {
+      "region": "europe",
+      "hero": "Brigitte",
+      "pick_rate": 3.4,
+      "win_rate": 52.1,
+      "tier": "gold"
+    },
+    {
+      "region": "europe",
+      "hero": "Cassidy",
+      "pick_rate": 11.7,
+      "win_rate": 49.1,
+      "tier": "gold"
+    },
+    {
+      "region": "europe",
+      "hero": "D.Va",
+      "pick_rate": 11.1,
+      "win_rate": 51.8,
+      "tier": "gold"
+    },
+    {
+      "region": "europe",
+      "hero": "Domina",
+      "pick_rate": 5.5,
+      "win_rate": 50,
+      "tier": "gold"
+    },
+    {
+      "region": "europe",
+      "hero": "Doomfist",
+      "pick_rate": 4.5,
+      "win_rate": 50.4,
+      "tier": "gold"
+    },
+    {
+      "region": "europe",
+      "hero": "Echo",
+      "pick_rate": 3.5,
+      "win_rate": 49.5,
+      "tier": "gold"
+    },
+    {
+      "region": "europe",
+      "hero": "Emre",
+      "pick_rate": 13.5,
+      "win_rate": 48.4,
+      "tier": "gold"
+    },
+    {
+      "region": "europe",
+      "hero": "Freja",
+      "pick_rate": 2.2,
+      "win_rate": 45.9,
+      "tier": "gold"
+    },
+    {
+      "region": "europe",
+      "hero": "Genji",
+      "pick_rate": 7.5,
+      "win_rate": 52.1,
+      "tier": "gold"
+    },
+    {
+      "region": "europe",
+      "hero": "Hanzo",
+      "pick_rate": 6.3,
+      "win_rate": 49.3,
+      "tier": "gold"
+    },
+    {
+      "region": "europe",
+      "hero": "Hazard",
+      "pick_rate": 2.4,
+      "win_rate": 52,
+      "tier": "gold"
+    },
+    {
+      "region": "europe",
+      "hero": "Illari",
+      "pick_rate": 15.6,
+      "win_rate": 52.6,
+      "tier": "gold"
+    },
+    {
+      "region": "europe",
+      "hero": "Jetpack Cat",
+      "pick_rate": 6.7,
+      "win_rate": 49,
+      "tier": "gold"
+    },
+    {
+      "region": "europe",
+      "hero": "Junker Queen",
+      "pick_rate": 2.8,
+      "win_rate": 49.6,
+      "tier": "gold"
+    },
+    {
+      "region": "europe",
+      "hero": "Junkrat",
+      "pick_rate": 6.6,
+      "win_rate": 48.1,
+      "tier": "gold"
+    },
+    {
+      "region": "europe",
+      "hero": "Juno",
+      "pick_rate": 24.1,
+      "win_rate": 51.1,
+      "tier": "gold"
+    },
+    {
+      "region": "europe",
+      "hero": "Kiriko",
+      "pick_rate": 17,
+      "win_rate": 45.9,
+      "tier": "gold"
+    },
+    {
+      "region": "europe",
+      "hero": "Lifeweaver",
+      "pick_rate": 11.4,
+      "win_rate": 49.5,
+      "tier": "gold"
+    },
+    {
+      "region": "europe",
+      "hero": "L\u00facio",
+      "pick_rate": 9.4,
+      "win_rate": 51,
+      "tier": "gold"
+    },
+    {
+      "region": "europe",
+      "hero": "Mauga",
+      "pick_rate": 8,
+      "win_rate": 51.4,
+      "tier": "gold"
+    },
+    {
+      "region": "europe",
+      "hero": "Mei",
+      "pick_rate": 5.2,
+      "win_rate": 48.3,
+      "tier": "gold"
+    },
+    {
+      "region": "europe",
+      "hero": "Mercy",
+      "pick_rate": 25.6,
+      "win_rate": 49.4,
+      "tier": "gold"
+    },
+    {
+      "region": "europe",
+      "hero": "Mizuki",
+      "pick_rate": 10.7,
+      "win_rate": 50.6,
+      "tier": "gold"
+    },
+    {
+      "region": "europe",
+      "hero": "Moira",
+      "pick_rate": 26.4,
+      "win_rate": 47.6,
+      "tier": "gold"
+    },
+    {
+      "region": "europe",
+      "hero": "Orisa",
+      "pick_rate": 16.7,
+      "win_rate": 48.1,
+      "tier": "gold"
+    },
+    {
+      "region": "europe",
+      "hero": "Pharah",
+      "pick_rate": 2.6,
+      "win_rate": 53.5,
+      "tier": "gold"
+    },
+    {
+      "region": "europe",
+      "hero": "Reaper",
+      "pick_rate": 14.5,
+      "win_rate": 53.4,
+      "tier": "gold"
+    },
+    {
+      "region": "europe",
+      "hero": "Reinhardt",
+      "pick_rate": 9.4,
+      "win_rate": 50.6,
+      "tier": "gold"
+    },
+    {
+      "region": "europe",
+      "hero": "Roadhog",
+      "pick_rate": 8.9,
+      "win_rate": 46.8,
+      "tier": "gold"
+    },
+    {
+      "region": "europe",
+      "hero": "Sigma",
+      "pick_rate": 11.9,
+      "win_rate": 49.2,
+      "tier": "gold"
+    },
+    {
+      "region": "europe",
+      "hero": "Sojourn",
+      "pick_rate": 8.3,
+      "win_rate": 44.1,
+      "tier": "gold"
+    },
+    {
+      "region": "europe",
+      "hero": "Soldier: 76",
+      "pick_rate": 24.8,
+      "win_rate": 51.2,
+      "tier": "gold"
+    },
+    {
+      "region": "europe",
+      "hero": "Sombra",
+      "pick_rate": 2,
+      "win_rate": 51.2,
+      "tier": "gold"
+    },
+    {
+      "region": "europe",
+      "hero": "Symmetra",
+      "pick_rate": 2.8,
+      "win_rate": 49.3,
+      "tier": "gold"
+    },
+    {
+      "region": "europe",
+      "hero": "Torbj\u00f6rn",
+      "pick_rate": 5.3,
+      "win_rate": 50.5,
+      "tier": "gold"
+    },
+    {
+      "region": "europe",
+      "hero": "Tracer",
+      "pick_rate": 3.8,
+      "win_rate": 51.2,
+      "tier": "gold"
+    },
+    {
+      "region": "europe",
+      "hero": "Vendetta",
+      "pick_rate": 1.3,
+      "win_rate": 43.7,
+      "tier": "gold"
+    },
+    {
+      "region": "europe",
+      "hero": "Venture",
+      "pick_rate": 1.4,
+      "win_rate": 49.4,
+      "tier": "gold"
+    },
+    {
+      "region": "europe",
+      "hero": "Widowmaker",
+      "pick_rate": 4.6,
+      "win_rate": 51.3,
+      "tier": "gold"
+    },
+    {
+      "region": "europe",
+      "hero": "Winston",
+      "pick_rate": 2.8,
+      "win_rate": 50.5,
+      "tier": "gold"
+    },
+    {
+      "region": "europe",
+      "hero": "Wrecking Ball",
+      "pick_rate": 2.2,
+      "win_rate": 49.1,
+      "tier": "gold"
+    },
+    {
+      "region": "europe",
+      "hero": "Wuyang",
+      "pick_rate": 4.1,
+      "win_rate": 47.4,
+      "tier": "gold"
+    },
+    {
+      "region": "europe",
+      "hero": "Zarya",
+      "pick_rate": 4.8,
+      "win_rate": 47.7,
+      "tier": "gold"
+    },
+    {
+      "region": "europe",
+      "hero": "Zenyatta",
+      "pick_rate": 14.2,
+      "win_rate": 53.5,
+      "tier": "gold"
+    },
+    {
+      "region": "europe",
+      "hero": "Sierra",
+      "pick_rate": 31.8,
+      "win_rate": 46.7,
+      "tier": "platinum"
+    },
+    {
+      "region": "europe",
+      "hero": "Ramattra",
+      "pick_rate": 7.7,
+      "win_rate": 48,
+      "tier": "platinum"
+    },
+    {
+      "region": "europe",
+      "hero": "Ana",
+      "pick_rate": 27.8,
+      "win_rate": 47.5,
+      "tier": "platinum"
+    },
+    {
+      "region": "europe",
+      "hero": "Anran",
+      "pick_rate": 6.5,
+      "win_rate": 53,
+      "tier": "platinum"
+    },
+    {
+      "region": "europe",
+      "hero": "Ashe",
+      "pick_rate": 13.9,
+      "win_rate": 52.1,
+      "tier": "platinum"
+    },
+    {
+      "region": "europe",
+      "hero": "Baptiste",
+      "pick_rate": 11,
+      "win_rate": 48.6,
+      "tier": "platinum"
+    },
+    {
+      "region": "europe",
+      "hero": "Bastion",
+      "pick_rate": 15.4,
+      "win_rate": 47.2,
+      "tier": "platinum"
+    },
+    {
+      "region": "europe",
+      "hero": "Brigitte",
+      "pick_rate": 4.1,
+      "win_rate": 52.8,
+      "tier": "platinum"
+    },
+    {
+      "region": "europe",
+      "hero": "Cassidy",
+      "pick_rate": 14.9,
+      "win_rate": 47.9,
+      "tier": "platinum"
+    },
+    {
+      "region": "europe",
+      "hero": "D.Va",
+      "pick_rate": 8.9,
+      "win_rate": 52.7,
+      "tier": "platinum"
+    },
+    {
+      "region": "europe",
+      "hero": "Domina",
+      "pick_rate": 5.3,
+      "win_rate": 51,
+      "tier": "platinum"
+    },
+    {
+      "region": "europe",
+      "hero": "Doomfist",
+      "pick_rate": 5.1,
+      "win_rate": 50.9,
+      "tier": "platinum"
+    },
+    {
+      "region": "europe",
+      "hero": "Echo",
+      "pick_rate": 3.4,
+      "win_rate": 52.3,
+      "tier": "platinum"
+    },
+    {
+      "region": "europe",
+      "hero": "Emre",
+      "pick_rate": 14.2,
+      "win_rate": 48.1,
+      "tier": "platinum"
+    },
+    {
+      "region": "europe",
+      "hero": "Freja",
+      "pick_rate": 1.8,
+      "win_rate": 47.1,
+      "tier": "platinum"
+    },
+    {
+      "region": "europe",
+      "hero": "Genji",
+      "pick_rate": 9,
+      "win_rate": 52.6,
+      "tier": "platinum"
+    },
+    {
+      "region": "europe",
+      "hero": "Hanzo",
+      "pick_rate": 5.8,
+      "win_rate": 50.5,
+      "tier": "platinum"
+    },
+    {
+      "region": "europe",
+      "hero": "Hazard",
+      "pick_rate": 3.6,
+      "win_rate": 53.3,
+      "tier": "platinum"
+    },
+    {
+      "region": "europe",
+      "hero": "Illari",
+      "pick_rate": 16.4,
+      "win_rate": 52.9,
+      "tier": "platinum"
+    },
+    {
+      "region": "europe",
+      "hero": "Jetpack Cat",
+      "pick_rate": 7.2,
+      "win_rate": 48.6,
+      "tier": "platinum"
+    },
+    {
+      "region": "europe",
+      "hero": "Junker Queen",
+      "pick_rate": 2.9,
+      "win_rate": 50,
+      "tier": "platinum"
+    },
+    {
+      "region": "europe",
+      "hero": "Junkrat",
+      "pick_rate": 5,
+      "win_rate": 47.8,
+      "tier": "platinum"
+    },
+    {
+      "region": "europe",
+      "hero": "Juno",
+      "pick_rate": 23.7,
+      "win_rate": 50.2,
+      "tier": "platinum"
+    },
+    {
+      "region": "europe",
+      "hero": "Kiriko",
+      "pick_rate": 19.1,
+      "win_rate": 46.3,
+      "tier": "platinum"
+    },
+    {
+      "region": "europe",
+      "hero": "Lifeweaver",
+      "pick_rate": 11.8,
+      "win_rate": 48.8,
+      "tier": "platinum"
+    },
+    {
+      "region": "europe",
+      "hero": "L\u00facio",
+      "pick_rate": 8.2,
+      "win_rate": 51.8,
+      "tier": "platinum"
+    },
+    {
+      "region": "europe",
+      "hero": "Mauga",
+      "pick_rate": 8.2,
+      "win_rate": 50.2,
+      "tier": "platinum"
+    },
+    {
+      "region": "europe",
+      "hero": "Mei",
+      "pick_rate": 4.9,
+      "win_rate": 47.5,
+      "tier": "platinum"
+    },
+    {
+      "region": "europe",
+      "hero": "Mercy",
+      "pick_rate": 21.7,
+      "win_rate": 50.3,
+      "tier": "platinum"
+    },
+    {
+      "region": "europe",
+      "hero": "Mizuki",
+      "pick_rate": 10.2,
+      "win_rate": 50.9,
+      "tier": "platinum"
+    },
+    {
+      "region": "europe",
+      "hero": "Moira",
+      "pick_rate": 21.1,
+      "win_rate": 46.3,
+      "tier": "platinum"
+    },
+    {
+      "region": "europe",
+      "hero": "Orisa",
+      "pick_rate": 15.2,
+      "win_rate": 48.1,
+      "tier": "platinum"
+    },
+    {
+      "region": "europe",
+      "hero": "Pharah",
+      "pick_rate": 2.1,
+      "win_rate": 53.3,
+      "tier": "platinum"
+    },
+    {
+      "region": "europe",
+      "hero": "Reaper",
+      "pick_rate": 14.9,
+      "win_rate": 52.7,
+      "tier": "platinum"
+    },
+    {
+      "region": "europe",
+      "hero": "Reinhardt",
+      "pick_rate": 9.5,
+      "win_rate": 50.9,
+      "tier": "platinum"
+    },
+    {
+      "region": "europe",
+      "hero": "Roadhog",
+      "pick_rate": 10.1,
+      "win_rate": 46.6,
+      "tier": "platinum"
+    },
+    {
+      "region": "europe",
+      "hero": "Sigma",
+      "pick_rate": 11.7,
+      "win_rate": 49.9,
+      "tier": "platinum"
+    },
+    {
+      "region": "europe",
+      "hero": "Sojourn",
+      "pick_rate": 8.2,
+      "win_rate": 44.7,
+      "tier": "platinum"
+    },
+    {
+      "region": "europe",
+      "hero": "Soldier: 76",
+      "pick_rate": 26.3,
+      "win_rate": 50.8,
+      "tier": "platinum"
+    },
+    {
+      "region": "europe",
+      "hero": "Sombra",
+      "pick_rate": 2.4,
+      "win_rate": 50.4,
+      "tier": "platinum"
+    },
+    {
+      "region": "europe",
+      "hero": "Symmetra",
+      "pick_rate": 2.6,
+      "win_rate": 47.4,
+      "tier": "platinum"
+    },
+    {
+      "region": "europe",
+      "hero": "Torbj\u00f6rn",
+      "pick_rate": 4.4,
+      "win_rate": 49.7,
+      "tier": "platinum"
+    },
+    {
+      "region": "europe",
+      "hero": "Tracer",
+      "pick_rate": 5,
+      "win_rate": 51.3,
+      "tier": "platinum"
+    },
+    {
+      "region": "europe",
+      "hero": "Vendetta",
+      "pick_rate": 1.2,
+      "win_rate": 45.4,
+      "tier": "platinum"
+    },
+    {
+      "region": "europe",
+      "hero": "Venture",
+      "pick_rate": 1.3,
+      "win_rate": 49.3,
+      "tier": "platinum"
+    },
+    {
+      "region": "europe",
+      "hero": "Widowmaker",
+      "pick_rate": 5.1,
+      "win_rate": 52.1,
+      "tier": "platinum"
+    },
+    {
+      "region": "europe",
+      "hero": "Winston",
+      "pick_rate": 3.5,
+      "win_rate": 50.7,
+      "tier": "platinum"
+    },
+    {
+      "region": "europe",
+      "hero": "Wrecking Ball",
+      "pick_rate": 2.7,
+      "win_rate": 49.6,
+      "tier": "platinum"
+    },
+    {
+      "region": "europe",
+      "hero": "Wuyang",
+      "pick_rate": 4.3,
+      "win_rate": 49.8,
+      "tier": "platinum"
+    },
+    {
+      "region": "europe",
+      "hero": "Zarya",
+      "pick_rate": 5.5,
+      "win_rate": 44.6,
+      "tier": "platinum"
+    },
+    {
+      "region": "europe",
+      "hero": "Zenyatta",
+      "pick_rate": 13.3,
+      "win_rate": 53.3,
+      "tier": "platinum"
+    },
+    {
+      "region": "europe",
+      "hero": "Sierra",
+      "pick_rate": 27.4,
+      "win_rate": 45.6,
+      "tier": "diamond"
+    },
+    {
+      "region": "europe",
+      "hero": "Ramattra",
+      "pick_rate": 5.9,
+      "win_rate": 47.1,
+      "tier": "diamond"
+    },
+    {
+      "region": "europe",
+      "hero": "Ana",
+      "pick_rate": 32.3,
+      "win_rate": 47.5,
+      "tier": "diamond"
+    },
+    {
+      "region": "europe",
+      "hero": "Anran",
+      "pick_rate": 6.3,
+      "win_rate": 53.6,
+      "tier": "diamond"
+    },
+    {
+      "region": "europe",
+      "hero": "Ashe",
+      "pick_rate": 15.8,
+      "win_rate": 53.7,
+      "tier": "diamond"
+    },
+    {
+      "region": "europe",
+      "hero": "Baptiste",
+      "pick_rate": 14.3,
+      "win_rate": 48.9,
+      "tier": "diamond"
+    },
+    {
+      "region": "europe",
+      "hero": "Bastion",
+      "pick_rate": 13.3,
+      "win_rate": 47.7,
+      "tier": "diamond"
+    },
+    {
+      "region": "europe",
+      "hero": "Brigitte",
+      "pick_rate": 5.6,
+      "win_rate": 52.6,
+      "tier": "diamond"
+    },
+    {
+      "region": "europe",
+      "hero": "Cassidy",
+      "pick_rate": 18.5,
+      "win_rate": 47.5,
+      "tier": "diamond"
+    },
+    {
+      "region": "europe",
+      "hero": "D.Va",
+      "pick_rate": 6.4,
+      "win_rate": 55.7,
+      "tier": "diamond"
+    },
+    {
+      "region": "europe",
+      "hero": "Domina",
+      "pick_rate": 5.5,
+      "win_rate": 51.6,
+      "tier": "diamond"
+    },
+    {
+      "region": "europe",
+      "hero": "Doomfist",
+      "pick_rate": 6.2,
+      "win_rate": 50.7,
+      "tier": "diamond"
+    },
+    {
+      "region": "europe",
+      "hero": "Echo",
+      "pick_rate": 3.2,
+      "win_rate": 51.5,
+      "tier": "diamond"
+    },
+    {
+      "region": "europe",
+      "hero": "Emre",
+      "pick_rate": 16.1,
+      "win_rate": 47.5,
+      "tier": "diamond"
+    },
+    {
+      "region": "europe",
+      "hero": "Freja",
+      "pick_rate": 1.7,
+      "win_rate": 50,
+      "tier": "diamond"
+    },
+    {
+      "region": "europe",
+      "hero": "Genji",
+      "pick_rate": 10.1,
+      "win_rate": 50.9,
+      "tier": "diamond"
+    },
+    {
+      "region": "europe",
+      "hero": "Hanzo",
+      "pick_rate": 4.8,
+      "win_rate": 48.2,
+      "tier": "diamond"
+    },
+    {
+      "region": "europe",
+      "hero": "Hazard",
+      "pick_rate": 5.7,
+      "win_rate": 54.5,
+      "tier": "diamond"
+    },
+    {
+      "region": "europe",
+      "hero": "Illari",
+      "pick_rate": 18.2,
+      "win_rate": 53.3,
+      "tier": "diamond"
+    },
+    {
+      "region": "europe",
+      "hero": "Jetpack Cat",
+      "pick_rate": 7.2,
+      "win_rate": 48,
+      "tier": "diamond"
+    },
+    {
+      "region": "europe",
+      "hero": "Junker Queen",
+      "pick_rate": 2.8,
+      "win_rate": 49.8,
+      "tier": "diamond"
+    },
+    {
+      "region": "europe",
+      "hero": "Junkrat",
+      "pick_rate": 3.2,
+      "win_rate": 48.1,
+      "tier": "diamond"
+    },
+    {
+      "region": "europe",
+      "hero": "Juno",
+      "pick_rate": 22.6,
+      "win_rate": 50.6,
+      "tier": "diamond"
+    },
+    {
+      "region": "europe",
+      "hero": "Kiriko",
+      "pick_rate": 22.6,
+      "win_rate": 46.3,
+      "tier": "diamond"
+    },
+    {
+      "region": "europe",
+      "hero": "Lifeweaver",
+      "pick_rate": 11.1,
+      "win_rate": 50.7,
+      "tier": "diamond"
+    },
+    {
+      "region": "europe",
+      "hero": "L\u00facio",
+      "pick_rate": 7.4,
+      "win_rate": 51.6,
+      "tier": "diamond"
+    },
+    {
+      "region": "europe",
+      "hero": "Mauga",
+      "pick_rate": 9,
+      "win_rate": 54.3,
+      "tier": "diamond"
+    },
+    {
+      "region": "europe",
+      "hero": "Mei",
+      "pick_rate": 3.7,
+      "win_rate": 46.7,
+      "tier": "diamond"
+    },
+    {
+      "region": "europe",
+      "hero": "Mercy",
+      "pick_rate": 18.4,
+      "win_rate": 51.3,
+      "tier": "diamond"
+    },
+    {
+      "region": "europe",
+      "hero": "Mizuki",
+      "pick_rate": 9.4,
+      "win_rate": 50.4,
+      "tier": "diamond"
+    },
+    {
+      "region": "europe",
+      "hero": "Moira",
+      "pick_rate": 14.8,
+      "win_rate": 46.2,
+      "tier": "diamond"
+    },
+    {
+      "region": "europe",
+      "hero": "Orisa",
+      "pick_rate": 15.3,
+      "win_rate": 48.7,
+      "tier": "diamond"
+    },
+    {
+      "region": "europe",
+      "hero": "Pharah",
+      "pick_rate": 1.8,
+      "win_rate": 51.9,
+      "tier": "diamond"
+    },
+    {
+      "region": "europe",
+      "hero": "Reaper",
+      "pick_rate": 14.6,
+      "win_rate": 53,
+      "tier": "diamond"
+    },
+    {
+      "region": "europe",
+      "hero": "Reinhardt",
+      "pick_rate": 8.2,
+      "win_rate": 50.1,
+      "tier": "diamond"
+    },
+    {
+      "region": "europe",
+      "hero": "Roadhog",
+      "pick_rate": 10.5,
+      "win_rate": 44.3,
+      "tier": "diamond"
+    },
+    {
+      "region": "europe",
+      "hero": "Sigma",
+      "pick_rate": 11.1,
+      "win_rate": 50.3,
+      "tier": "diamond"
+    },
+    {
+      "region": "europe",
+      "hero": "Sojourn",
+      "pick_rate": 9.1,
+      "win_rate": 45.2,
+      "tier": "diamond"
+    },
+    {
+      "region": "europe",
+      "hero": "Soldier: 76",
+      "pick_rate": 27.6,
+      "win_rate": 50.6,
+      "tier": "diamond"
+    },
+    {
+      "region": "europe",
+      "hero": "Sombra",
+      "pick_rate": 3.1,
+      "win_rate": 49.7,
+      "tier": "diamond"
+    },
+    {
+      "region": "europe",
+      "hero": "Symmetra",
+      "pick_rate": 1.9,
+      "win_rate": 50.2,
+      "tier": "diamond"
+    },
+    {
+      "region": "europe",
+      "hero": "Torbj\u00f6rn",
+      "pick_rate": 2.9,
+      "win_rate": 49.4,
+      "tier": "diamond"
+    },
+    {
+      "region": "europe",
+      "hero": "Tracer",
+      "pick_rate": 7.2,
+      "win_rate": 53,
+      "tier": "diamond"
+    },
+    {
+      "region": "europe",
+      "hero": "Vendetta",
+      "pick_rate": 1.1,
+      "win_rate": 44.1,
+      "tier": "diamond"
+    },
+    {
+      "region": "europe",
+      "hero": "Venture",
+      "pick_rate": 1.2,
+      "win_rate": 52.6,
+      "tier": "diamond"
+    },
+    {
+      "region": "europe",
+      "hero": "Widowmaker",
+      "pick_rate": 5.2,
+      "win_rate": 53.5,
+      "tier": "diamond"
+    },
+    {
+      "region": "europe",
+      "hero": "Winston",
+      "pick_rate": 4.5,
+      "win_rate": 48.7,
+      "tier": "diamond"
+    },
+    {
+      "region": "europe",
+      "hero": "Wrecking Ball",
+      "pick_rate": 3.8,
+      "win_rate": 47.8,
+      "tier": "diamond"
+    },
+    {
+      "region": "europe",
+      "hero": "Wuyang",
+      "pick_rate": 4.3,
+      "win_rate": 48.8,
+      "tier": "diamond"
+    },
+    {
+      "region": "europe",
+      "hero": "Zarya",
+      "pick_rate": 5.3,
+      "win_rate": 42.5,
+      "tier": "diamond"
+    },
+    {
+      "region": "europe",
+      "hero": "Zenyatta",
+      "pick_rate": 11.6,
+      "win_rate": 51.6,
+      "tier": "diamond"
+    },
+    {
+      "region": "europe",
+      "hero": "Sierra",
+      "pick_rate": 18.1,
+      "win_rate": 42.4,
+      "tier": "master"
+    },
+    {
+      "region": "europe",
+      "hero": "Ramattra",
+      "pick_rate": 3.9,
+      "win_rate": 45.8,
+      "tier": "master"
+    },
+    {
+      "region": "europe",
+      "hero": "Ana",
+      "pick_rate": 35.1,
+      "win_rate": 47.2,
+      "tier": "master"
+    },
+    {
+      "region": "europe",
+      "hero": "Anran",
+      "pick_rate": 4.7,
+      "win_rate": 52.3,
+      "tier": "master"
+    },
+    {
+      "region": "europe",
+      "hero": "Ashe",
+      "pick_rate": 20.6,
+      "win_rate": 54.7,
+      "tier": "master"
+    },
+    {
+      "region": "europe",
+      "hero": "Baptiste",
+      "pick_rate": 20.4,
+      "win_rate": 47.7,
+      "tier": "master"
+    },
+    {
+      "region": "europe",
+      "hero": "Bastion",
+      "pick_rate": 11.4,
+      "win_rate": 49.4,
+      "tier": "master"
+    },
+    {
+      "region": "europe",
+      "hero": "Brigitte",
+      "pick_rate": 9.7,
+      "win_rate": 52,
+      "tier": "master"
+    },
+    {
+      "region": "europe",
+      "hero": "Cassidy",
+      "pick_rate": 20.7,
+      "win_rate": 47.3,
+      "tier": "master"
+    },
+    {
+      "region": "europe",
+      "hero": "D.Va",
+      "pick_rate": 4.9,
+      "win_rate": 56.3,
+      "tier": "master"
+    },
+    {
+      "region": "europe",
+      "hero": "Domina",
+      "pick_rate": 5.3,
+      "win_rate": 50.7,
+      "tier": "master"
+    },
+    {
+      "region": "europe",
+      "hero": "Doomfist",
+      "pick_rate": 6.4,
+      "win_rate": 51.2,
+      "tier": "master"
+    },
+    {
+      "region": "europe",
+      "hero": "Echo",
+      "pick_rate": 2.6,
+      "win_rate": 52.2,
+      "tier": "master"
+    },
+    {
+      "region": "europe",
+      "hero": "Emre",
+      "pick_rate": 17.5,
+      "win_rate": 47.3,
+      "tier": "master"
+    },
+    {
+      "region": "europe",
+      "hero": "Freja",
+      "pick_rate": 1.4,
+      "win_rate": 44.5,
+      "tier": "master"
+    },
+    {
+      "region": "europe",
+      "hero": "Genji",
+      "pick_rate": 9.5,
+      "win_rate": 51.6,
+      "tier": "master"
+    },
+    {
+      "region": "europe",
+      "hero": "Hanzo",
+      "pick_rate": 3.6,
+      "win_rate": 51.9,
+      "tier": "master"
+    },
+    {
+      "region": "europe",
+      "hero": "Hazard",
+      "pick_rate": 6.5,
+      "win_rate": 49.4,
+      "tier": "master"
+    },
+    {
+      "region": "europe",
+      "hero": "Illari",
+      "pick_rate": 24.1,
+      "win_rate": 54,
+      "tier": "master"
+    },
+    {
+      "region": "europe",
+      "hero": "Jetpack Cat",
+      "pick_rate": 6.1,
+      "win_rate": 48.6,
+      "tier": "master"
+    },
+    {
+      "region": "europe",
+      "hero": "Junker Queen",
+      "pick_rate": 2.7,
+      "win_rate": 48.3,
+      "tier": "master"
+    },
+    {
+      "region": "europe",
+      "hero": "Junkrat",
+      "pick_rate": 2.2,
+      "win_rate": 50.3,
+      "tier": "master"
+    },
+    {
+      "region": "europe",
+      "hero": "Juno",
+      "pick_rate": 19.7,
+      "win_rate": 50.4,
+      "tier": "master"
+    },
+    {
+      "region": "europe",
+      "hero": "Kiriko",
+      "pick_rate": 27.4,
+      "win_rate": 46.4,
+      "tier": "master"
+    },
+    {
+      "region": "europe",
+      "hero": "Lifeweaver",
+      "pick_rate": 8.1,
+      "win_rate": 51.9,
+      "tier": "master"
+    },
+    {
+      "region": "europe",
+      "hero": "L\u00facio",
+      "pick_rate": 6,
+      "win_rate": 53.9,
+      "tier": "master"
+    },
+    {
+      "region": "europe",
+      "hero": "Mauga",
+      "pick_rate": 11.7,
+      "win_rate": 53.8,
+      "tier": "master"
+    },
+    {
+      "region": "europe",
+      "hero": "Mei",
+      "pick_rate": 2.2,
+      "win_rate": 45.9,
+      "tier": "master"
+    },
+    {
+      "region": "europe",
+      "hero": "Mercy",
+      "pick_rate": 14,
+      "win_rate": 52.8,
+      "tier": "master"
+    },
+    {
+      "region": "europe",
+      "hero": "Mizuki",
+      "pick_rate": 7.6,
+      "win_rate": 51,
+      "tier": "master"
+    },
+    {
+      "region": "europe",
+      "hero": "Moira",
+      "pick_rate": 7.5,
+      "win_rate": 43.5,
+      "tier": "master"
+    },
+    {
+      "region": "europe",
+      "hero": "Orisa",
+      "pick_rate": 18.7,
+      "win_rate": 51.1,
+      "tier": "master"
+    },
+    {
+      "region": "europe",
+      "hero": "Pharah",
+      "pick_rate": 1.5,
+      "win_rate": 56.5,
+      "tier": "master"
+    },
+    {
+      "region": "europe",
+      "hero": "Reaper",
+      "pick_rate": 15.7,
+      "win_rate": 52.4,
+      "tier": "master"
+    },
+    {
+      "region": "europe",
+      "hero": "Reinhardt",
+      "pick_rate": 5.4,
+      "win_rate": 48.1,
+      "tier": "master"
+    },
+    {
+      "region": "europe",
+      "hero": "Roadhog",
+      "pick_rate": 8.8,
+      "win_rate": 44.3,
+      "tier": "master"
+    },
+    {
+      "region": "europe",
+      "hero": "Sigma",
+      "pick_rate": 11.4,
+      "win_rate": 50.5,
+      "tier": "master"
+    },
+    {
+      "region": "europe",
+      "hero": "Sojourn",
+      "pick_rate": 10,
+      "win_rate": 43.5,
+      "tier": "master"
+    },
+    {
+      "region": "europe",
+      "hero": "Soldier: 76",
+      "pick_rate": 32.5,
+      "win_rate": 51.6,
+      "tier": "master"
+    },
+    {
+      "region": "europe",
+      "hero": "Sombra",
+      "pick_rate": 3.9,
+      "win_rate": 46.3,
+      "tier": "master"
+    },
+    {
+      "region": "europe",
+      "hero": "Symmetra",
+      "pick_rate": 1.7,
+      "win_rate": 47.5,
+      "tier": "master"
+    },
+    {
+      "region": "europe",
+      "hero": "Torbj\u00f6rn",
+      "pick_rate": 1.8,
+      "win_rate": 50.5,
+      "tier": "master"
+    },
+    {
+      "region": "europe",
+      "hero": "Tracer",
+      "pick_rate": 11,
+      "win_rate": 54,
+      "tier": "master"
+    },
+    {
+      "region": "europe",
+      "hero": "Vendetta",
+      "pick_rate": 0.6,
+      "win_rate": 41,
+      "tier": "master"
+    },
+    {
+      "region": "europe",
+      "hero": "Venture",
+      "pick_rate": 1.3,
+      "win_rate": 50.9,
+      "tier": "master"
+    },
+    {
+      "region": "europe",
+      "hero": "Widowmaker",
+      "pick_rate": 5.4,
+      "win_rate": 51,
+      "tier": "master"
+    },
+    {
+      "region": "europe",
+      "hero": "Winston",
+      "pick_rate": 4.6,
+      "win_rate": 49.2,
+      "tier": "master"
+    },
+    {
+      "region": "europe",
+      "hero": "Wrecking Ball",
+      "pick_rate": 5.1,
+      "win_rate": 49.1,
+      "tier": "master"
+    },
+    {
+      "region": "europe",
+      "hero": "Wuyang",
+      "pick_rate": 4.4,
+      "win_rate": 49.1,
+      "tier": "master"
+    },
+    {
+      "region": "europe",
+      "hero": "Zarya",
+      "pick_rate": 4.7,
+      "win_rate": 43.9,
+      "tier": "master"
+    },
+    {
+      "region": "europe",
+      "hero": "Zenyatta",
+      "pick_rate": 9.8,
+      "win_rate": 49.6,
+      "tier": "master"
+    },
+    {
+      "region": "europe",
+      "hero": "Sierra",
+      "pick_rate": 6.7,
+      "win_rate": 43.6,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "europe",
+      "hero": "Ramattra",
+      "pick_rate": 1.6,
+      "win_rate": 42.6,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "europe",
+      "hero": "Ana",
+      "pick_rate": 25.1,
+      "win_rate": 46.6,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "europe",
+      "hero": "Anran",
+      "pick_rate": 2.1,
+      "win_rate": 46,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "europe",
+      "hero": "Ashe",
+      "pick_rate": 29.5,
+      "win_rate": 55.6,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "europe",
+      "hero": "Baptiste",
+      "pick_rate": 31.7,
+      "win_rate": 52.5,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "europe",
+      "hero": "Bastion",
+      "pick_rate": 13.6,
+      "win_rate": 49.9,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "europe",
+      "hero": "Brigitte",
+      "pick_rate": 22.9,
+      "win_rate": 54.9,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "europe",
+      "hero": "Cassidy",
+      "pick_rate": 16.7,
+      "win_rate": 41.4,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "europe",
+      "hero": "D.Va",
+      "pick_rate": 10.5,
+      "win_rate": 59.9,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "europe",
+      "hero": "Domina",
+      "pick_rate": 5.1,
+      "win_rate": 55.1,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "europe",
+      "hero": "Doomfist",
+      "pick_rate": 4.1,
+      "win_rate": 47.4,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "europe",
+      "hero": "Echo",
+      "pick_rate": 0.9,
+      "win_rate": 57.2,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "europe",
+      "hero": "Emre",
+      "pick_rate": 15.9,
+      "win_rate": 44.9,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "europe",
+      "hero": "Freja",
+      "pick_rate": 0.6,
+      "win_rate": 48.1,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "europe",
+      "hero": "Genji",
+      "pick_rate": 6.5,
+      "win_rate": 50.7,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "europe",
+      "hero": "Hanzo",
+      "pick_rate": 2.7,
+      "win_rate": 46.6,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "europe",
+      "hero": "Hazard",
+      "pick_rate": 3.7,
+      "win_rate": 48.4,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "europe",
+      "hero": "Illari",
+      "pick_rate": 42.1,
+      "win_rate": 52.1,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "europe",
+      "hero": "Jetpack Cat",
+      "pick_rate": 2.8,
+      "win_rate": 44.4,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "europe",
+      "hero": "Junker Queen",
+      "pick_rate": 1.1,
+      "win_rate": 37.2,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "europe",
+      "hero": "Junkrat",
+      "pick_rate": 1.5,
+      "win_rate": 48,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "europe",
+      "hero": "Juno",
+      "pick_rate": 10.4,
+      "win_rate": 51.2,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "europe",
+      "hero": "Kiriko",
+      "pick_rate": 26.6,
+      "win_rate": 46,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "europe",
+      "hero": "Lifeweaver",
+      "pick_rate": 3.1,
+      "win_rate": 49.2,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "europe",
+      "hero": "L\u00facio",
+      "pick_rate": 5.2,
+      "win_rate": 41.6,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "europe",
+      "hero": "Mauga",
+      "pick_rate": 15,
+      "win_rate": 55.3,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "europe",
+      "hero": "Mei",
+      "pick_rate": 0.8,
+      "win_rate": 38.6,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "europe",
+      "hero": "Mercy",
+      "pick_rate": 9.5,
+      "win_rate": 54,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "europe",
+      "hero": "Mizuki",
+      "pick_rate": 7.1,
+      "win_rate": 54.1,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "europe",
+      "hero": "Moira",
+      "pick_rate": 2.9,
+      "win_rate": 46.4,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "europe",
+      "hero": "Orisa",
+      "pick_rate": 28.9,
+      "win_rate": 53,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "europe",
+      "hero": "Pharah",
+      "pick_rate": 2,
+      "win_rate": 48.9,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "europe",
+      "hero": "Reaper",
+      "pick_rate": 15.2,
+      "win_rate": 53.8,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "europe",
+      "hero": "Reinhardt",
+      "pick_rate": 2.5,
+      "win_rate": 47.1,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "europe",
+      "hero": "Roadhog",
+      "pick_rate": 5.6,
+      "win_rate": 39.8,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "europe",
+      "hero": "Sigma",
+      "pick_rate": 8.8,
+      "win_rate": 47.3,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "europe",
+      "hero": "Sojourn",
+      "pick_rate": 12.5,
+      "win_rate": 46.3,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "europe",
+      "hero": "Soldier: 76",
+      "pick_rate": 32.6,
+      "win_rate": 54,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "europe",
+      "hero": "Sombra",
+      "pick_rate": 4.3,
+      "win_rate": 50.3,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "europe",
+      "hero": "Symmetra",
+      "pick_rate": 3.2,
+      "win_rate": 50.5,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "europe",
+      "hero": "Torbj\u00f6rn",
+      "pick_rate": 1.1,
+      "win_rate": 32.2,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "europe",
+      "hero": "Tracer",
+      "pick_rate": 21.8,
+      "win_rate": 54.3,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "europe",
+      "hero": "Vendetta",
+      "pick_rate": 0.4,
+      "win_rate": 27.6,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "europe",
+      "hero": "Venture",
+      "pick_rate": 1.3,
+      "win_rate": 47.2,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "europe",
+      "hero": "Widowmaker",
+      "pick_rate": 8.6,
+      "win_rate": 51.1,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "europe",
+      "hero": "Winston",
+      "pick_rate": 2.9,
+      "win_rate": 51.5,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "europe",
+      "hero": "Wrecking Ball",
+      "pick_rate": 5.9,
+      "win_rate": 44.8,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "europe",
+      "hero": "Wuyang",
+      "pick_rate": 4.3,
+      "win_rate": 48.5,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "europe",
+      "hero": "Zarya",
+      "pick_rate": 4.3,
+      "win_rate": 47,
+      "tier": "grandmaster"
+    },
+    {
+      "region": "europe",
+      "hero": "Zenyatta",
+      "pick_rate": 6.2,
+      "win_rate": 46.3,
+      "tier": "grandmaster"
+    }
+  ]
+}
