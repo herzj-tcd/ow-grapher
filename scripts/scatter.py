@@ -75,6 +75,12 @@ def load_data(path: str) -> dict:
         return json.load(f)
 
 
+def load_weights(path: str, dataset_key: str) -> dict:
+    with open(path, encoding="utf-8") as f:
+        data = json.load(f)
+    return data.get("weights", {}).get(dataset_key, {})
+
+
 def _mean(vals: list) -> float | None:
     valid = [v for v in vals if v is not None]
     return sum(valid) / len(valid) if valid else None
@@ -117,10 +123,59 @@ def build_points(
     return points
 
 
+def build_weighted_points(
+    rows: list[dict],
+    region: str | None,
+    tiers: list[str],
+    hero_roles: dict,
+    weights: dict,
+) -> list[dict]:
+    """
+    Return one averaged point per hero using weighted average across tiers.
+    region=None  → average all three regions.
+    weights should be a dict like {region_key: {tier: weight}}
+    """
+    region_key = region or "combined"
+    region_weights = weights.get(region_key, {})
+
+    subset = rows
+    if region:
+        subset = [r for r in subset if r["region"] == region]
+    subset = [r for r in subset if r["tier"] in tiers]
+
+    heroes = list(dict.fromkeys(r["hero"] for r in subset))
+    points = []
+    for hero in heroes:
+        weighted_pick = 0.0
+        weighted_win = 0.0
+        total_weight = 0.0
+
+        for tier in tiers:
+            weight = region_weights.get(tier, 0.0)
+            if weight == 0:
+                continue
+            hero_rows = [r for r in subset if r["hero"] == hero and r["tier"] == tier]
+            pick = _mean([r["pick_rate"] for r in hero_rows])
+            win = _mean([r["win_rate"] for r in hero_rows])
+            if pick is not None and win is not None:
+                weighted_pick += pick * weight
+                weighted_win += win * weight
+                total_weight += weight
+
+        if total_weight > 0:
+            points.append({
+                "hero": hero,
+                "pick_rate": weighted_pick / total_weight,
+                "win_rate": weighted_win / total_weight,
+                "role": hero_roles.get(hero, "damage"),
+            })
+    return points
+
+
 def make_scatter(
     points: list[dict],
     region_key: str,
-    tier_key: str,
+    tier_display: str,
     out_dir: Path,
     patch: str | None,
     fetched_date: str | None,
@@ -136,7 +191,7 @@ def make_scatter(
         sys.exit(1)
 
     region_label = REGION_DISPLAY.get(region_key, region_key.title())
-    tier_label   = RANK_DISPLAY.get(tier_key, tier_key.title())
+    tier_label   = RANK_DISPLAY.get(tier_display, tier_display.title())
     patch_str    = f"  •  Patch {patch}" if patch else ""
     date_str     = f"  •  {fetched_date}" if fetched_date else ""
     if mobile:
@@ -236,7 +291,8 @@ def make_scatter(
     out_dir.mkdir(parents=True, exist_ok=True)
     role_slug   = f"_{role_filter}" if role_filter else ""
     mobile_slug = "_mobile" if mobile else ""
-    filename    = f"scatter_{region_key}_{tier_key}{role_slug}{mobile_slug}.png"
+    tier_slug   = tier_display.lower().replace(" ", "_").replace("-", "_")
+    filename    = f"scatter_{region_key}_{tier_slug}{role_slug}{mobile_slug}.png"
     out_path    = out_dir / filename
     fig.savefig(out_path, dpi=150, facecolor=fig.get_facecolor())
     plt.close(fig)
@@ -250,9 +306,9 @@ def main() -> None:
     parser.add_argument(
         "--rank",
         metavar="RANK",
-        choices=RANK_ORDER + ["all"],
-        default="all",
-        help="Rank tier to show (default: all). Choices: " + ", ".join(RANK_ORDER + ["all"]),
+        nargs='+',
+        default=["all"],
+        help="Rank tier(s) to show. Use one rank (e.g. 'gold') or two (e.g. 'gold master') to average over a range",
     )
     parser.add_argument("--role", metavar="ROLE", choices=["tank", "damage", "support"])
     parser.add_argument("--mobile", action="store_true",
@@ -271,8 +327,37 @@ def main() -> None:
     fetched_date = (payload.get("fetched_at") or "")[:10] or None
     hero_roles   = payload.get("hero_roles", {})
 
-    tier_key       = args.rank
+    # Parse rank argument(s)
+    rank_args = args.rank if isinstance(args.rank, list) else [args.rank]
+    if len(rank_args) > 2:
+        parser.error("--rank accepts at most 2 values")
+
+    is_rank_range = False
+    if len(rank_args) == 2:
+        # Rank range mode
+        rank1, rank2 = rank_args[0], rank_args[1]
+        if rank1 not in RANK_ORDER or rank2 not in RANK_ORDER:
+            parser.error(f"Both ranks must be in {RANK_ORDER}")
+        idx1, idx2 = RANK_ORDER.index(rank1), RANK_ORDER.index(rank2)
+        if idx1 > idx2:
+            idx1, idx2 = idx2, idx1
+            rank1, rank2 = rank2, rank1
+        tier_key = [RANK_ORDER[i] for i in range(idx1, idx2 + 1)]
+        tier_display = f"{rank1.title()}-{rank2.title()}"
+        is_rank_range = True
+    elif rank_args[0] == "all":
+        tier_key = "all"
+        tier_display = "all"
+    else:
+        tier_key = rank_args[0]
+        tier_display = tier_key
+
     region_display = args.region or "all"
+
+    # Load weights for rank range mode
+    if is_rank_range:
+        dataset_key = Path(args.data).stem
+        weights = load_weights(_ROOT / "data" / "rank_weights.json", dataset_key)
 
     if args.split:
         split_by = args.split
@@ -281,22 +366,31 @@ def main() -> None:
             parser.error("--split role and --role cannot be used together")
         if split_by == "region" and args.region:
             parser.error("--split region and --region cannot be used together")
-        if split_by == "rank" and args.rank != "all":
+        if split_by == "rank" and (is_rank_range or rank_args[0] != "all"):
             parser.error("--split rank and --rank cannot be used together")
 
         # Build (points, region_key, tier_key, role_filter) for each chart
         charts = []
         if split_by == "role":
-            base = build_points(rows, args.region, tier_key, hero_roles)
+            if is_rank_range:
+                base = build_weighted_points(rows, args.region, tier_key, hero_roles, weights)
+            else:
+                base = build_points(rows, args.region, tier_key, hero_roles)
             for role in ["tank", "damage", "support"]:
-                charts.append((base, region_display, tier_key, role))
-            charts.append((base, region_display, tier_key, None))
+                charts.append((base, region_display, tier_display, role))
+            charts.append((base, region_display, tier_display, None))
         elif split_by == "region":
             for region in ["americas", "asia", "europe"]:
-                pts = build_points(rows, region, tier_key, hero_roles)
-                charts.append((pts, region, tier_key, args.role))
-            pts = build_points(rows, None, tier_key, hero_roles)
-            charts.append((pts, "all", tier_key, args.role))
+                if is_rank_range:
+                    pts = build_weighted_points(rows, region, tier_key, hero_roles, weights)
+                else:
+                    pts = build_points(rows, region, tier_key, hero_roles)
+                charts.append((pts, region, tier_display, args.role))
+            if is_rank_range:
+                pts = build_weighted_points(rows, None, tier_key, hero_roles, weights)
+            else:
+                pts = build_points(rows, None, tier_key, hero_roles)
+            charts.append((pts, "all", tier_display, args.role))
         elif split_by == "rank":
             for rank in RANK_ORDER:
                 pts = build_points(rows, args.region, rank, hero_roles)
@@ -314,7 +408,7 @@ def main() -> None:
             axis_limits = (_scatter_limits(all_picks), _scatter_limits(all_wins))
 
         print(f"Generating {len(charts)} charts  split={split_by}  region={region_display}"
-              f"  tier={tier_key}  normalise={args.normalise}")
+              f"  tier={tier_display}  normalise={args.normalise}")
         for pts, rk, tk, rf in charts:
             out_path = make_scatter(
                 pts, rk, tk, Path(args.out), patch, fetched_date, rf,
@@ -322,7 +416,10 @@ def main() -> None:
             )
             print(f"  {out_path}")
     else:
-        points = build_points(rows, args.region, tier_key, hero_roles)
+        if is_rank_range:
+            points = build_weighted_points(rows, args.region, tier_key, hero_roles, weights)
+        else:
+            points = build_points(rows, args.region, tier_key, hero_roles)
 
         axis_limits = None
         if args.normalise:
@@ -330,9 +427,9 @@ def main() -> None:
             all_wins  = [p["win_rate"]  for p in points]
             axis_limits = (_scatter_limits(all_picks), _scatter_limits(all_wins))
 
-        print(f"Plotting {len(points)} heroes  region={region_display}  tier={tier_key}")
+        print(f"Plotting {len(points)} heroes  region={region_display}  tier={tier_display}")
         out_path = make_scatter(
-            points, region_display, tier_key,
+            points, region_display, tier_display,
             Path(args.out), patch, fetched_date, args.role,
             mobile=args.mobile, axis_limits=axis_limits,
         )

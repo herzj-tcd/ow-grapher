@@ -57,15 +57,15 @@ REGION_DISPLAY = {
 _STAT_META = {
     ("linreg", "pick"): {
         "y_label":    "Pick Rate Slope (% pts per rank)",
-        "low_label":  "Pick rate \n decreases with rank",
-        "high_label": "Pick rate \n increases with rank",
+        "low_label":  "Pick rate decreases\nwith rank",
+        "high_label": "Pick rate increases\nwith rank",
         "y_fmt":      "%+.3f%%",
         "chart_title": "Pick Rate Slope Across Ranks",
     },
     ("linreg", "win"): {
         "y_label":    "Win Rate Slope (% pts per rank)",
-        "low_label":  "Win rate \n decreases with rank",
-        "high_label": "Win rate \n increases with rank",
+        "low_label":  "Win rate decreases\nwith rank",
+        "high_label": "Win rate increases\nwith rank",
         "y_fmt":      "%+.3f%%",
         "chart_title": "Win Rate Slope Across Ranks",
     },

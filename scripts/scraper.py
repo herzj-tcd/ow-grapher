@@ -16,6 +16,7 @@ Usage:
 import argparse
 import json
 import re
+import shutil
 import sys
 import time
 from datetime import datetime, timezone
@@ -78,6 +79,46 @@ MAPS = {
 
 SLEEP_SEC   = 1.2
 MAX_RETRIES = 4
+
+# ── Patch tracking ────────────────────────────────────────────────────────────
+
+def _get_previous_patch() -> str | None:
+    """Read the previously recorded patch version."""
+    patch_file = _ROOT / ".patch_version"
+    if patch_file.exists():
+        return patch_file.read_text(encoding="utf-8").strip()
+    return None
+
+
+def _save_patch_version(patch: str | None) -> None:
+    """Save the current patch version."""
+    if patch:
+        patch_file = _ROOT / ".patch_version"
+        patch_file.write_text(patch, encoding="utf-8")
+
+
+def _archive_data_for_patch(old_patch: str) -> None:
+    """Move data folder contents to releases/patch_OLDPATCH."""
+    data_dir = _ROOT / "data"
+    if not data_dir.exists():
+        return
+
+    releases_dir = _ROOT / "releases" / f"patch_{old_patch}"
+    releases_dir.mkdir(parents=True, exist_ok=True)
+
+    for item in data_dir.iterdir():
+        if item.name != "maps":
+            dest = releases_dir / item.name
+            if dest.exists():
+                shutil.rmtree(dest) if item.is_dir() else dest.unlink()
+            shutil.move(str(item), str(dest))
+
+    maps_dir = data_dir / "maps"
+    if maps_dir.exists():
+        maps_dest = releases_dir / "maps"
+        if maps_dest.exists():
+            shutil.rmtree(maps_dest)
+        shutil.move(str(maps_dir), str(maps_dest))
 
 
 # ── Cache paths ───────────────────────────────────────────────────────────────
@@ -323,6 +364,15 @@ def main() -> None:
     html  = fetch_page_html(use_cache=use_cache)
     patch = parse_patch_note(html)
     print(f"  Patch: {patch}\n")
+
+    previous_patch = _get_previous_patch()
+    if previous_patch and patch and previous_patch != patch:
+        print(f"Patch incremented from {previous_patch} to {patch}")
+        print(f"Archiving previous data to releases/patch_{previous_patch}/...")
+        _archive_data_for_patch(previous_patch)
+        print()
+
+    _save_patch_version(patch)
 
     if args.maps:
         if args.maps == "all":
