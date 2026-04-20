@@ -57,15 +57,15 @@ REGION_DISPLAY = {
 _STAT_META = {
     ("linreg", "pick"): {
         "y_label":    "Pick Rate Slope (% pts per rank)",
-        "low_label":  "Declines with rank",
-        "high_label": "Increases with rank",
+        "low_label":  "Pick rate \n decreases with rank",
+        "high_label": "Pick rate \n increases with rank",
         "y_fmt":      "%+.3f%%",
         "chart_title": "Pick Rate Slope Across Ranks",
     },
     ("linreg", "win"): {
         "y_label":    "Win Rate Slope (% pts per rank)",
-        "low_label":  "Declines with rank",
-        "high_label": "Increases with rank",
+        "low_label":  "Win rate \n decreases with rank",
+        "high_label": "Win rate \n increases with rank",
         "y_fmt":      "%+.3f%%",
         "chart_title": "Win Rate Slope Across Ranks",
     },
@@ -228,20 +228,26 @@ def _make_single_chart(
         ax.axvline(0, color="#AAAAAA", linewidth=0.9, zorder=4)
         ax.xaxis.set_major_formatter(ticker.FormatStrFormatter(meta["y_fmt"]))
         ax.tick_params(axis="x", colors="#CCCCCC", labelsize=tick_fontsize, labelrotation=45)
-        ax.tick_params(axis="y", colors="#CCCCCC", labelsize=tick_fontsize)
+        ax.tick_params(axis="y", left=False, labelleft=False)
         ax.grid(axis="x", color="#2A2A4A", linewidth=0.6, zorder=0)
         ax.set_axisbelow(True)
         for spine in ax.spines.values():
             spine.set_edgecolor("#2A2A4A")
         ax.set_xlabel(meta["y_label"], color="#AAAAAA", fontsize=axis_fontsize)
-        ax.set_yticks(y)
-        ax.set_yticklabels(heroes, color="#CCCCCC", fontsize=tick_fontsize)
+
+        pad = (max(vals) - min(vals)) * 0.01
+        for i, (hero, val) in enumerate(zip(heroes, vals)):
+            if val >= 0:
+                ax.text(-pad, i, hero, va="center", ha="right", color="#CCCCCC",
+                        fontsize=tick_fontsize, zorder=5, clip_on=False)
+            else:
+                ax.text(pad, i, hero, va="center", ha="left", color="#CCCCCC",
+                        fontsize=tick_fontsize, zorder=5, clip_on=False)
 
         x_min, x_max = ax.get_xlim()
-        mid = n // 2
         kw = dict(fontsize=annot_fontsize, alpha=0.45, color="white", ha="center", zorder=2)
-        ax.text(x_min * 0.5, mid, meta["low_label"],  rotation=45, va="center", **kw)
-        ax.text(x_max * 0.5, mid, meta["high_label"], rotation=45, va="center", **kw)
+        ax.text(x_min * 0.7, n * 0.25, meta["low_label"],  rotation=45, va="center", **kw)
+        ax.text(x_max * 0.7, n * 0.75, meta["high_label"], rotation=45, va="center", **kw)
 
         legend_loc = "lower right"
     else:
@@ -257,10 +263,9 @@ def _make_single_chart(
         ax.set_ylabel(meta["y_label"], color="#AAAAAA", fontsize=axis_fontsize)
 
         y_min, y_max = ax.get_ylim()
-        mid = len(x) // 2
         kw = dict(fontsize=annot_fontsize, alpha=0.45, color="white", va="center", zorder=2)
-        ax.text(mid, y_min * 0.85, meta["low_label"],  **kw)
-        ax.text(mid, y_max * 0.85, meta["high_label"], **kw)
+        ax.text(n * 0.15, y_min * 0.85, meta["low_label"],  **kw)
+        ax.text(n * 0.85, y_max * 0.85, meta["high_label"], **kw)
 
         ax.set_xticks(x)
         ax.set_xticklabels(heroes, rotation=45, ha="right", color="#CCCCCC", fontsize=8)
