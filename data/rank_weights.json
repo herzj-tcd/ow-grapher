@@ -1,0 +1,92 @@
+{
+  "generated_at": "2026-04-20T00:27:50Z",
+  "method": "nnls_weighted_average",
+  "note": "Relative match-count weights per rank derived from the constraint that the 'all' tier pick rates equal a weighted average of per-rank pick rates. Solved via non-negative least squares across all heroes. Values within each region sum to 1.0.",
+  "rank_order": [
+    "bronze",
+    "silver",
+    "gold",
+    "platinum",
+    "diamond",
+    "master",
+    "grandmaster"
+  ],
+  "weights": {
+    "comp_mnk": {
+      "americas": {
+        "bronze": 0.052836,
+        "silver": 0.227397,
+        "gold": 0.298807,
+        "platinum": 0.251369,
+        "diamond": 0.131789,
+        "master": 0.026068,
+        "grandmaster": 0.011734
+      },
+      "asia": {
+        "bronze": 0.058621,
+        "silver": 0.260705,
+        "gold": 0.255574,
+        "platinum": 0.266313,
+        "diamond": 0.119613,
+        "master": 0.026349,
+        "grandmaster": 0.012825
+      },
+      "europe": {
+        "bronze": 0.051283,
+        "silver": 0.199406,
+        "gold": 0.28031,
+        "platinum": 0.292006,
+        "diamond": 0.121083,
+        "master": 0.037191,
+        "grandmaster": 0.01872
+      },
+      "combined": {
+        "bronze": 0.054247,
+        "silver": 0.229169,
+        "gold": 0.27823,
+        "platinum": 0.269896,
+        "diamond": 0.124162,
+        "master": 0.029869,
+        "grandmaster": 0.014426
+      }
+    },
+    "comp_controller": {
+      "americas": {
+        "bronze": 0.025358,
+        "silver": 0.162658,
+        "gold": 0.289893,
+        "platinum": 0.30485,
+        "diamond": 0.165905,
+        "master": 0.046458,
+        "grandmaster": 0.004879
+      },
+      "asia": {
+        "bronze": 0.057201,
+        "silver": 0.217047,
+        "gold": 0.288839,
+        "platinum": 0.301386,
+        "diamond": 0.103671,
+        "master": 0.028866,
+        "grandmaster": 0.002989
+      },
+      "europe": {
+        "bronze": 0.025593,
+        "silver": 0.134355,
+        "gold": 0.321493,
+        "platinum": 0.293458,
+        "diamond": 0.166783,
+        "master": 0.04527,
+        "grandmaster": 0.013048
+      },
+      "combined": {
+        "bronze": 0.036051,
+        "silver": 0.171353,
+        "gold": 0.300075,
+        "platinum": 0.299898,
+        "diamond": 0.145453,
+        "master": 0.040198,
+        "grandmaster": 0.006972
+      }
+    }
+  }
+}
