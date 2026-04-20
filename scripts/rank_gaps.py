@@ -57,15 +57,15 @@ REGION_DISPLAY = {
 _STAT_META = {
     ("linreg", "pick"): {
         "y_label":    "Pick Rate Slope (% pts per rank)",
-        "low_label":  "Pick rate decreases\nwith rank",
-        "high_label": "Pick rate increases\nwith rank",
+        "low_label":  "More popular at\nlow ranks",
+        "high_label": "More popular at\nhigh ranks",
         "y_fmt":      "%+.3f%%",
         "chart_title": "Pick Rate Slope Across Ranks",
     },
     ("linreg", "win"): {
         "y_label":    "Win Rate Slope (% pts per rank)",
-        "low_label":  "Win rate decreases\nwith rank",
-        "high_label": "Win rate increases\nwith rank",
+        "low_label":  "Stronger at\nlow ranks",
+        "high_label": "Stronger at\nhigh ranks",
         "y_fmt":      "%+.3f%%",
         "chart_title": "Win Rate Slope Across Ranks",
     },
@@ -246,8 +246,8 @@ def _make_single_chart(
 
         x_min, x_max = ax.get_xlim()
         kw = dict(fontsize=annot_fontsize, alpha=0.45, color="white", ha="center", zorder=2)
-        ax.text(x_min * 0.7, n * 0.25, meta["low_label"],  rotation=45, va="center", **kw)
-        ax.text(x_max * 0.7, n * 0.75, meta["high_label"], rotation=45, va="center", **kw)
+        ax.text(x_max * 0.75, n * 0.25, meta["low_label"],  rotation=0, va="center", **kw)
+        ax.text(x_min * 0.75, n * 0.75, meta["high_label"], rotation=0, va="center", **kw)
 
         legend_loc = "lower right"
     else:
@@ -271,16 +271,18 @@ def _make_single_chart(
         ax.set_xticklabels(heroes, rotation=45, ha="right", color="#CCCCCC", fontsize=8)
         legend_loc = "upper right"
 
-    legend_handles = [
-        Patch(facecolor=ROLE_COLORS["tank"],    label="Tank"),
-        Patch(facecolor=ROLE_COLORS["damage"],  label="Damage"),
-        Patch(facecolor=ROLE_COLORS["support"], label="Support"),
-    ]
-    ax.legend(
-        handles=legend_handles,
-        facecolor="#1A1A2E", edgecolor="#2A2A4A", labelcolor="#CCCCCC",
-        fontsize=9 if not mobile else 13, loc=legend_loc,
-    )
+    roles_present = sorted(set(roles))
+    if len(roles_present) > 1:
+        legend_handles = [
+            Patch(facecolor=ROLE_COLORS["tank"],    label="Tank"),
+            Patch(facecolor=ROLE_COLORS["damage"],  label="Damage"),
+            Patch(facecolor=ROLE_COLORS["support"], label="Support"),
+        ]
+        ax.legend(
+            handles=legend_handles,
+            facecolor="#1A1A2E", edgecolor="#2A2A4A", labelcolor="#CCCCCC",
+            fontsize=9 if not mobile else 13, loc=legend_loc,
+        )
 
     role_str = f"  •  {role_filter.title()}" if role_filter else ""
     fig.suptitle(

@@ -178,10 +178,12 @@ def make_chart(
     ax.text((x_min + avg_pick) / 2, (y_min + 50) / 2, "Niche & Weak",      **kw)
 
     # Legend: roles + bronze/gm dot explanation
+    roles_present = sorted(set(h["role"] for h in heroes))
     role_handles = [
         Line2D([0], [0], marker="o", color="w", markerfacecolor=ROLE_COLORS[r],
                markersize=7, label=r.title(), linewidth=0)
         for r in ("tank", "damage", "support")
+        if r in roles_present
     ]
     tier_handles = [
         Line2D([0], [0], marker="o", color="w", markerfacecolor="#1A1A2E",

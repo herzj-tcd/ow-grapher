@@ -278,10 +278,11 @@ def make_scatter(
     ax.text((avg_pick + x_max) / 2, (y_min + 50) / 2, "Popular & Weak",     **kw)
     ax.text((x_min + avg_pick) / 2, (y_min + 50) / 2, "Niche & Weak",       **kw)
 
-    ax.legend(
-        facecolor="#1A1A2E", edgecolor="#2A2A4A", labelcolor="#CCCCCC",
-        fontsize=legend_fontsize, loc="lower right",
-    )
+    if len(roles_present) > 1:
+        ax.legend(
+            facecolor="#1A1A2E", edgecolor="#2A2A4A", labelcolor="#CCCCCC",
+            fontsize=legend_fontsize, loc="lower right",
+        )
     ax.set_title(
         f"Pick Rate vs Win Rate\n{subtitle}",
         color="white", fontsize=title_fontsize, pad=12,
