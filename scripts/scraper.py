@@ -230,9 +230,7 @@ def parse_rows(
             "pick_rate": None if (pick is None or pick < 0) else pick,
             "win_rate":  None if (win  is None or win  < 0) else win,
         }
-        if map_slug:
-            row["map"] = map_slug
-        else:
+        if not map_slug:
             row["tier"] = tier.lower()
 
         rows.append(row)
