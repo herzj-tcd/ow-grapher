@@ -121,6 +121,7 @@ def calculate_metrics(map_stats: dict, overall_stats: dict, region: str) -> list
 def generate_overview(overall_stats: str, maps_dir: str, region: str = None) -> list:
     """Generate overview of which heroes lead on each map.
 
+    If no region filter, averages metrics across all regions.
     Returns list of dicts with map-level summary stats.
     """
     overall = load_overall_stats(overall_stats)
@@ -133,7 +134,7 @@ def generate_overview(overall_stats: str, maps_dir: str, region: str = None) -> 
         map_name = map_file.stem
         map_stats = load_map_stats(map_file)
 
-        # If region filter specified, only use that region
+        # If region filter specified, process only that region
         if region:
             if region not in map_stats:
                 continue
@@ -141,51 +142,84 @@ def generate_overview(overall_stats: str, maps_dir: str, region: str = None) -> 
         else:
             regions_to_process = list(map_stats.keys())
 
+        # Aggregate metrics across regions (or single region if filtered)
+        aggregated_metrics = defaultdict(
+            lambda: {
+                "wr_map_sum": 0,
+                "wr_delta_sum": 0,
+                "wr_ratio_sum": 0,
+                "pick_map_sum": 0,
+                "pick_delta_sum": 0,
+                "pick_ratio_sum": 0,
+                "count": 0,
+            }
+        )
+
         for r in regions_to_process:
-            # Calculate metrics for all heroes on this map
             metrics = calculate_metrics(map_stats[r], overall, r)
+            for m in metrics:
+                hero = m["hero"]
+                aggregated_metrics[hero]["wr_map_sum"] += m["win_rate_map"]
+                aggregated_metrics[hero]["wr_delta_sum"] += m["win_rate_delta"]
+                aggregated_metrics[hero]["wr_ratio_sum"] += m["win_rate_multiplier"]
+                aggregated_metrics[hero]["pick_map_sum"] += m["pick_rate_map"]
+                aggregated_metrics[hero]["pick_delta_sum"] += m["pick_rate_delta"]
+                aggregated_metrics[hero]["pick_ratio_sum"] += m["pick_rate_ratio"]
+                aggregated_metrics[hero]["count"] += 1
 
-            # Find top/bottom by different metrics
-            by_wr_delta = sorted(metrics, key=lambda x: x["win_rate_delta"], reverse=True)
-            by_wr_multiplier = sorted(metrics, key=lambda x: x["win_rate_multiplier"], reverse=True)
-            by_pick_delta = sorted(metrics, key=lambda x: x["pick_rate_delta"], reverse=True)
-            by_pick_ratio = sorted(metrics, key=lambda x: x["pick_rate_ratio"], reverse=True)
+        # Calculate averages
+        averaged = {}
+        for hero, stats in aggregated_metrics.items():
+            n = stats["count"]
+            averaged[hero] = {
+                "wr_map": stats["wr_map_sum"] / n,
+                "wr_delta": stats["wr_delta_sum"] / n,
+                "wr_ratio": stats["wr_ratio_sum"] / n,
+                "pick_map": stats["pick_map_sum"] / n,
+                "pick_delta": stats["pick_delta_sum"] / n,
+                "pick_ratio": stats["pick_ratio_sum"] / n,
+            }
 
-            overview.append({
-                "map": map_name,
-                "region": r,
-                "best_wr_hero": by_wr_delta[0]["hero"],
-                "best_wr_delta": by_wr_delta[0]["win_rate_delta"],
-                "best_wr_map": by_wr_delta[0]["win_rate_map"],
-                "best_wr_overall": by_wr_delta[0]["win_rate_overall"],
-                "worst_wr_hero": by_wr_delta[-1]["hero"],
-                "worst_wr_delta": by_wr_delta[-1]["win_rate_delta"],
-                "worst_wr_map": by_wr_delta[-1]["win_rate_map"],
-                "worst_wr_overall": by_wr_delta[-1]["win_rate_overall"],
-                "best_wr_skew_hero": by_wr_multiplier[0]["hero"],
-                "best_wr_skew_multiplier": by_wr_multiplier[0]["win_rate_multiplier"],
-                "most_picked_hero": by_pick_delta[0]["hero"],
-                "most_picked_delta": by_pick_delta[0]["pick_rate_delta"],
-                "most_picked_map": by_pick_delta[0]["pick_rate_map"],
-                "most_picked_overall": by_pick_delta[0]["pick_rate_overall"],
-                "least_picked_hero": by_pick_delta[-1]["hero"],
-                "least_picked_delta": by_pick_delta[-1]["pick_rate_delta"],
-                "least_picked_map": by_pick_delta[-1]["pick_rate_map"],
-                "least_picked_overall": by_pick_delta[-1]["pick_rate_overall"],
-                "most_contested_hero": by_pick_ratio[0]["hero"],
-                "most_contested_ratio": by_pick_ratio[0]["pick_rate_ratio"],
-            })
+        # Sort by different metrics
+        by_wr_absolute = sorted(averaged.items(), key=lambda x: x[1]["wr_map"], reverse=True)
+        by_wr_delta = sorted(averaged.items(), key=lambda x: x[1]["wr_delta"], reverse=True)
+        by_wr_ratio = sorted(averaged.items(), key=lambda x: x[1]["wr_ratio"], reverse=True)
+        by_pick_absolute = sorted(averaged.items(), key=lambda x: x[1]["pick_map"], reverse=True)
+        by_pick_delta = sorted(averaged.items(), key=lambda x: x[1]["pick_delta"], reverse=True)
+        by_pick_ratio = sorted(averaged.items(), key=lambda x: x[1]["pick_ratio"], reverse=True)
+
+        entry = {
+            "map": map_name,
+            # Win rate: absolute, delta, ratio (highest then lowest for each)
+            "highest_wr": by_wr_absolute[0][0],
+            "most_improved_wr": by_wr_delta[0][0],
+            "most_improved_wr_relative": by_wr_ratio[0][0],
+            "lowest_wr": by_wr_absolute[-1][0],
+            "most_decreased_wr": by_wr_delta[-1][0],
+            "most_decreased_wr_relative": by_wr_ratio[-1][0],
+            # Pick rate: absolute, delta, ratio (highest then lowest for each)
+            "highest_pick": by_pick_absolute[0][0],
+            "most_picked_increase": by_pick_delta[0][0],
+            "most_picked_increase_relative": by_pick_ratio[0][0],
+            "lowest_pick": by_pick_absolute[-1][0],
+            "most_picked_decrease": by_pick_delta[-1][0],
+            "most_picked_decrease_relative": by_pick_ratio[-1][0],
+        }
+        overview.append(entry)
 
     return overview
 
 
 def generate_per_map_reports(overall_stats: str, maps_dir: str, out_dir: Path, region: str = None):
-    """Generate and save per-map detailed reports."""
+    """Generate and save per-map detailed reports.
+
+    Yields tuples of (map_name, map_report, target_region) where target_region
+    is the region to use in the output folder structure.
+    """
     overall = load_overall_stats(overall_stats)
     maps_path = Path(maps_dir)
     map_files = sorted(maps_path.glob("*.json"))
 
-    count = 0
     for map_file in map_files:
         map_name = map_file.stem
         map_stats = load_map_stats(map_file)
@@ -197,17 +231,18 @@ def generate_per_map_reports(overall_stats: str, maps_dir: str, out_dir: Path, r
         else:
             regions_to_process = list(map_stats.keys())
 
-        map_report = []
         for r in regions_to_process:
             metrics = calculate_metrics(map_stats[r], overall, r)
-            map_report.extend(metrics)
 
-        if not map_report:
-            continue
+            # Remove region column from metrics for individual region reports
+            for metric in metrics:
+                metric.pop("region", None)
 
-        count += 1
-        # Saves are handled by caller based on format preference
-        yield map_name, map_report
+            if not metrics:
+                continue
+
+            # Yield with target region for folder organization
+            yield map_name, metrics, r
 
 
 def save_overview(overview: list, out_dir: Path, format: str = "csv"):
@@ -215,7 +250,7 @@ def save_overview(overview: list, out_dir: Path, format: str = "csv"):
     out_dir.mkdir(parents=True, exist_ok=True)
 
     if format in ("csv", "both"):
-        out_csv = out_dir / "overview.csv"
+        out_csv = out_dir / "map_reports_overview.csv"
         with open(out_csv, "w", newline="", encoding="utf-8") as f:
             writer = csv.DictWriter(f, fieldnames=overview[0].keys())
             writer.writeheader()
@@ -223,19 +258,31 @@ def save_overview(overview: list, out_dir: Path, format: str = "csv"):
         print(f"Wrote overview to {out_csv.name}")
 
     if format in ("json", "both"):
-        out_json = out_dir / "overview.json"
+        out_json = out_dir / "map_reports_overview.json"
         with open(out_json, "w", encoding="utf-8") as f:
             json.dump(overview, f, indent=2)
         print(f"Wrote overview to {out_json.name}")
 
 
-def save_per_map_reports(gen, out_dir: Path, format: str = "csv"):
-    """Save per-map reports from generator in specified format(s)."""
-    out_dir.mkdir(parents=True, exist_ok=True)
+def save_per_map_reports(gen, out_dir: Path, region: str = None, format: str = "csv"):
+    """Save per-map reports from generator in specified format(s).
+
+    Organizes files by region folder structure if multiple regions.
+    """
     count = 0
-    for map_name, map_report in gen:
+    for map_name, map_report, region_name in gen:
+        # Create region-specific subdirectory
+        if region:
+            # Single region specified, save directly to out_dir
+            region_dir = out_dir
+        else:
+            # Multiple regions, organize by region
+            region_dir = out_dir / region_name
+
+        region_dir.mkdir(parents=True, exist_ok=True)
+
         if format in ("csv", "both"):
-            out_csv = out_dir / f"{map_name}.csv"
+            out_csv = region_dir / f"{map_name}.csv"
             with open(out_csv, "w", newline="", encoding="utf-8") as f:
                 writer = csv.DictWriter(f, fieldnames=map_report[0].keys())
                 writer.writeheader()
@@ -243,7 +290,7 @@ def save_per_map_reports(gen, out_dir: Path, format: str = "csv"):
             count += 1
 
         if format in ("json", "both"):
-            out_json = out_dir / f"{map_name}.json"
+            out_json = region_dir / f"{map_name}.json"
             with open(out_json, "w", encoding="utf-8") as f:
                 json.dump(map_report, f, indent=2)
             count += 1
@@ -256,10 +303,10 @@ def generate_report(overall_stats: str, maps_dir: str, region: str = None, out_d
 
     if out_dir is None:
         out_root = _ROOT / "outputs"
-        per_map_dir = out_root / "map_hero_reports"
+        per_map_dir = out_root / "map_reports"
     else:
         out_root = Path(out_dir)
-        per_map_dir = out_root / "map_hero_reports"
+        per_map_dir = out_root / "map_reports"
 
     # Load overall stats
     print(f"Loading overall stats from {overall_stats}...")
@@ -282,7 +329,7 @@ def generate_report(overall_stats: str, maps_dir: str, region: str = None, out_d
     if per_map:
         print("Generating per-map reports...")
         gen = generate_per_map_reports(overall_stats, maps_dir, per_map_dir, region)
-        save_per_map_reports(gen, per_map_dir, format=format)
+        save_per_map_reports(gen, per_map_dir, region=region, format=format)
         print()
 
 
@@ -301,7 +348,7 @@ def main():
     )
     parser.add_argument(
         "--out",
-        help="Output directory (default: outputs/map_hero_reports/)",
+        help="Output directory (default: outputs/map_reports/)",
     )
     parser.add_argument(
         "--per-map",
