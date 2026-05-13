@@ -174,6 +174,15 @@ def fetch_rates(
                 continue
             resp.raise_for_status()
             data = resp.json()
+            # Normalize new API response structure if needed
+            if "rates" in data and isinstance(data["rates"], dict) and "rates" in data["rates"]:
+                # New API structure: flatten it to match old structure
+                rates_data = data["rates"]
+                data = {
+                    "rates": rates_data.get("rates", []),
+                    "selected": rates_data.get("selected", {}),
+                    "extrema": rates_data.get("extrema", {}),
+                }
             path.parent.mkdir(parents=True, exist_ok=True)
             path.write_text(json.dumps(data, indent=2))
             return data, True
@@ -217,11 +226,19 @@ def parse_rows(
 ) -> tuple[list[dict], dict[str, str]]:
     """Returns (rows, {hero_name: role})."""
     rows, roles = [], {}
-    for entry in data.get("rates", []):
+    
+    # Handle both old and new API response structures
+    rates_list = data.get("rates", [])
+    if isinstance(rates_list, dict) and "rates" in rates_list:
+        # New API structure: data["rates"]["rates"]
+        rates_list = rates_list["rates"]
+    
+    for entry in rates_list:
         cells    = entry.get("cells", {})
         hero_obj = entry.get("hero") or {}
         pick = cells.get("pickrate")
         win  = cells.get("winrate")
+        ban  = cells.get("banrate")
         name = cells.get("name") or entry.get("id", "")
 
         row: dict = {
@@ -229,6 +246,7 @@ def parse_rows(
             "hero":      name,
             "pick_rate": None if (pick is None or pick < 0) else pick,
             "win_rate":  None if (win  is None or win  < 0) else win,
+            "ban_rate":  None if (ban  is None or ban  < 0) else ban,
         }
         if not map_slug:
             row["tier"] = tier.lower()
@@ -241,7 +259,10 @@ def parse_rows(
 
 
 def validate(data: dict, expected_tier: str, expected_region: str) -> None:
+    # Handle both old flat structure and new nested structure
     sel = data.get("selected", {})
+    if not sel and "rates" in data and isinstance(data["rates"], dict):
+        sel = data["rates"].get("selected", {})
     if sel.get("tier") != expected_tier:
         print(f"  WARNING: expected tier={expected_tier!r}, got {sel.get('tier')!r}")
     if sel.get("region") != expected_region:
